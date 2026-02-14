@@ -1,14 +1,10 @@
 [
     {
-        "date": "25-02-13",
-        "amount": 4.0,
-        "category": "htshrthrts",
-        "payment": "grhtrrht"
-    },
-    {
-        "date": "26-02-13",
-        "amount": 6.0,
-        "category": "t",
-        "payment": "f"
+        "id": "b9867072-df4a-4f92-8300-a7effaaaac9e",
+        "date": "26-02-14",
+        "category": "TEST",
+        "amount": "777",
+        "payment_method": "Chase",
+        "rebate": 0.0
     }
 ]
