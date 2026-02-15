@@ -9,8 +9,8 @@ def show_menu():
     print("\n=== Personal Spending Tracker ===\n")
     print("1. Add expense")
     print("2. View expenses")
-    print("5. delete")
-    print("6. Edit")
+    print("5. edit")
+    print("6. delete")
     print("-1. Exit")
 
 
@@ -44,10 +44,14 @@ def handle_delete(tracker):
     
 
 def handle_view(tracker):
-    print("\n-- ID       |      Date   |category| amount |payment method | rebate--")
+    if not tracker.expenses:
+        print("No records")
+        return
+    
+    print("\n-- ID |  Date  |category| amount |payment| rebate --")
 
-    for expense in tracker.expenses:
-        print (expense.to_String())
+    for expense in tracker.expenses.values():
+        print(expense)
         
 def main():
     tracker = ExpenseTracker()
@@ -64,7 +68,7 @@ def main():
         elif choice == "5":
             handle_edit(tracker)
         elif choice == "6":
-            handle_edit(tracker)
+            handle_delete(tracker)
         elif choice =="-1":
             print("program end")
             break

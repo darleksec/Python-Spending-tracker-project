@@ -1,10 +1,14 @@
-[
-    {
-        "id": "b9867072-df4a-4f92-8300-a7effaaaac9e",
-        "date": "26-02-14",
-        "category": "TEST",
-        "amount": "777",
-        "payment_method": "Chase",
-        "rebate": 0.0
-    }
-]
+{
+    "next_id": 3,
+    "expenses": [
+        {
+            "id": 2,
+            "date": "26-01-02",
+            "category": "test",
+            "amount": 888.0,
+            "payment_method": "AE",
+            "rebate": 0.0,
+            "hash_value": "52f72c4749766090f034a7bf893c895f17e3e5403b9653d8089fa9aae0c375e2"
+        }
+    ]
+}
