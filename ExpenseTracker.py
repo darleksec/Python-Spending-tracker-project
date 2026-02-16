@@ -100,7 +100,13 @@ class ExpenseTracker:
             self.expenses = {}
             self.next_id = 1
             
-        
+    def get_all_expenses(self):
+        return sorted(
+            self.expenses.values(),
+            key=lambda e: e.date
+        )
+
+    
             
             
             

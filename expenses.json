@@ -1,14 +1,23 @@
 {
-    "next_id": 3,
+    "next_id": 4,
     "expenses": [
         {
             "id": 2,
             "date": "26-01-02",
             "category": "test",
-            "amount": 888.0,
+            "amount": 777.0,
             "payment_method": "AE",
             "rebate": 0.0,
-            "hash_value": "52f72c4749766090f034a7bf893c895f17e3e5403b9653d8089fa9aae0c375e2"
+            "hash_value": "9d6edbec8319b266be79d93fa905e6f40d4aa7d304df3bd7aae275a0eedbac7a"
+        },
+        {
+            "id": 3,
+            "date": "2026-02-16",
+            "category": "CHASE",
+            "amount": 999.0,
+            "payment_method": "methoddss",
+            "rebate": 0.0,
+            "hash_value": "876139961198e5f35e7713c1cc8d4a175cb0c87f17c451c6759c858d32671f31"
         }
     ]
 }
