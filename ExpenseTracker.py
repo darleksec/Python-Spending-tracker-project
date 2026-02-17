@@ -1,11 +1,14 @@
 import json
 import os
+import csv
 from expense import Expense
+from datetime import datetime
 class ExpenseTracker:
     def __init__(self, filename="expenses.json"):
         self.filename = filename
         self.expenses = {}
         self.next_id =1
+        self.hash_index = {}
         self.load()
 
     #ID
@@ -17,15 +20,29 @@ class ExpenseTracker:
     # -----------------
     # Add
     # -----------------
-    def add_expense(self, date, category, amount, payment_method, rebate=0.0):
+    def add_expense(self, date, category, amount, payment_method, merchant, rebate=0.0):
         expense_id = self.get_next_id()
-        
-        
-        expense = Expense(expense_id, date, category, amount, payment_method, rebate)
-         
+
+        expense = Expense(
+            expense_id,
+            date,
+            category,
+            amount,
+            payment_method,
+            merchant,
+            rebate
+        )
+
+        # Now check duplicate
+        if expense.hash_value in self.hash_index:
+            return False  # duplicate detected
+
         self.expenses[expense_id] = expense
+        self.hash_index[expense.hash_value] = expense_id
+
         self.save()
-        return expense.id
+        return True
+
 
     # -----------------
     # Delete
@@ -100,14 +117,79 @@ class ExpenseTracker:
             self.expenses = {}
             self.next_id = 1
             
+            
+    #getters
+    
+    def get_expense_by_id(self,expense_id):
+        return self.expenses.get(expense_id)
+    
+    
     def get_all_expenses(self):
         return sorted(
             self.expenses.values(),
             key=lambda e: e.date
         )
 
-    
+    def get_category_total(self):
+        totals = {}
+        
+        for exp in self.expenses.values():  
+            print(type(exp))  
+            category = exp.category
+            amount = exp.amount
             
+            if category not in totals:
+                totals[category] = 0
+                
+            totals[category] += amount
+            
+        return totals
+    
+    def _clean_money(self, value):
+
+        if not value:
+            return 0.0
+
+        # Remove currency symbol and spaces
+        value = value.strip().replace("£", "").replace(",", "")
+
+        # Handle weird rebate like "£-   "
+        if value == "-" or value == "":
+            return 0.0
+
+        return float(value)
+
+                
+                
+    def importCSV(self, file_path):    
+        count = 0
+
+        with open(file_path, newline="", encoding="utf-8-sig") as file:
+            reader = csv.DictReader(file)
+            reader.fieldnames = [field.strip() for field in reader.fieldnames]
+
+            for row in reader:
+                try:
+                    row = {key.strip(): value for key, value in row.items()}
+
+                    date = row["Date"].strip()
+                    category = row["Category"].strip()
+                    payment_method = row["Bank"].strip()
+                    merchant = row["Merchant"].strip()
+
+                    amount = self._clean_money(row["Amount"])
+                    rebate = self._clean_money(row["Rebate"])
+
+                    if self.add_expense(date, category, amount,
+                                        payment_method, merchant, rebate):
+                        count += 1
+
+                except Exception as e:
+                    print(f"Skipping row due to error Row:{row} Error: {e}")
+                    continue
+
+        return count
+
             
             
             

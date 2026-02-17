@@ -7,6 +7,7 @@ from .log_page import LogPage
 from .visual_page import VisualPage
 from .menu import build_menu
 
+
 class ExpenseApp(QMainWindow):
 
     def __init__(self, tracker):
@@ -51,7 +52,6 @@ class ExpenseApp(QMainWindow):
         self.add_sidebar_btn("Expense Log", 1)
         self.add_sidebar_btn("Analytics ", 2)
         
-        self.apply_styles()
 
         # Build menu
         build_menu(self)
@@ -74,22 +74,5 @@ class ExpenseApp(QMainWindow):
         btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.sidebar.addWidget(btn)
         
-    def apply_styles(self):
-        self.setStyleSheet("""
-            QWidget {
-                font-family: Segoe UI;
-                font-size: 14px;
-            }
-
-            QPushButton {
-                background-color: #2C3E50;
-                color: white;
-                padding: 10px;
-                border-radius: 6px;
-            }
-
-            QPushButton:hover {
-                background-color: #34495E;
-            }
-        """)
+        
     

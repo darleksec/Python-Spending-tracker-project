@@ -16,7 +16,7 @@ class VisualPage(QWidget):
         self.setLayout(layout)
 
     def plot_data(self):
-        data = self.tracker.get_category_totals()
+        data = self.tracker.get_category_total()
 
         categories = list(data.keys())
         totals = list(data.values())

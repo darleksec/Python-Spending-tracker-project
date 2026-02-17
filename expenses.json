@@ -1,23 +1,515 @@
 {
-    "next_id": 4,
+    "next_id": 105,
     "expenses": [
         {
-            "id": 2,
-            "date": "26-01-02",
-            "category": "test",
-            "amount": 777.0,
-            "payment_method": "AE",
+            "id": 53,
+            "date": "9/2/2025",
+            "category": "HK",
+            "amount": 719.62,
+            "payment_method": "Chase",
+            "merchant": "China Airline",
             "rebate": 0.0,
-            "hash_value": "9d6edbec8319b266be79d93fa905e6f40d4aa7d304df3bd7aae275a0eedbac7a"
+            "hash_value": "1b21a4a6caeb2483e3ead8f7e142600452649e566c4e1c2696efb625af09e604"
         },
         {
-            "id": 3,
-            "date": "2026-02-16",
-            "category": "CHASE",
-            "amount": 999.0,
-            "payment_method": "methoddss",
+            "id": 54,
+            "date": "4/2/2025",
+            "category": "Shopping",
+            "amount": 59.92,
+            "payment_method": "Chase",
+            "merchant": "Amazon",
+            "rebate": 7.2,
+            "hash_value": "319b75a13bb44f0406d9da716d7f39a67a47e1a16ccc4f3e80c34a211629d861"
+        },
+        {
+            "id": 55,
+            "date": "24/2/2025",
+            "category": "Groceries",
+            "amount": 50.0,
+            "payment_method": "Chase",
+            "merchant": "Jamdoughnut",
+            "rebate": 0.6,
+            "hash_value": "f8df662927b52d587a8896af9a453fd4ca084632c0f7ac957846f7b6d988c7e0"
+        },
+        {
+            "id": 56,
+            "date": "22/2/2025",
+            "category": "Groceries",
+            "amount": 46.6,
+            "payment_method": "Chase",
+            "merchant": "Chinatown",
+            "rebate": 0.5,
+            "hash_value": "0b58ac6f6723142819db4c47bd81e8515ff0609096373e78129e3144fde4c826"
+        },
+        {
+            "id": 57,
+            "date": "15/2/2025",
+            "category": "Dining",
+            "amount": 36.45,
+            "payment_method": "Chase",
+            "merchant": "GBK",
+            "rebate": 0.47,
+            "hash_value": "5008e033896c4a9e0279551f677768f5d3b55f2f4dc025fcdf87a6facf2d691f"
+        },
+        {
+            "id": 58,
+            "date": "22/2/2025",
+            "category": "Dining",
+            "amount": 35.25,
+            "payment_method": "Chase",
+            "merchant": "Matane Sushi",
+            "rebate": 0.36,
+            "hash_value": "ccec4545f2bea8d005fbd02add59c706c379ebc09d39aaa6cc98d5b522d1bb10"
+        },
+        {
+            "id": 59,
+            "date": "5/2/2025",
+            "category": "Groceries",
+            "amount": 34.71,
+            "payment_method": "Chase",
+            "merchant": "Aldi",
+            "rebate": 0.35,
+            "hash_value": "8ccd866a44ff305e28c507c94e69b78fd8ef9b466f43bb4453a605466a6ab3fa"
+        },
+        {
+            "id": 60,
+            "date": "2/2/2025",
+            "category": "Sport",
+            "amount": 30.52,
+            "payment_method": "Chase",
+            "merchant": "UEA",
+            "rebate": 0.35,
+            "hash_value": "39dcc84b54b5d12161e620be437258b283b632bd56e31bdd760fae8189635508"
+        },
+        {
+            "id": 61,
+            "date": "17/2/2025",
+            "category": "Groceries",
+            "amount": 30.38,
+            "payment_method": "Chase",
+            "merchant": "Co-op",
+            "rebate": 0.31,
+            "hash_value": "a0ac0ee8f4aa2974d2020f4e77c1dd1ae51d9dff4e1bccd3ac2553af952a0399"
+        },
+        {
+            "id": 62,
+            "date": "1/2/2025",
+            "category": "Dining",
+            "amount": 30.07,
+            "payment_method": "Chase",
+            "merchant": "Deliveroo",
+            "rebate": 0.3,
+            "hash_value": "fd630a7010ff0a018043578bcdc62291a1a3f6832241fd677bfd89779bd36d95"
+        },
+        {
+            "id": 63,
+            "date": "16/2/2025",
+            "category": "Dining",
+            "amount": 25.5,
+            "payment_method": "Chase",
+            "merchant": "Ask Italian",
+            "rebate": 0.3,
+            "hash_value": "4d6bb7a4c03d3f3574f1244a29d749f00731a75b4b236d61b2b648804a48b75b"
+        },
+        {
+            "id": 64,
+            "date": "16/2/2025",
+            "category": "Shopping",
+            "amount": 22.98,
+            "payment_method": "Chase",
+            "merchant": "Hmv",
+            "rebate": 0.26,
+            "hash_value": "f0c6174c22a8c89d39e5b1eb64251f1c9346eacdf1a38e7d98971b0e8a2d6c39"
+        },
+        {
+            "id": 65,
+            "date": "21/2/2025",
+            "category": "Dining",
+            "amount": 20.65,
+            "payment_method": "Chase",
+            "merchant": "Five Guys",
+            "rebate": 0.23,
+            "hash_value": "2383ded61118d42aa106ee3f04229934cfc4bca68c9d9dd133a2f03b6c16f231"
+        },
+        {
+            "id": 66,
+            "date": "12/2/2025",
+            "category": "Groceries",
+            "amount": 18.37,
+            "payment_method": "Chase",
+            "merchant": "Co-op",
+            "rebate": 0.21,
+            "hash_value": "337e26022cadaef139c452f602305e0587fae148cb3a49d85b7287c8353de6d0"
+        },
+        {
+            "id": 67,
+            "date": "14/2/2025",
+            "category": "Transport",
+            "amount": 13.5,
+            "payment_method": "Chase",
+            "merchant": "First Bus",
+            "rebate": 0.18,
+            "hash_value": "536dceacb41fb424733d1e88a5080379a5e43734cee14566cc5d0891f1039de6"
+        },
+        {
+            "id": 68,
+            "date": "18/2/2025",
+            "category": "Shopping",
+            "amount": 12.99,
+            "payment_method": "Chase",
+            "merchant": "Amazon",
+            "rebate": 0.14,
+            "hash_value": "811b0bd1b6fd00136d83e32c50defb18112de36935f4a8753d509166b766a645"
+        },
+        {
+            "id": 69,
+            "date": "11/2/2025",
+            "category": "Shopping",
+            "amount": 27.5,
+            "payment_method": "HSBC",
+            "merchant": "First Bus",
+            "rebate": 0.13,
+            "hash_value": "f95ffd7e390a816ffc8c0ff8cd6844e985b4b6530a0d3831590a7c02ee99227a"
+        },
+        {
+            "id": 70,
+            "date": "20/2/2025",
+            "category": "Leisure",
+            "amount": 10.4,
+            "payment_method": "Chase",
+            "merchant": "Bar SU",
+            "rebate": 0.11,
+            "hash_value": "822f3b98b6f65aba8af45863631d4604a119e0ee167eb672fbf2fcca258ed964"
+        },
+        {
+            "id": 71,
+            "date": "8/2/2025",
+            "category": "Groceries",
+            "amount": 10.35,
+            "payment_method": "Chase",
+            "merchant": "Sainsbury's",
+            "rebate": 0.1,
+            "hash_value": "16831838455ed1ac1a22035a8733cae0d52ae5cb9381e7782b31cb4297f45398"
+        },
+        {
+            "id": 72,
+            "date": "13/2/2025",
+            "category": "Laundry",
+            "amount": 10.0,
+            "payment_method": "Chase",
+            "merchant": "Laundry",
+            "rebate": 0.1,
+            "hash_value": "2d5071b231790a577e66f878eb56ee88ba8227262672a2ae1fbd651fd386c72a"
+        },
+        {
+            "id": 73,
+            "date": "14/2/2025",
+            "category": "Groceries",
+            "amount": 9.3,
+            "payment_method": "Chase",
+            "merchant": "Chinatown",
+            "rebate": 0.1,
+            "hash_value": "7c37e368b68ef681036e593d122435828d042cf20825e6c82da9b9a8bca8e12c"
+        },
+        {
+            "id": 74,
+            "date": "7/2/2025",
+            "category": "Bill",
+            "amount": 7.0,
+            "payment_method": "Chase",
+            "merchant": "Wise",
+            "rebate": 0.09,
+            "hash_value": "e78c5cebf83181dd94adf7f07b1eef4c834b6e348ab30a98124d4a116abe3144"
+        },
+        {
+            "id": 75,
+            "date": "5/2/2025",
+            "category": "Dining",
+            "amount": 6.0,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.07,
+            "hash_value": "a2950d4d0b408c36485150352da731e4e8a90a61ded7c0b609815d93dbee65f8"
+        },
+        {
+            "id": 76,
+            "date": "14/2/2025",
+            "category": "Dining",
+            "amount": 5.9,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.06,
+            "hash_value": "2c0cf7cd73cc05080f3a5d27907d19513a512a95dff743fa06d30209e21e9ac8"
+        },
+        {
+            "id": 77,
+            "date": "21/2/2025",
+            "category": "Leisure",
+            "amount": 5.4,
+            "payment_method": "Chase",
+            "merchant": "Bar SU",
+            "rebate": 0.06,
+            "hash_value": "ddf020301d6de63261e64a7443ecff45ab3b28569fe7d303f57d1643da690144"
+        },
+        {
+            "id": 78,
+            "date": "22/2/2025",
+            "category": "Transport",
+            "amount": 13.5,
+            "payment_method": "HSBC",
+            "merchant": "First Bus",
+            "rebate": 0.05,
+            "hash_value": "59c0217cc887fc7b52a22bb4c6f1d5aa8b0c8506bd0ac05f2acb787400a43806"
+        },
+        {
+            "id": 79,
+            "date": "15/2/2025",
+            "category": "Groceries",
+            "amount": 5.24,
+            "payment_method": "Chase",
+            "merchant": "Boots",
+            "rebate": 0.05,
+            "hash_value": "f6f26ec9630475379f8e58f76917596b360ea940b09d3d13b12b97d2da921a3d"
+        },
+        {
+            "id": 80,
+            "date": "27/2/2025",
+            "category": "Leisure",
+            "amount": 5.2,
+            "payment_method": "Chase",
+            "merchant": "Bar SU",
+            "rebate": 0.05,
+            "hash_value": "1c2af2511d9f68a6ffe6a8b5ce0aa7bf3f1cba323b6c6d2a10b00480c7062902"
+        },
+        {
+            "id": 82,
+            "date": "8/2/2025",
+            "category": "Bill",
+            "amount": 4.99,
+            "payment_method": "Chase",
+            "merchant": "Apple",
+            "rebate": 0.05,
+            "hash_value": "bbd2b7354b8977357063805e98658b4ccff828d678bfd7b4c59513f6f6e07991"
+        },
+        {
+            "id": 83,
+            "date": "3/2/2025",
+            "category": "Dining",
+            "amount": 4.8,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.05,
+            "hash_value": "ebbc677d0f1053f6cc6f032058d84d83e1f63ae64146e2e1029ba07fb8f97cce"
+        },
+        {
+            "id": 84,
+            "date": "3/2/2025",
+            "category": "Sport",
+            "amount": 4.5,
+            "payment_method": "Chase",
+            "merchant": "Spikers",
+            "rebate": 0.05,
+            "hash_value": "ff9700c99688ef00bdbc49ce80ff3aafad13e2048b6a8218698f5d1d2407fa01"
+        },
+        {
+            "id": 85,
+            "date": "23/2/2025",
+            "category": "Sport",
+            "amount": 4.5,
+            "payment_method": "Chase",
+            "merchant": "Spikers",
+            "rebate": 0.05,
+            "hash_value": "f0ddd8d15fa2827458c6e46afa66a153f6d25c4bc378fb94485d9b47237b9ff7"
+        },
+        {
+            "id": 86,
+            "date": "18/2/2025",
+            "category": "Leisure",
+            "amount": 4.26,
+            "payment_method": "Chase",
+            "merchant": "Club",
+            "rebate": 0.05,
+            "hash_value": "9123a8b16445e63ac6e1665531150818103812c74ff2d8441bf88fcd47a916e6"
+        },
+        {
+            "id": 87,
+            "date": "24/2/2025",
+            "category": "Leisure",
+            "amount": 4.26,
+            "payment_method": "Chase",
+            "merchant": "Club",
+            "rebate": 0.04,
+            "hash_value": "00ddd78b9a6aa25908fc56893f655d74a34f03e02041ed7b41f27a6aa181bb0e"
+        },
+        {
+            "id": 88,
+            "date": "8/2/2025",
+            "category": "Dining",
+            "amount": 4.1,
+            "payment_method": "Chase",
+            "merchant": "Bar SU",
+            "rebate": 0.04,
+            "hash_value": "1b2667b9b3a67e3477679456321f1cad2a2e372fc8d819e829ab1a534910a4e8"
+        },
+        {
+            "id": 89,
+            "date": "5/2/2025",
+            "category": "Dining",
+            "amount": 3.94,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.04,
+            "hash_value": "15e7bb783c6762de5b7eee1fdf52ee70c40273d2ab7289db635216336090482c"
+        },
+        {
+            "id": 90,
+            "date": "22/2/2025",
+            "category": "Groceries",
+            "amount": 2.7,
+            "payment_method": "Chase",
+            "merchant": "Boots",
+            "rebate": 0.04,
+            "hash_value": "0bdcd7a1a2b93c96291a64e2681e78c120ce6eb17b71443b14bb0aeb2f0c71e1"
+        },
+        {
+            "id": 91,
+            "date": "27/2/2025",
+            "category": "Leisure",
+            "amount": 2.7,
+            "payment_method": "Chase",
+            "merchant": "Bar SU",
+            "rebate": 0.03,
+            "hash_value": "bf001df593be622e40a9f9e85330e278241e75aab9b1c2a6d198f26a740099de"
+        },
+        {
+            "id": 92,
+            "date": "26/2/2025",
+            "category": "Groceries",
+            "amount": 2.42,
+            "payment_method": "Chase",
+            "merchant": "Sainsbury's",
+            "rebate": 0.03,
+            "hash_value": "2f74074a86201956fdebd8dc4f0c4c86075416ca69d90d5a63dd3272a50871eb"
+        },
+        {
+            "id": 93,
+            "date": "8/2/2025",
+            "category": "Dining",
+            "amount": 2.4,
+            "payment_method": "Chase",
+            "merchant": "Iyasaka Caf\u00e9",
+            "rebate": 0.02,
+            "hash_value": "0274bdf6e0a38c21ee61fa722a2329ebb7d4c208c3ba06c4d410398051ec041b"
+        },
+        {
+            "id": 94,
+            "date": "11/2/2025",
+            "category": "Dining",
+            "amount": 2.3,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.02,
+            "hash_value": "8ed3231035d14c8d40ac283e93ecffb94b1e08bff7a0dc85b2553dc952d8878e"
+        },
+        {
+            "id": 95,
+            "date": "9/2/2025",
+            "category": "Dining",
+            "amount": 2.2,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.02,
+            "hash_value": "1521b138c4b4f1dc6c265871c6efd641dbad8509ea7f9eb7d6272da7ebfb4680"
+        },
+        {
+            "id": 96,
+            "date": "22/2/2025",
+            "category": "Shopping",
+            "amount": 2.0,
+            "payment_method": "Chase",
+            "merchant": "Copenhagen",
+            "rebate": 0.02,
+            "hash_value": "b4ad9cfe1a124f981a08ec6c8e86d640bae50f5046eeea217778259e62b66295"
+        },
+        {
+            "id": 97,
+            "date": "8/2/2025",
+            "category": "Dining",
+            "amount": 1.9,
+            "payment_method": "Chase",
+            "merchant": "Iyasaka Caf\u00e9",
+            "rebate": 0.02,
+            "hash_value": "13bbfc263d33acdde30996b4790a967ac9ed75090115dc88b9c29f0aeb16da67"
+        },
+        {
+            "id": 98,
+            "date": "10/2/2025",
+            "category": "Dining",
+            "amount": 1.9,
+            "payment_method": "Chase",
+            "merchant": "Ziggy",
+            "rebate": 0.02,
+            "hash_value": "024a20b59e9c05475c6518c18eb89d1ff9072ce83096836538ea034580db738d"
+        },
+        {
+            "id": 99,
+            "date": "25/2/2025",
+            "category": "Leisure",
+            "amount": 1.23,
+            "payment_method": "Chase",
+            "merchant": "UEA",
+            "rebate": 0.02,
+            "hash_value": "fa2e20bd327e44637288c53ba27db8a86b22a859b14bf5fdca188233376dd422"
+        },
+        {
+            "id": 100,
+            "date": "1/2/2025",
+            "category": "Sport",
+            "amount": 1.0,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.01,
+            "hash_value": "3c3bbd57796a32d58c38cfd478fda6abf4cd8b257a6fafac02a1b8da8ca418fa"
+        },
+        {
+            "id": 101,
+            "date": "3/2/2025",
+            "category": "Sport",
+            "amount": 1.0,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.01,
+            "hash_value": "ec3bfb1338f1b6c7b550611ce55874bfd15189365286f174bcdb235478428360"
+        },
+        {
+            "id": 102,
+            "date": "22/2/2025",
+            "category": "Dining",
+            "amount": 1.0,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.01,
+            "hash_value": "08d2dc0ddc23ca47f3bffd2801c87dfcebc1fe421b0338709d46cfca33963984"
+        },
+        {
+            "id": 103,
+            "date": "24/2/2025",
+            "category": "Sport",
+            "amount": 1.0,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
+            "rebate": 0.01,
+            "hash_value": "676cb5829f89b69629773661a79c4fd4f7c3f342da5501da5151ca2528b83976"
+        },
+        {
+            "id": 104,
+            "date": "9/2/2025",
+            "category": "Dining",
+            "amount": 10.75,
+            "payment_method": "Chase",
+            "merchant": "Sportspark",
             "rebate": 0.0,
-            "hash_value": "876139961198e5f35e7713c1cc8d4a175cb0c87f17c451c6759c858d32671f31"
+            "hash_value": "272088fd93888f4e23cab0bd4a11f4ec795b33df36cd5ccb436ba56268bb46c5"
         }
     ]
 }

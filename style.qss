@@ -1,0 +1,14 @@
+QMainWindow {
+    background-color: #1a67b3;
+}
+
+QLineEdit, QComboBox, QDateEdit {
+    padding: 6px;
+    border: 1px solid #D0D7DE;
+    border-radius: 6px;
+}
+
+QTableWidget {
+    background-color:  #dc9f26;
+    gridline-color: #E1E4E8;
+}
