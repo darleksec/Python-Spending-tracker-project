@@ -1,57 +1,13 @@
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel,
-    QLineEdit, QPushButton, QComboBox, QDateEdit, QFormLayout
+    QLineEdit, QPushButton, QComboBox, QDateEdit, QFormLayout, QMessageBox
 )
 from PyQt6.QtCore import QDate
-
+ #bugs
+ #prompt to enter all fields 
+ 
 class EntryPage(QWidget):
     
-    # def __init__(self, tracker):
-        #     super().__init__()
-        #     self.tracker = tracker
-
-        #     layout = QVBoxLayout()
-
-            
-        #     self.date_input = QDateEdit()
-        #     self.date_input.setDate(QDate.currentDate())
-        #     layout.addWidget(self.date_input)
-
-        #     self.category_input = QLineEdit()
-        #     self.category_input.setPlaceholderText("Category")
-        #     layout.addWidget(self.category_input)
-
-        #     self.amount_input = QLineEdit()
-        #     self.amount_input.setPlaceholderText("Amount")
-        #     layout.addWidget(self.amount_input)
-
-        #     self.payment_input = QLineEdit()
-        #     self.payment_input.setPlaceholderText("Payment Method")  
-        #     layout.addWidget(self.payment_input)
-
-        #     self.rebate_input = QLineEdit()
-        #     layout.addWidget(QLabel("Rebate"))
-        #     layout.addWidget(self.rebate_input)
-
-        #     submit = QPushButton("Add Expense")
-        #     submit.clicked.connect(self.add_expense)
-
-        #     layout.addWidget(submit)
-        #     self.setLayout(layout)
-
-        # def add_expense(self):
-        #     self.tracker.add_expense(
-        #         date=self.date_input.date().toString("yyyy-MM-dd"),
-        #         category=self.category_input.text(),
-        #         amount=float(self.amount_input.text()),
-        #         payment_method=self.payment_input.text(),
-        #         rebate=float(self.rebate_input.text() or 0)
-        #     )
-            
-        #     self.category_input.clear()
-        #     self.amount_input.clear()
-        #     self.payment_input.clear()
-        #     self.rebate_input.clear()
 
     def __init__(self, tracker):
             super().__init__()
@@ -59,6 +15,7 @@ class EntryPage(QWidget):
 
             layout = QVBoxLayout()
             form = QFormLayout()
+
 
 
             
@@ -79,16 +36,24 @@ class EntryPage(QWidget):
             form.addRow("Rebate:", self.rebate_input)
 
             layout.addLayout(form)
+            
+            
 
-            submit = QPushButton("Add Expense")
-            submit.clicked.connect(self.add_expense)
+            self.submit_btn = QPushButton("Add Expense")
+            self.submit_btn.clicked.connect(self.submit_add_expense)
 
-            layout.addWidget(submit)
+            layout.addWidget(self.submit_btn)
+            
+            self.amount_input.textChanged.connect(self.check_form_complete)
+            self.category_input.textChanged.connect(self.check_form_complete)
+            self.payment_input.textChanged.connect(self.check_form_complete)
+            self.merchant_input.textChanged.connect(self.check_form_complete)
+            self.rebate_input.textChanged.connect(self.check_form_complete)
             self.setLayout(layout)
 
     def add_expense(self):
         self.tracker.add_expense(
-            date=self.date_input.date().toString("yyyy-MM-dd"),
+            date=self.date_input.date().toString("dd/MM/yyyy"),
             category=self.category_input.text(),
             amount=float(self.amount_input.text()),
             payment_method=self.payment_input.text(),
@@ -101,4 +66,45 @@ class EntryPage(QWidget):
         self.payment_input.clear()
         self.merchant_input.clear()
         self.rebate_input.clear()
+        
+    def submit_add_expense(self):
+        self.check_form_complete()
+        if not self.validate_inputs():
+            return
+        self.add_expense()
+        QMessageBox.information(self," Success" , "Expense saved")
+
+    def validate_inputs(self):
+
+        if not self.amount_input.text().strip():
+            QMessageBox.warning(self, "Missing Field", "Amount is required.")
+            return False
+
+        if not self.category_input.text().strip():
+            QMessageBox.warning(self, "Missing Field", "Category is required.")
+            return False
+
+        if not self.payment_input.text().strip():
+            QMessageBox.warning(self, "Missing Field", "Payment Method is required.")
+            return False
+
+        if not self.merchant_input.text().strip():
+            QMessageBox.warning(self, "Missing Field", "Merchant is required.")
+            return False
+
+        return True
+
+    
+    def check_form_complete(self):
+
+        if (
+            self.amount_input.text().strip()
+            and self.category_input.text().strip()
+            and self.payment_input.text().strip()
+            and self.merchant_input.text().strip()
+        ):
+            self.submit_btn.setEnabled(True)
+        else:
+            self.submit_btn.setEnabled(False)
+
 

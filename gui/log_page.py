@@ -4,6 +4,8 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt
 
+    #bugs
+ #why is the sorting weird
 class LogPage(QWidget):
 
     def __init__(self, tracker):
@@ -14,8 +16,9 @@ class LogPage(QWidget):
         
         self.search_input = QLineEdit()
         self.search_input.setPlaceholderText("Search by category...")
+        self.search_input.textChanged.connect(self.filter_expenses)
         layout.addWidget(self.search_input)
-        submit = QPushButton("Import CSV")
+        submit = QPushButton("Import spreadsheet")
         submit.clicked.connect(self.import_spreadsheet)
         layout.addWidget(submit)
 
@@ -65,6 +68,12 @@ class LogPage(QWidget):
 
 
     def load_data(self):
+        header = self.table.horizontalHeader()
+        sort_column = header.sortIndicatorSection()
+        sort_order = header.sortIndicatorOrder()
+        self.table.setSortingEnabled(False)
+
+        
         expenses = self.tracker.get_all_expenses()
         
         self.table.blockSignals(True)  # prevent itemChanged firing
@@ -87,23 +96,34 @@ class LogPage(QWidget):
         self.table.setColumnHidden(0, True)
 
         self.table.blockSignals(False)
+        
+        self.table.setSortingEnabled(True)
+        self.table.sortItems(sort_column, sort_order)
+
+        
 
 
 
     def import_spreadsheet(self):
         file_path, _ = QFileDialog.getOpenFileName(
             self,
-            "Select CSV File",
+            "Select spreadsheet File",
             "",
-            "CSV Files (*.csv)"
+            "csv/xlsx Files (*.csv *.xlsx)"
         )
         
-        if file_path:
+        if not file_path:
+            return
+        if file_path.endswith(".csv"):
             count = self.tracker.importCSV(file_path)
             print(f"{count} expenses imported")
             self.load_data()
         
-        
+        elif file_path.endswith(".xlsx"):
+            count = self.tracker.importXlsx(file_path)
+            print(f"{count} expenses imported")
+            self.load_data()
+
         
     def get_expense_id_from_row(self, row):
         item = self.table.item(row, 0)  # Column 0 = ID
@@ -178,3 +198,17 @@ class LogPage(QWidget):
         except ValueError:
             QMessageBox.warning(self, "Invalid Input", "Invalid value entered.")
             self.load_data()
+
+
+    def filter_expenses(self, text):
+
+        for row in range(self.table.rowCount()):
+            match = False
+
+            for col in range(self.table.columnCount()):
+                item = self.table.item(row, col)
+                if item and text.lower() in item.text().lower():
+                    match = True
+                    break
+
+            self.table.setRowHidden(row, not match)

@@ -3,6 +3,7 @@ import os
 import csv
 from expense import Expense
 from datetime import datetime
+import pandas as pd
 class ExpenseTracker:
     def __init__(self, filename="expenses.json"):
         self.filename = filename
@@ -15,6 +16,11 @@ class ExpenseTracker:
     def get_next_id(self):
         current_id = self.next_id
         self.next_id += 1
+        
+        if self.expenses:
+            self.next_id = max(self.expenses.keys()) + 1
+        else:
+            self.next_id = 1
         return current_id
 
     # -----------------
@@ -33,7 +39,7 @@ class ExpenseTracker:
             rebate
         )
 
-        # Now check duplicate
+        #  check duplicate
         if expense.hash_value in self.hash_index:
             return False  # duplicate detected
 
@@ -112,6 +118,9 @@ class ExpenseTracker:
             for item in data.get("expenses", []):
                 expense = Expense.from_dict(item)
                 self.expenses[expense.id] = expense
+                self.hash_index[expense.hash_value] = expense.id
+                
+            
         except json.JSONDecodeError:
             print("JSON file corrupted, resetting storage")
             self.expenses = {}
@@ -159,8 +168,8 @@ class ExpenseTracker:
 
         return float(value)
 
-                
-                
+    
+     #importing            
     def importCSV(self, file_path):    
         count = 0
 
@@ -189,6 +198,55 @@ class ExpenseTracker:
                     continue
 
         return count
+    
+    def importXlsx(self, file_path):
+        count = 0
+
+        df = pd.read_excel(file_path, sheet_name=0)
+
+        # Clean empty rows
+        df = df.dropna(how="all")
+
+        # Strip column names
+        df.columns = df.columns.str.strip()
+        print(df.columns)
+
+        for _, row in df.iterrows():
+            try:
+                # Date
+                date = row["Date"]
+                if pd.isna(date):
+                    raise ValueError("Missing date")
+                date = date.strftime("%d/%m/%Y")
+
+                # Other fields
+                category = str(row["Category"]).strip()
+                amount = float(row["Amount"])
+                payment_method = str(row["Bank"]).strip()
+                merchant = str(row["Merchant"]).strip()
+
+                rebate = row["Rebate"]
+                rebate = 0.0 if pd.isna(rebate) else float(rebate)
+
+                added = self.add_expense(
+                    date,
+                    category,
+                    amount,
+                    payment_method,
+                    merchant,
+                    rebate
+                )
+
+                if added:
+                    count += 1
+
+            except Exception as e:
+                print(f"Skipping row due to error Row:{row} Error: {e}")
+                continue
+
+        return count
+
+
 
             
             
