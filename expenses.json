@@ -1,5 +1,5 @@
 {
-    "next_id": 564,
+    "next_id": 801,
     "expenses": [
         {
             "id": 105,
@@ -12,627 +12,7 @@
             "hash_value": "d0904483d00b8580a810cbb8a199a85af67164b297b58d4ccc20ff79c56b4801"
         },
         {
-            "id": 106,
-            "date": "09/09/2024",
-            "category": "Transport",
-            "amount": 74.97,
-            "payment_method": "HSBC",
-            "merchant": "Uber",
-            "rebate": 0.04,
-            "hash_value": "04fc1688c0bb3a8ba97c37fd7ec5eeb466d3f80cd22b4c5b7e4a1aafd3e6e9ce"
-        },
-        {
-            "id": 107,
-            "date": "11/09/2024",
-            "category": "Dining",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Caf\u00e9",
-            "rebate": 0.29988,
-            "hash_value": "cae4cf5475e4ac4c85f85eec25e79246d01d98b0fed1f58f1b77d421ccf19acf"
-        },
-        {
-            "id": 108,
-            "date": "11/09/2024",
-            "category": "Transport",
-            "amount": 7.0,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.0152,
-            "hash_value": "98671e568b059b4ce5185127a24c72f928c186ec405f97c83e2c9366d0fcd60c"
-        },
-        {
-            "id": 109,
-            "date": "11/09/2024",
-            "category": "Groceries",
-            "amount": 3.1,
-            "payment_method": "HSBC",
-            "merchant": "Tesco",
-            "rebate": 0.028,
-            "hash_value": "66939673c37371d8127aa81bd3dec9cd3fbc056c0b6afce271d54789e699a6ed"
-        },
-        {
-            "id": 110,
-            "date": "11/09/2024",
-            "category": "Leisure",
-            "amount": 3.6,
-            "payment_method": "HSBC",
-            "merchant": "Southark Tavern",
-            "rebate": 0.012400000000000001,
-            "hash_value": "68e839a464613dae9fe99e58954bc5f34e50063f7e9ff4213e3f43d35f2d3327"
-        },
-        {
-            "id": 111,
-            "date": "12/09/2024",
-            "category": "Transport",
-            "amount": 13.8,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.014400000000000001,
-            "hash_value": "695e6eb15debb572e0bd329d3ec40b02da0cf28f61b41afd794b3564053e84a3"
-        },
-        {
-            "id": 112,
-            "date": "13/09/2024",
-            "category": "Transport",
-            "amount": 11.9,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.055200000000000006,
-            "hash_value": "cbf0bde3cd67dbcc6fff18110e06e5dc2fe6e01df5068b9901263336f91330a5"
-        },
-        {
-            "id": 113,
-            "date": "13/09/2024",
-            "category": "Transport",
-            "amount": 7.0,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.0476,
-            "hash_value": "28dbd129776a640dff87ee5e060c217bc3b21fcdecf33a75d0b4664e00d9ffe0"
-        },
-        {
-            "id": 114,
-            "date": "14/09/2024",
-            "category": "Shopping",
-            "amount": 100.1,
-            "payment_method": "HSBC",
-            "merchant": "Uniqlo",
-            "rebate": 0.028,
-            "hash_value": "3a542c9e454a78e0aa8ef0233036d02fc4d7444377582b04910ebccc6f9ad370"
-        },
-        {
-            "id": 115,
-            "date": "14/09/2024",
-            "category": "Shopping",
-            "amount": 21.68,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.4004,
-            "hash_value": "7bdc765b0ed8654619a1e420997680ae32882f992b2ca595b3316eea302c2e6b"
-        },
-        {
-            "id": 116,
-            "date": "14/09/2024",
-            "category": "Shopping",
-            "amount": 47.98,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.08672,
-            "hash_value": "30e6094f5b1e1a0ae08ab57a1596214ecab5b86c9bfa3dadbdaaa3105db9f0e0"
-        },
-        {
-            "id": 117,
-            "date": "15/09/2024",
-            "category": "Transport",
-            "amount": 13.05,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.19191999999999998,
-            "hash_value": "c8c24ca6bc7154f0093c3d24fddf528df10a2b5acc7d909d40bbe6816398610c"
-        },
-        {
-            "id": 118,
-            "date": "15/09/2024",
-            "category": "Shopping",
-            "amount": 16.08,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.0522,
-            "hash_value": "ca74880904e1c7184b1120dc84ecfccd8fb3c666b9225c9a1c0b78f0e3b7eda6"
-        },
-        {
-            "id": 119,
-            "date": "16/09/2024",
-            "category": "Leisure",
-            "amount": 8.81,
-            "payment_method": "HSBC",
-            "merchant": "Club",
-            "rebate": 0.06431999999999999,
-            "hash_value": "cc17bca2a11e010fc729bb3a794d8e9b087c200c3934cdb81464047a5f88bf3b"
-        },
-        {
-            "id": 120,
-            "date": "16/09/2024",
-            "category": "Shopping",
-            "amount": 22.1,
-            "payment_method": "HSBC",
-            "merchant": "M&S",
-            "rebate": 0.03524,
-            "hash_value": "b71bbecc788c9505ad5f61a8f77156015c94ac2694c47bf00bdf1df4f6653b7b"
-        },
-        {
-            "id": 121,
-            "date": "17/09/2024",
-            "category": "Groceries",
-            "amount": 8.78,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.0884,
-            "hash_value": "0bf67281c496f466e2b323835e31e86a1ee3dffdb5ef8416ad42fb778bc44025"
-        },
-        {
-            "id": 122,
-            "date": "17/09/2024",
-            "category": "Groceries",
-            "amount": 7.66,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.03512,
-            "hash_value": "8b0abd69e36d7285177b9890c66ddd78dde4092efd3a665061e194eb9cc1e875"
-        },
-        {
-            "id": 123,
-            "date": "17/09/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.03064,
-            "hash_value": "d80b094669256c6ce35d9da354eb4dae89e48b035308831d3de57080cbf90353"
-        },
-        {
-            "id": 124,
-            "date": "17/09/2024",
-            "category": "Dining",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.0152,
-            "hash_value": "6cb275ac95be6ad0a61cb664caefb6f797b8367786a9c7d129645f537b25b18e"
-        },
-        {
-            "id": 125,
-            "date": "18/09/2024",
-            "category": "Leisure",
-            "amount": 7.8,
-            "payment_method": "HSBC",
-            "merchant": "Club",
-            "rebate": 0.024,
-            "hash_value": "fd46bbfe7462b7af1b77a7b56eaa64199542d7f9e6b87a257421361498fee87a"
-        },
-        {
-            "id": 126,
-            "date": "18/09/2024",
-            "category": "Groceries",
-            "amount": 4.08,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.0312,
-            "hash_value": "e1bdf16c4669a94da6e316eba3240832570fc4c30fa929f9f692ee08890c90f4"
-        },
-        {
-            "id": 127,
-            "date": "18/09/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.01632,
-            "hash_value": "12e26a4ca09e6073de09b6691f95d04c25d07289b209562873d74fa7f947f3b5"
-        },
-        {
-            "id": 128,
-            "date": "19/09/2024",
-            "category": "Dining",
-            "amount": 5.0,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.0152,
-            "hash_value": "f238f7c0e92ab0e5d39f381930bc0476432623c9ab39b19e19b637b2cb8d6801"
-        },
-        {
-            "id": 129,
-            "date": "19/09/2024",
-            "category": "Shopping",
-            "amount": 8.49,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.02,
-            "hash_value": "2870243c7585532aa07571015b615d9b4dae1b0b73f30beeb285b074f4f7a571"
-        },
-        {
-            "id": 130,
-            "date": "20/09/2024",
-            "category": "Leisure",
-            "amount": 5.27,
-            "payment_method": "HSBC",
-            "merchant": "Club",
-            "rebate": 0.033960000000000004,
-            "hash_value": "847411a4b3e9b149651e6c6e8807c5cc4bf4e89a4f99aa1dbb8c5cad53c7396c"
-        },
-        {
-            "id": 131,
-            "date": "20/09/2024",
-            "category": "Shopping",
-            "amount": 21.0,
-            "payment_method": "HSBC",
-            "merchant": "Posters",
-            "rebate": 0.021079999999999998,
-            "hash_value": "906eef0b16a80bddc4ad225fef4774fbc423b954364e8638d5106a4541061de9"
-        },
-        {
-            "id": 132,
-            "date": "20/09/2024",
-            "category": "Shopping",
-            "amount": 9.99,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.084,
-            "hash_value": "4fdd6b274807f3e008064e6d0d6130d3e81ec7befd6211085ce30b662fc59bb0"
-        },
-        {
-            "id": 133,
-            "date": "21/09/2024",
-            "category": "Dining",
-            "amount": 4.0,
-            "payment_method": "HSBC",
-            "merchant": "Market",
-            "rebate": 0.03996,
-            "hash_value": "a4b4e7ce3164b46dceb311ea21c3651c75dfa7fbc1e063d27fafc2c6e6e671ac"
-        },
-        {
-            "id": 134,
-            "date": "21/09/2024",
-            "category": "Groceries",
-            "amount": 2.5,
-            "payment_method": "HSBC",
-            "merchant": "Korean",
-            "rebate": 0.016,
-            "hash_value": "9e3014488951b1c3e0302588fed870b48f15f22cc10512658acecf0db6872b84"
-        },
-        {
-            "id": 135,
-            "date": "21/09/2024",
-            "category": "Transport",
-            "amount": 4.5,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.01,
-            "hash_value": "526089b4f6dcc43cd17138a6c8704cc0df0e7e65aa38ff5079b1e757fcb935bb"
-        },
-        {
-            "id": 136,
-            "date": "21/09/2024",
-            "category": "Laundry",
-            "amount": 10.0,
-            "payment_method": "HSBC",
-            "merchant": "Laundry",
-            "rebate": 0.018000000000000002,
-            "hash_value": "e7d941fccab7404e92b247debb07fc58e912d98fbac4e6a5753f3db3e9c6ede9"
-        },
-        {
-            "id": 137,
-            "date": "21/09/2024",
-            "category": "Groceries",
-            "amount": 13.08,
-            "payment_method": "HSBC",
-            "merchant": "Boots",
-            "rebate": 0.04,
-            "hash_value": "657b043ffd4a7bf138d4dc73391e372224d011522ad9cba53d62a14f802d84c1"
-        },
-        {
-            "id": 138,
-            "date": "22/09/2024",
-            "category": "Dining",
-            "amount": 6.2,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.05232,
-            "hash_value": "9b030f614136963d57be8e3003dbe0d27d6d30727ef6cf17320e0436e6bbf616"
-        },
-        {
-            "id": 139,
-            "date": "22/09/2024",
-            "category": "Groceries",
-            "amount": 4.28,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.024800000000000003,
-            "hash_value": "705f1a072121822d6150174afaaf59096ec6c61751a148803ecff46d2604fe1b"
-        },
-        {
-            "id": 140,
-            "date": "22/09/2024",
-            "category": "Dining",
-            "amount": 7.0,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.01712,
-            "hash_value": "ff1de2de63b7b07f99fb02030e036f916d7342d3dfda04c26021de8e5069f693"
-        },
-        {
-            "id": 141,
-            "date": "23/09/2024",
-            "category": "Groceries",
-            "amount": 4.49,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.028,
-            "hash_value": "8d7aaa2add68fed0c671f5804c3d1b2524f47c1221ebe30dd8f03c259ccb0d6f"
-        },
-        {
-            "id": 142,
-            "date": "23/09/2024",
-            "category": "Sport",
-            "amount": 157.5,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.01796,
-            "hash_value": "923bc63f5a7070847a0623441b8d91886631332ef940c852f0d67b7c41e53167"
-        },
-        {
-            "id": 143,
-            "date": "23/09/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.63,
-            "hash_value": "09562fa43631deb26cbbecedd7b8cbb7163e1215985b64233842c1644899e658"
-        },
-        {
-            "id": 144,
-            "date": "23/09/2024",
-            "category": "Dining",
-            "amount": 5.6,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.004,
-            "hash_value": "fe70e4db237420287541b08b6adfa3c561dffdbe5590e674e3a6475d43465885"
-        },
-        {
-            "id": 145,
-            "date": "23/09/2024",
-            "category": "Shopping",
-            "amount": 26.68,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.0224,
-            "hash_value": "200e8fbecdb39c1e1514e1b6382419941d5664e26f33273371f75709c1ced15e"
-        },
-        {
-            "id": 146,
-            "date": "23/09/2024",
-            "category": "Shopping",
-            "amount": 12.82,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.10672,
-            "hash_value": "de5ddc9c20947a7474b0d6218e81d4fd79390cfbea3dfecfb89ca076a13f3bcb"
-        },
-        {
-            "id": 147,
-            "date": "24/09/2024",
-            "category": "Dining",
-            "amount": 6.4,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.05128,
-            "hash_value": "08d38c7f92f5c3ac59ab12b985fae090e38282b2159c83faaca3c0a6492791ba"
-        },
-        {
-            "id": 148,
-            "date": "24/09/2024",
-            "category": "Groceries",
-            "amount": 29.67,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.0256,
-            "hash_value": "a4fa03112a323b4e5f540d1e34375dda8e1021512e4431c21a6ab195d4ebc782"
-        },
-        {
-            "id": 149,
-            "date": "25/09/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.11868000000000001,
-            "hash_value": "b7fefd0cad403394b19fe2a4f177181fccff07156c57a81365ffefe907048f21"
-        },
-        {
-            "id": 150,
-            "date": "25/09/2024",
-            "category": "Groceries",
-            "amount": 8.75,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.004,
-            "hash_value": "20c7c0cb55dbacc92703897b0c3e949b8afe4d5a7053088a1df4a044c0ed42e7"
-        },
-        {
-            "id": 151,
-            "date": "25/09/2024",
-            "category": "Groceries",
-            "amount": 1.75,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.035,
-            "hash_value": "cddee76a759d7ca03f69cd062e289b53575e5b98ce931419196203ce868999c6"
-        },
-        {
-            "id": 152,
-            "date": "25/09/2024",
-            "category": "Groceries",
-            "amount": 69.15,
-            "payment_method": "HSBC",
-            "merchant": "Chinatown",
-            "rebate": 0.007,
-            "hash_value": "c8949fa16d71f4461cf9eefc77fa25273fd69e47f6d323c7d83ca9155f0e849d"
-        },
-        {
-            "id": 153,
-            "date": "25/09/2024",
-            "category": "Transport",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.2766,
-            "hash_value": "0cf6b745625ad5e74a54de00be8b81b616a368e9ab2ef539635c21df2c0da2e0"
-        },
-        {
-            "id": 154,
-            "date": "26/09/2024",
-            "category": "Dining",
-            "amount": 8.0,
-            "payment_method": "HSBC",
-            "merchant": "Market",
-            "rebate": 0.024,
-            "hash_value": "554c638ae183cda640396663e00edafd0ae01d65cdb0d9fc27936a52d77cf836"
-        },
-        {
-            "id": 155,
-            "date": "26/09/2024",
-            "category": "Transport",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.032,
-            "hash_value": "0da020f091fd3e4e6fd33169d6754c8aaa9f088a5032aa0735f83feac3636201"
-        },
-        {
-            "id": 156,
-            "date": "26/09/2024",
-            "category": "Shopping",
-            "amount": 59.75,
-            "payment_method": "HSBC",
-            "merchant": "Clarks",
-            "rebate": 0.024,
-            "hash_value": "ec8fa101bd74234742bace9782ac74ef8e219a8e420d23db3a9a79870fb1ee55"
-        },
-        {
-            "id": 157,
-            "date": "27/09/2024",
-            "category": "Shopping",
-            "amount": 32.5,
-            "payment_method": "HSBC",
-            "merchant": "Primark",
-            "rebate": 0.23900000000000002,
-            "hash_value": "ba2aa7fcdd0b08061b39344f0feaa6c673f2ea83bc3561f8fe03a4b101630bda"
-        },
-        {
-            "id": 158,
-            "date": "27/09/2024",
-            "category": "Shopping",
-            "amount": 12.3,
-            "payment_method": "HSBC",
-            "merchant": "Poundland",
-            "rebate": 0.13,
-            "hash_value": "13f7f9ae052b37f12e2ffb827ca1f328c7b579c9150a9fb44dda04e3cf7e104a"
-        },
-        {
-            "id": 159,
-            "date": "27/09/2024",
-            "category": "Shopping",
-            "amount": 13.6,
-            "payment_method": "HSBC",
-            "merchant": "M&S",
-            "rebate": 0.0492,
-            "hash_value": "7eb7af18877472d2fd5fdf3a81af27644519c47f8eb0303376dbb9bdb2387d17"
-        },
-        {
-            "id": 160,
-            "date": "27/09/2024",
-            "category": "Groceries",
-            "amount": 10.85,
-            "payment_method": "HSBC",
-            "merchant": "Chinatown",
-            "rebate": 0.0544,
-            "hash_value": "23d10b82ccf308808467ae86d93b1be5042778cd1bc52b0a05d4800b77ff5f5e"
-        },
-        {
-            "id": 161,
-            "date": "27/09/2024",
-            "category": "Transport",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.0434,
-            "hash_value": "807dbbf75b5cbc697593e9f6b23da8dcf2c72e1351ef05746f8df6e9ab610e7c"
-        },
-        {
-            "id": 162,
-            "date": "28/09/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "HSBC",
-            "merchant": "Market",
-            "rebate": 0.024,
-            "hash_value": "676fbb8ae5ba0295301073ced17f2304a0d58a9793975988161035656c0cafb1"
-        },
-        {
-            "id": 163,
-            "date": "29/09/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.0076,
-            "hash_value": "06f08043de0bfe5644479b8e6e67241791ad86e7b4582cf08fe28ffe7e372077"
-        },
-        {
-            "id": 164,
-            "date": "29/09/2024",
-            "category": "Laundry",
-            "amount": 10.0,
-            "payment_method": "HSBC",
-            "merchant": "Laundry",
-            "rebate": 0.0076,
-            "hash_value": "61d7ada60e1b6c4f59a02c63b7b02b924a62ce2dd01385f29abd61752ba3b4d3"
-        },
-        {
-            "id": 165,
-            "date": "30/09/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.04,
-            "hash_value": "d919e29227d1b2c55081ff94e4d92e73b1c40d9d7bb5a4d927894a61d44ae5b7"
-        },
-        {
-            "id": 166,
-            "date": "30/09/2024",
-            "category": "Groceries",
-            "amount": 24.98,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.004,
-            "hash_value": "9ca55b160dde6ea8b5030b552a5456991db9850763c0cf4b828fc7df0ef44108"
-        },
-        {
-            "id": 167,
-            "date": "30/09/2024",
-            "category": "Shopping",
-            "amount": 46.91,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.09992000000000001,
-            "hash_value": "0ab530a73a4a80b5cd4486d26ac5e3624cc21aceef00d2d2c3c0b0fb1005661f"
-        },
-        {
-            "id": 168,
+            "id": 564,
             "date": "09/09/2024",
             "category": "Bill",
             "amount": 10.0,
@@ -642,7 +22,7 @@
             "hash_value": "04d03c9e0c2268df75013b3cfb2364f18f3e976eccb7c7eb93a28df5b715936e"
         },
         {
-            "id": 169,
+            "id": 106,
             "date": "09/09/2024",
             "category": "Transport",
             "amount": 74.97,
@@ -652,17 +32,7 @@
             "hash_value": "cbbf922f2dcb83ee5d031159620faa44154fe8d50804a4856beae8fdcd147d3c"
         },
         {
-            "id": 170,
-            "date": "11/09/2024",
-            "category": "Dining",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Caf\u00e9",
-            "rebate": 0.0152,
-            "hash_value": "356a4002dd10438e13c91e7e432db386167e6297fb60970c3ed6f85bf6f77625"
-        },
-        {
-            "id": 171,
+            "id": 565,
             "date": "11/09/2024",
             "category": "Transport",
             "amount": 7.0,
@@ -672,17 +42,7 @@
             "hash_value": "8a39c5044470e073105b5265ccc3524dacec8fa93df32e6343b7661858bd7235"
         },
         {
-            "id": 172,
-            "date": "11/09/2024",
-            "category": "Groceries",
-            "amount": 3.1,
-            "payment_method": "HSBC",
-            "merchant": "Tesco",
-            "rebate": 0.012400000000000001,
-            "hash_value": "ea6b8549a96373c1f16c41200dbeb541d243a9e64dab0b848145e5c44210e701"
-        },
-        {
-            "id": 173,
+            "id": 566,
             "date": "11/09/2024",
             "category": "Leisure",
             "amount": 3.6,
@@ -692,17 +52,7 @@
             "hash_value": "1549f03992248a9261c726f550316953b35734050c62d75369544186cc020e33"
         },
         {
-            "id": 174,
-            "date": "12/09/2024",
-            "category": "Transport",
-            "amount": 13.8,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.055200000000000006,
-            "hash_value": "df2c8f989c4709cc65a52ee1c6c995f36b332182444f95f3474bbe81a644aa4d"
-        },
-        {
-            "id": 175,
+            "id": 567,
             "date": "13/09/2024",
             "category": "Transport",
             "amount": 11.9,
@@ -712,17 +62,7 @@
             "hash_value": "cb4717f80dc3dcd7e9a582333fdbff1517e2ecb2cad4ccdd9c034ad1cc3d0e09"
         },
         {
-            "id": 176,
-            "date": "13/09/2024",
-            "category": "Transport",
-            "amount": 7.0,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.028,
-            "hash_value": "498a5a6da6ddb9aef768899dc99c49e7754e2057c2cd979f9eae5ab6df0ab421"
-        },
-        {
-            "id": 177,
+            "id": 568,
             "date": "14/09/2024",
             "category": "Shopping",
             "amount": 100.1,
@@ -732,17 +72,7 @@
             "hash_value": "e20eccc5f48dac7f0b1dbd5fdd5fd06d35fe2105d11756d6c9cda9166507fb85"
         },
         {
-            "id": 178,
-            "date": "14/09/2024",
-            "category": "Shopping",
-            "amount": 21.68,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.08672,
-            "hash_value": "cda0e8e28461e9433b951296ab7137bf555365f9e54b248856ba13170434b6fd"
-        },
-        {
-            "id": 179,
+            "id": 569,
             "date": "14/09/2024",
             "category": "Shopping",
             "amount": 47.98,
@@ -752,17 +82,7 @@
             "hash_value": "b133b99dfb09f8b89c34e660786ad7b303acca8da7527fc560533261d675eaaa"
         },
         {
-            "id": 180,
-            "date": "15/09/2024",
-            "category": "Transport",
-            "amount": 13.05,
-            "payment_method": "HSBC",
-            "merchant": "TFL",
-            "rebate": 0.0522,
-            "hash_value": "e56cc01c9dddc3d1ecb24943fc3dd13673d74ad27294dffccdc14b8e543cfa02"
-        },
-        {
-            "id": 181,
+            "id": 570,
             "date": "15/09/2024",
             "category": "Shopping",
             "amount": 16.08,
@@ -772,17 +92,7 @@
             "hash_value": "d84cb0df754f101af42977103a21064f12cca6111892bf78ed37d046b427c9f8"
         },
         {
-            "id": 182,
-            "date": "16/09/2024",
-            "category": "Leisure",
-            "amount": 8.81,
-            "payment_method": "HSBC",
-            "merchant": "Club",
-            "rebate": 0.03524,
-            "hash_value": "58bedc7f48d8ec9530dead91201bb5cffed00e9e7be6db1e97669af44776e967"
-        },
-        {
-            "id": 183,
+            "id": 571,
             "date": "16/09/2024",
             "category": "Shopping",
             "amount": 22.1,
@@ -792,17 +102,7 @@
             "hash_value": "30ef0c9d6e6c5c6cddfa9f27b5b6640505e5169e616e3aefe4bc1dfae369a2bf"
         },
         {
-            "id": 184,
-            "date": "17/09/2024",
-            "category": "Groceries",
-            "amount": 8.78,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.03512,
-            "hash_value": "c25f114a67a8f51cd0a29feba0d62cb645bde6d9a44c89d0e93626134689d99e"
-        },
-        {
-            "id": 185,
+            "id": 572,
             "date": "17/09/2024",
             "category": "Groceries",
             "amount": 7.66,
@@ -812,17 +112,7 @@
             "hash_value": "be30dac9971ec52b5db152d053a1d56aa12990ebe073084363ac3ad204fa2e86"
         },
         {
-            "id": 186,
-            "date": "17/09/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0152,
-            "hash_value": "032d24bdd00199f7c6b6eaab9f32804a0a410e38bc377bde544f56dc16a2adec"
-        },
-        {
-            "id": 187,
+            "id": 573,
             "date": "17/09/2024",
             "category": "Dining",
             "amount": 6.0,
@@ -832,17 +122,7 @@
             "hash_value": "9f94490c178435b28ab6f60a9a9a517bf2255d649718aa5202f8abfd9a340b31"
         },
         {
-            "id": 188,
-            "date": "18/09/2024",
-            "category": "Leisure",
-            "amount": 7.8,
-            "payment_method": "HSBC",
-            "merchant": "Club",
-            "rebate": 0.0312,
-            "hash_value": "400f15cdcdf23210e7b98c7ffbc2a34f32fb0a51109ac9b9b0d70c71dfc88ea9"
-        },
-        {
-            "id": 189,
+            "id": 574,
             "date": "18/09/2024",
             "category": "Groceries",
             "amount": 4.08,
@@ -852,17 +132,7 @@
             "hash_value": "10a0541fab71ac4d06828e0e52e6c4031e2109dd634467e1988e53b041716217"
         },
         {
-            "id": 190,
-            "date": "18/09/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0152,
-            "hash_value": "60adfa36c39d97ba04bfc6b4920f807e9f3294dc7067c0d5dc4d3bb6b2602451"
-        },
-        {
-            "id": 191,
+            "id": 575,
             "date": "19/09/2024",
             "category": "Dining",
             "amount": 5.0,
@@ -872,17 +142,7 @@
             "hash_value": "1edf195a42f0ea5d5c00cb718d7f43d46f0651b5038085b56ac886fb49c39ff5"
         },
         {
-            "id": 192,
-            "date": "19/09/2024",
-            "category": "Shopping",
-            "amount": 8.49,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.033960000000000004,
-            "hash_value": "26026f7b104fdcbcd636a1e03575ba8f7b0801d43c5be3b4993ffd1bd1ae19ab"
-        },
-        {
-            "id": 193,
+            "id": 576,
             "date": "20/09/2024",
             "category": "Leisure",
             "amount": 5.27,
@@ -892,17 +152,7 @@
             "hash_value": "2d562e176e47d9d7e77dfa468e5d1012c902fc6d3348e65da8e2ede2d39a4dd8"
         },
         {
-            "id": 194,
-            "date": "20/09/2024",
-            "category": "Shopping",
-            "amount": 21.0,
-            "payment_method": "HSBC",
-            "merchant": "Posters",
-            "rebate": 0.084,
-            "hash_value": "4455e15212a451390e371960c2d4f03f76c453e20c17f3dacbcb41629907e3e2"
-        },
-        {
-            "id": 195,
+            "id": 577,
             "date": "20/09/2024",
             "category": "Shopping",
             "amount": 9.99,
@@ -912,17 +162,7 @@
             "hash_value": "586a2cf50080fd1e0d48e130d0bf9663bc6ca75249db1dfb0f40cb0514af2571"
         },
         {
-            "id": 196,
-            "date": "21/09/2024",
-            "category": "Dining",
-            "amount": 4.0,
-            "payment_method": "HSBC",
-            "merchant": "Market",
-            "rebate": 0.016,
-            "hash_value": "00097baf7d6eb66e9472b82facf363583369617e1ced9d64d96d44c0cdbca243"
-        },
-        {
-            "id": 197,
+            "id": 578,
             "date": "21/09/2024",
             "category": "Groceries",
             "amount": 2.5,
@@ -932,17 +172,7 @@
             "hash_value": "7b3f33145292e1ce2670fe400b1e4fd6feb4d337c31f1a28ea4053fdd72d2c1f"
         },
         {
-            "id": 198,
-            "date": "21/09/2024",
-            "category": "Transport",
-            "amount": 4.5,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.018000000000000002,
-            "hash_value": "2f651e9dcc99f75ee51ddf9e33f59758819d57ff0cd7ac2bdf74ca7f6f97e0b0"
-        },
-        {
-            "id": 199,
+            "id": 579,
             "date": "21/09/2024",
             "category": "Laundry",
             "amount": 10.0,
@@ -952,17 +182,7 @@
             "hash_value": "e16ff4b5974c59e96d390ef9c5cb8fed93938e12b72a79d12d4f5590f41d5115"
         },
         {
-            "id": 200,
-            "date": "21/09/2024",
-            "category": "Groceries",
-            "amount": 13.08,
-            "payment_method": "HSBC",
-            "merchant": "Boots",
-            "rebate": 0.05232,
-            "hash_value": "04c0d43561ca2691fe30b8c1aadd59e875e932ccfe1beddb03c85bace852d125"
-        },
-        {
-            "id": 201,
+            "id": 580,
             "date": "22/09/2024",
             "category": "Dining",
             "amount": 6.2,
@@ -972,17 +192,7 @@
             "hash_value": "399276c37981269be6bc5b3b7600fb98167ebb6562fcb48adef67e2fccb82a82"
         },
         {
-            "id": 202,
-            "date": "22/09/2024",
-            "category": "Groceries",
-            "amount": 4.28,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.01712,
-            "hash_value": "34b93f7b040dc031da9ecf8f32a3703e57579f03c0da3284c9c75807bfc960e0"
-        },
-        {
-            "id": 203,
+            "id": 581,
             "date": "22/09/2024",
             "category": "Dining",
             "amount": 7.0,
@@ -992,17 +202,7 @@
             "hash_value": "a65eadad3e6dd4d73db6dbf790ff5329a6183c21ab5370b8000a7ac542f854b5"
         },
         {
-            "id": 204,
-            "date": "23/09/2024",
-            "category": "Groceries",
-            "amount": 4.49,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.01796,
-            "hash_value": "413fa3587068418c8e0fc94182cd0cef850db57c25acf4d84696f3ad77afce41"
-        },
-        {
-            "id": 205,
+            "id": 582,
             "date": "23/09/2024",
             "category": "Sport",
             "amount": 157.5,
@@ -1012,17 +212,7 @@
             "hash_value": "2ff1278bb42dcc28ef59402c24a42904bc01de4a76fee9b77b391ca92169c4c7"
         },
         {
-            "id": 206,
-            "date": "23/09/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.004,
-            "hash_value": "a0ab5d3892081c0206d7c202b4df0585a1c744bcc372014363aff7dee445b902"
-        },
-        {
-            "id": 207,
+            "id": 583,
             "date": "23/09/2024",
             "category": "Dining",
             "amount": 5.6,
@@ -1032,17 +222,7 @@
             "hash_value": "a108b750a08608d3fc04ff17416d01effa6d809053da804cdeba1112f22fb397"
         },
         {
-            "id": 208,
-            "date": "23/09/2024",
-            "category": "Shopping",
-            "amount": 26.68,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.10672,
-            "hash_value": "db4b9c4d026a36970987227b4b721f7cdd26381e7db205c7aaea273081f503c2"
-        },
-        {
-            "id": 209,
+            "id": 584,
             "date": "23/09/2024",
             "category": "Shopping",
             "amount": 12.82,
@@ -1052,17 +232,7 @@
             "hash_value": "4e04634cb5e8bea8692ac10a08dc72c36d594125c27a767eba73455e9b8e1105"
         },
         {
-            "id": 210,
-            "date": "24/09/2024",
-            "category": "Dining",
-            "amount": 6.4,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.0256,
-            "hash_value": "f9d6ee5ceb0d48ec38d0006b3c5364481f0b7caed4114e46b431cfebaa3e5edb"
-        },
-        {
-            "id": 211,
+            "id": 585,
             "date": "24/09/2024",
             "category": "Groceries",
             "amount": 29.67,
@@ -1072,17 +242,7 @@
             "hash_value": "93a5f3edc625f9c71002998d1feb978065588d5f1c05995021a9dcbae5bde110"
         },
         {
-            "id": 212,
-            "date": "25/09/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.004,
-            "hash_value": "0ef39895cdfa124fa88b3e40e2173cf2565d70df79f0b065ed948caeac502165"
-        },
-        {
-            "id": 213,
+            "id": 586,
             "date": "25/09/2024",
             "category": "Groceries",
             "amount": 8.75,
@@ -1092,17 +252,7 @@
             "hash_value": "043467c019e38e16889abf2e1010e5c769e6c002f4ca539db4c3ac72dbe388d3"
         },
         {
-            "id": 214,
-            "date": "25/09/2024",
-            "category": "Groceries",
-            "amount": 1.75,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.007,
-            "hash_value": "0a9aa0abd7eb434b926b4b27abaa3be10248893ea52fbbc2cf358a4f25c68ae1"
-        },
-        {
-            "id": 215,
+            "id": 587,
             "date": "25/09/2024",
             "category": "Groceries",
             "amount": 69.15,
@@ -1112,17 +262,7 @@
             "hash_value": "dffed5718cd518418c406babf5bd9662eeb6c2131edcdc15e8cd388853072ab0"
         },
         {
-            "id": 216,
-            "date": "25/09/2024",
-            "category": "Transport",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.024,
-            "hash_value": "3b1f02953b8cde31c826484b5127a277a671ed7bb70e11748a14f3c45b6d291e"
-        },
-        {
-            "id": 217,
+            "id": 588,
             "date": "26/09/2024",
             "category": "Dining",
             "amount": 8.0,
@@ -1132,17 +272,7 @@
             "hash_value": "fc9202a0aa0f5f68f17de6895ce2a78761893cf5c56d33df967c63e6214238d4"
         },
         {
-            "id": 218,
-            "date": "26/09/2024",
-            "category": "Transport",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.024,
-            "hash_value": "850586352ed4795a63787caf7030fcf004d7652549322a711de8d467365ff277"
-        },
-        {
-            "id": 219,
+            "id": 589,
             "date": "26/09/2024",
             "category": "Shopping",
             "amount": 59.75,
@@ -1152,17 +282,7 @@
             "hash_value": "220b453c15cfbd87460919170ad25d70566c1219e09ce7654b3dcff486f24fb6"
         },
         {
-            "id": 220,
-            "date": "27/09/2024",
-            "category": "Shopping",
-            "amount": 32.5,
-            "payment_method": "HSBC",
-            "merchant": "Primark",
-            "rebate": 0.13,
-            "hash_value": "7067498f48c16f1b0629cf33e2179bf9a85005f42c29fd4caedb66af00521f25"
-        },
-        {
-            "id": 221,
+            "id": 590,
             "date": "27/09/2024",
             "category": "Shopping",
             "amount": 12.3,
@@ -1172,17 +292,7 @@
             "hash_value": "861a512b44466a6570045b98473bbd803b34bc2f4f16d43628759606b63cf15a"
         },
         {
-            "id": 222,
-            "date": "27/09/2024",
-            "category": "Shopping",
-            "amount": 13.6,
-            "payment_method": "HSBC",
-            "merchant": "M&S",
-            "rebate": 0.0544,
-            "hash_value": "1db1a79a1d28e436704c801728078f17491480b7470ac9a8529a88efa3506f5f"
-        },
-        {
-            "id": 223,
+            "id": 591,
             "date": "27/09/2024",
             "category": "Groceries",
             "amount": 10.85,
@@ -1192,17 +302,7 @@
             "hash_value": "36656849d38e52e9fdbb66949174126897740bc4e56621d04cd507522253b3d2"
         },
         {
-            "id": 224,
-            "date": "27/09/2024",
-            "category": "Transport",
-            "amount": 6.0,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.024,
-            "hash_value": "b5187fa16458972d1a98e386ee286ed8344bb1adcd1e4d49f0851c4bd3220379"
-        },
-        {
-            "id": 225,
+            "id": 592,
             "date": "28/09/2024",
             "category": "Dining",
             "amount": 1.9,
@@ -1212,7 +312,7 @@
             "hash_value": "6b60a466c19cf68e631d9512763d4ad0e28c0814386dde41d8aac44d290f1ac1"
         },
         {
-            "id": 227,
+            "id": 593,
             "date": "29/09/2024",
             "category": "Laundry",
             "amount": 10.0,
@@ -1222,17 +322,7 @@
             "hash_value": "7d61bed00a63533d9cbae1988745385f09db50f45e8ea4e571828437907dc315"
         },
         {
-            "id": 228,
-            "date": "30/09/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.004,
-            "hash_value": "db2fa680e7ed440d2111ebcbe56d9b1ae3c926747490b8019d31a459ec375c77"
-        },
-        {
-            "id": 229,
+            "id": 594,
             "date": "30/09/2024",
             "category": "Groceries",
             "amount": 24.98,
@@ -1242,17 +332,7 @@
             "hash_value": "9e084c4a84de5aa177fc4869912c9abb84dc1ebc1177ed91530ab9caddf26137"
         },
         {
-            "id": 230,
-            "date": "30/09/2024",
-            "category": "Shopping",
-            "amount": 46.91,
-            "payment_method": "HSBC",
-            "merchant": "Amazon",
-            "rebate": 0.18764,
-            "hash_value": "22d7334f1e4f949e73f1f23540ada26c0bbd0aa5d2a44c73885c5a00cf7b3908"
-        },
-        {
-            "id": 231,
+            "id": 595,
             "date": "01/10/2024",
             "category": "Leisure",
             "amount": 3.99,
@@ -1262,17 +342,7 @@
             "hash_value": "96bf7bf89974e8926970ab3fea2829f90edab6be346808dc0bb57a1cd81d0ac8"
         },
         {
-            "id": 232,
-            "date": "01/10/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0152,
-            "hash_value": "5c60eee1f9a4bdac0002aa32c2c56036aafd12b3934727959ab92c4eab640861"
-        },
-        {
-            "id": 233,
+            "id": 596,
             "date": "01/10/2024",
             "category": "Groceries",
             "amount": 4.49,
@@ -1282,17 +352,7 @@
             "hash_value": "5b2f3e3e88624f3388113147b54d0bda06e31b1c304c9f9688159c2c0c280d84"
         },
         {
-            "id": 234,
-            "date": "02/10/2024",
-            "category": "Groceries",
-            "amount": 43.47,
-            "payment_method": "HSBC",
-            "merchant": "Sainsbury's",
-            "rebate": 0.17388,
-            "hash_value": "32832f8a3f4500283b2992923d9c79f8764de49aeaff50572a97ae23c3689418"
-        },
-        {
-            "id": 235,
+            "id": 597,
             "date": "02/10/2024",
             "category": "Sport",
             "amount": 96.17,
@@ -1302,17 +362,7 @@
             "hash_value": "88640ca1a3eab036909d731ae7e33f33909b020548cd2231953f963019fd7f3e"
         },
         {
-            "id": 236,
-            "date": "03/10/2024",
-            "category": "Savings",
-            "amount": 250.0,
-            "payment_method": "Lloyds Savings",
-            "merchant": "Lloyds Savings",
-            "rebate": 0.0,
-            "hash_value": "4a30b6d9e5f8ec8e7a088160c0e7cd16f388217b5adaced4c63c3cb48d134e10"
-        },
-        {
-            "id": 237,
+            "id": 598,
             "date": "03/10/2024",
             "category": "Groceries",
             "amount": 0.45,
@@ -1322,17 +372,7 @@
             "hash_value": "dacc33f8b4dcb1b5efddbc436d4b32de2fecbe2d418606f714df80829978ffbd"
         },
         {
-            "id": 238,
-            "date": "04/10/2024",
-            "category": "Groceries",
-            "amount": 5.27,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.021079999999999998,
-            "hash_value": "2d88cce44b9b17c992bee0c326f2dd544cde207698896393fef3f6887a373719"
-        },
-        {
-            "id": 239,
+            "id": 599,
             "date": "05/10/2024",
             "category": "Leisure",
             "amount": 3.8,
@@ -1342,17 +382,7 @@
             "hash_value": "17eab550852fc1d9a4d93fd724fb8c06d403c18b0e3d7b816165626f85e04fc1"
         },
         {
-            "id": 240,
-            "date": "05/10/2024",
-            "category": "Leisure",
-            "amount": 2.99,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.011960000000000002,
-            "hash_value": "9b49a0fbaefc0f0aaa7a540187eb309dc469de70e5c34c3dc76b160be16701f4"
-        },
-        {
-            "id": 241,
+            "id": 600,
             "date": "05/10/2024",
             "category": "Post",
             "amount": 12.95,
@@ -1362,7 +392,7 @@
             "hash_value": "bb1302c7d0bc77821568062d9e6b998610ab436c5a9214cbfc2d1e720ea023c1"
         },
         {
-            "id": 242,
+            "id": 601,
             "date": "06/10/2024",
             "category": "Leisure",
             "amount": 3.2,
@@ -1372,17 +402,7 @@
             "hash_value": "6c49ac0d453c9ce8b41e9b8356b8a44f33369405b48a61fe6a4b2dc260f93696"
         },
         {
-            "id": 244,
-            "date": "06/10/2024",
-            "category": "Dining",
-            "amount": 1.99,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.00796,
-            "hash_value": "b2d211bd14bdd886abbbbab0cb8c158e8d879b121fb35212a6549e246dcf4f24"
-        },
-        {
-            "id": 245,
+            "id": 602,
             "date": "06/10/2024",
             "category": "Leisure",
             "amount": 6.28,
@@ -1392,17 +412,7 @@
             "hash_value": "f8ad3d3d8951718a46377d55b9c7de6af245293960d56c9b19da493e7419f08f"
         },
         {
-            "id": 246,
-            "date": "07/10/2024",
-            "category": "Groceries",
-            "amount": 2.64,
-            "payment_method": "Lloyds",
-            "merchant": "Spar",
-            "rebate": 0.0,
-            "hash_value": "9e9429a73944db72cdf324bf5dec087f6598becbf4c08c8bc7fec6be6efcd1cd"
-        },
-        {
-            "id": 247,
+            "id": 603,
             "date": "08/10/2024",
             "category": "Leisure",
             "amount": 4.26,
@@ -1412,17 +422,7 @@
             "hash_value": "518f29f53caebe20eab679b7cca33911f2728cfa0dfec308ab8b9bcee8730e4c"
         },
         {
-            "id": 248,
-            "date": "09/10/2024",
-            "category": "Dining",
-            "amount": 7.3,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.0292,
-            "hash_value": "08bcbc70948d7e84c5d3070ebf53f26bebf364cbe45c8cea87be81841ae55829"
-        },
-        {
-            "id": 249,
+            "id": 604,
             "date": "09/10/2024",
             "category": "Groceries",
             "amount": 7.0,
@@ -1432,17 +432,7 @@
             "hash_value": "414ff7a68c667c8e275d4ba80d0192eb949f0ef8fe893e82b2ec1b84464bbfd8"
         },
         {
-            "id": 250,
-            "date": "09/10/2024",
-            "category": "Groceries",
-            "amount": 2.09,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.00836,
-            "hash_value": "3a57efad3a8c9b6a5087721d2fc83e6e880d484432470c8361b19f2e1b10a671"
-        },
-        {
-            "id": 251,
+            "id": 605,
             "date": "09/10/2024",
             "category": "Sport",
             "amount": 1.0,
@@ -1452,17 +442,7 @@
             "hash_value": "7fe214a612e3c7d585012aca01bf7769ebdbd5bdbdf5eb86efb6a5fd93d54f0d"
         },
         {
-            "id": 252,
-            "date": "10/10/2024",
-            "category": "Leisure",
-            "amount": 6.6,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0264,
-            "hash_value": "4e7ae78bdc85a18fb64217a867a508bf6c9fb67c94bc39e58038efb8109d2b86"
-        },
-        {
-            "id": 253,
+            "id": 606,
             "date": "10/10/2024",
             "category": "Leisure",
             "amount": 3.2,
@@ -1472,17 +452,7 @@
             "hash_value": "ee8c70950e7be03446355c66aa5816e7d1ec64eb29be8bace76a8bbbda9621af"
         },
         {
-            "id": 255,
-            "date": "10/10/2024",
-            "category": "Groceries",
-            "amount": 6.5,
-            "payment_method": "Lloyds",
-            "merchant": "Boots",
-            "rebate": 0.0,
-            "hash_value": "0f35060545bb862e083d970c7cdcb62b1906c937549c60296247dc0dc39ee0bf"
-        },
-        {
-            "id": 256,
+            "id": 607,
             "date": "10/10/2024",
             "category": "Leisure",
             "amount": 7.04,
@@ -1492,17 +462,7 @@
             "hash_value": "1a2beeca8e9ec7fe4574ada497011d5d552c063840696d42017e6317faab9886"
         },
         {
-            "id": 257,
-            "date": "10/10/2024",
-            "category": "Transport",
-            "amount": 4.5,
-            "payment_method": "Lloyds",
-            "merchant": "First Bus",
-            "rebate": 0.0,
-            "hash_value": "d857fa3818303dd69517864b8f2e3bd55a8f6cfb0a3bc33515c22523e6332b1b"
-        },
-        {
-            "id": 258,
+            "id": 608,
             "date": "10/10/2024",
             "category": "Groceries",
             "amount": 44.11,
@@ -1512,17 +472,7 @@
             "hash_value": "ea4631ad2fb76684cb49ebbb997b40c1de55bbd1a745cfae446b21f8157ae28a"
         },
         {
-            "id": 259,
-            "date": "10/10/2024",
-            "category": "Groceries",
-            "amount": 1.55,
-            "payment_method": "Lloyds",
-            "merchant": "Sainsbury's",
-            "rebate": 0.07750000000000001,
-            "hash_value": "08b4eaaa3712eaa44750f3dcaf0174e77db53faa7385614209a5e3bb9d05d236"
-        },
-        {
-            "id": 260,
+            "id": 609,
             "date": "11/10/2024",
             "category": "Leisure",
             "amount": 6.28,
@@ -1532,17 +482,7 @@
             "hash_value": "118449c766f822be052d16a452d74c2456f8f0417ef7b0a2ed08a7daf1631568"
         },
         {
-            "id": 261,
-            "date": "11/10/2024",
-            "category": "Transport",
-            "amount": 4.5,
-            "payment_method": "Lloyds",
-            "merchant": "First Bus",
-            "rebate": 0.0,
-            "hash_value": "57666ff7eb1bc5fd822c61e94f0bdc0500d9af423a961a11f3443c3393e6e6bb"
-        },
-        {
-            "id": 262,
+            "id": 610,
             "date": "11/10/2024",
             "category": "Groceries",
             "amount": 40.2,
@@ -1552,17 +492,7 @@
             "hash_value": "260177d7d5b3479371ba0487c9ec4a84e620fdf1c4d779fb2ecb497fa25b3ec4"
         },
         {
-            "id": 263,
-            "date": "11/10/2024",
-            "category": "UEA",
-            "amount": 2598.75,
-            "payment_method": "HSBC",
-            "merchant": "UEA",
-            "rebate": 10.395,
-            "hash_value": "49b4441f26ad820f7b70b2bebdc269d4ed63b8ec32fa22127a640b2584256041"
-        },
-        {
-            "id": 264,
+            "id": 611,
             "date": "13/10/2024",
             "category": "Shopping",
             "amount": 184.57,
@@ -1572,17 +502,7 @@
             "hash_value": "5defcaad8f371071fd2f31195350c0db180ed3a6a0cefe15fef08b442bef9860"
         },
         {
-            "id": 265,
-            "date": "13/10/2024",
-            "category": "Leisure",
-            "amount": 2.99,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.011960000000000002,
-            "hash_value": "eaa14e42a3796f771a18414c042361fc886a3693456e81da0e4c651b66ffda88"
-        },
-        {
-            "id": 266,
+            "id": 612,
             "date": "13/10/2024",
             "category": "UEA",
             "amount": 7366.0,
@@ -1592,17 +512,7 @@
             "hash_value": "ec2e6e800f72ac47de81239c510279e1a34348f5ae472774532f2d559dadb852"
         },
         {
-            "id": 267,
-            "date": "13/10/2024",
-            "category": "Bill",
-            "amount": 10.0,
-            "payment_method": "HSBC",
-            "merchant": "Voxi",
-            "rebate": 0.04,
-            "hash_value": "7be2925bcc8bc77944529809b59b4cbcd7fae9d707ef270bf93f62b2f29d3fcd"
-        },
-        {
-            "id": 268,
+            "id": 613,
             "date": "14/10/2024",
             "category": "Sport",
             "amount": 2.04,
@@ -1612,17 +522,7 @@
             "hash_value": "c15bd574e9db762689f6603143be7ff86ab8a347a308e57392e9dbb0d52dce29"
         },
         {
-            "id": 269,
-            "date": "15/10/2024",
-            "category": "Dining",
-            "amount": 5.2,
-            "payment_method": "Lloyds",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.0,
-            "hash_value": "799b739ad82847167a1df9240031e08eea3a64a90451131bd273c6cde92e8cec"
-        },
-        {
-            "id": 270,
+            "id": 614,
             "date": "15/10/2024",
             "category": "Groceries",
             "amount": 5.29,
@@ -1632,17 +532,7 @@
             "hash_value": "beace9352e55c4293c4b9d57d470eb35175c1e18d1d3720cd66ace3f734bdb13"
         },
         {
-            "id": 271,
-            "date": "16/10/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "Lloyds",
-            "merchant": "Bar SU",
-            "rebate": 0.0,
-            "hash_value": "53dc0230c782685fb96719c0700baee4a5c08f687dcaa8234dcb3639a756a7de"
-        },
-        {
-            "id": 272,
+            "id": 615,
             "date": "16/10/2024",
             "category": "Leisure",
             "amount": 3.99,
@@ -1652,17 +542,7 @@
             "hash_value": "4613094edb222c9109c923af4cc0ad18faf2109496cc04d49ec59d074d389107"
         },
         {
-            "id": 273,
-            "date": "16/10/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0152,
-            "hash_value": "290d4ac12bcd15eaf2103978a4ad59969444edf9fdabf048d142bb9433997a25"
-        },
-        {
-            "id": 274,
+            "id": 616,
             "date": "16/10/2024",
             "category": "Leisure",
             "amount": 7.29,
@@ -1672,17 +552,7 @@
             "hash_value": "87a79d7e027f4f08e0a3151292212d372c77d8d0556a6fe63abb473d05b8b09b"
         },
         {
-            "id": 275,
-            "date": "16/10/2024",
-            "category": "Groceries",
-            "amount": 0.75,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.003,
-            "hash_value": "08482137340497c4cf8132e53eff6a5bfafce0165eca0dadb0dcb258e8a24031"
-        },
-        {
-            "id": 276,
+            "id": 617,
             "date": "17/10/2024",
             "category": "Dining",
             "amount": 9.99,
@@ -1692,17 +562,7 @@
             "hash_value": "56a67704d41c36d42215a55a6e4adab886fc8374bdce7e07426efcc11872c681"
         },
         {
-            "id": 277,
-            "date": "17/10/2024",
-            "category": "Savings",
-            "amount": 4800.0,
-            "payment_method": "HSBC Savings",
-            "merchant": "HSBC Savings",
-            "rebate": 0.0,
-            "hash_value": "aaa478a6af020852d97ee0bd6b53dff5e93b0ccd3ee224531ad533cf1cd14e83"
-        },
-        {
-            "id": 278,
+            "id": 618,
             "date": "17/10/2024",
             "category": "Groceries",
             "amount": 18.99,
@@ -1712,17 +572,7 @@
             "hash_value": "5cd7abbd6c09bedf8f06e8784d35fef3aabadf977f702430569bc20b7266572a"
         },
         {
-            "id": 279,
-            "date": "17/10/2024",
-            "category": "Shopping",
-            "amount": 17.5,
-            "payment_method": "HSBC",
-            "merchant": "Poundland",
-            "rebate": 0.07,
-            "hash_value": "4941062fd50563f0e9865164566415d30a1de0a1c80f58516b11d99000384ff1"
-        },
-        {
-            "id": 280,
+            "id": 619,
             "date": "17/10/2024",
             "category": "Groceries",
             "amount": 27.53,
@@ -1732,17 +582,7 @@
             "hash_value": "dc54d115f842010d0e1d1e084a4844e8a105607f709d49a8801216a428335c37"
         },
         {
-            "id": 281,
-            "date": "17/10/2024",
-            "category": "Sport",
-            "amount": 7.5,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.03,
-            "hash_value": "d69ef99e3968590437dcee15c17017809cd0a8ef9fe6cd2cc29b049fbf488a41"
-        },
-        {
-            "id": 282,
+            "id": 620,
             "date": "17/10/2024",
             "category": "Sport",
             "amount": 1.0,
@@ -1752,17 +592,7 @@
             "hash_value": "36e0f782c0cb18bfbdda28f8ebdc48c7e0c85dff62215718ec8458d61b3af073"
         },
         {
-            "id": 283,
-            "date": "18/10/2024",
-            "category": "Dining",
-            "amount": 1.99,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.00796,
-            "hash_value": "3fe02b9a92686c9b1647ed4e19d7aa9af3c9144be7b36df5d2326e04ab0b4fbb"
-        },
-        {
-            "id": 284,
+            "id": 621,
             "date": "18/10/2024",
             "category": "Transport",
             "amount": 4.5,
@@ -1772,17 +602,7 @@
             "hash_value": "8e7e65eef3aa51c1687b6ff056f4daa8d062e015c6fa6c4c69e3ac15d2044eec"
         },
         {
-            "id": 285,
-            "date": "18/10/2024",
-            "category": "Groceries",
-            "amount": 2.65,
-            "payment_method": "Lloyds",
-            "merchant": "Sainsbury's",
-            "rebate": 0.1325,
-            "hash_value": "03c987a561782c208be928bda2a9bdc7f44bcce6f1141bbfa321bc29dac6b883"
-        },
-        {
-            "id": 286,
+            "id": 622,
             "date": "18/10/2024",
             "category": "Sport",
             "amount": 1.8,
@@ -1792,17 +612,7 @@
             "hash_value": "af16ecd85df14e4a6d1c9ba26c743ec34021544171326f1569c234dad459fc1e"
         },
         {
-            "id": 287,
-            "date": "18/10/2024",
-            "category": "Leisure",
-            "amount": 3.8,
-            "payment_method": "HSBC",
-            "merchant": "Wetherspoons",
-            "rebate": 0.0152,
-            "hash_value": "7d459cb4145ad8a85db294a66ce4438a21a3fc94dfa133875b88b618878df4d5"
-        },
-        {
-            "id": 288,
+            "id": 623,
             "date": "19/10/2024",
             "category": "Sport",
             "amount": 3.0,
@@ -1812,17 +622,7 @@
             "hash_value": "bd2b9bc9fc8c49a22d74d9374d08b532ab1e6dbb3beb7b749c4ad7fa446347f6"
         },
         {
-            "id": 289,
-            "date": "19/10/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.0076,
-            "hash_value": "5f7df05121cfdfc66e4bf593d0e958f1bd84990256b6d8538aaa1aed147f1d2b"
-        },
-        {
-            "id": 290,
+            "id": 624,
             "date": "20/10/2024",
             "category": "Dining",
             "amount": 1.99,
@@ -1832,17 +632,7 @@
             "hash_value": "b79713cfe6d985bdab9782cb5852e54edf8a828d7ade7c27420b99e94437ab23"
         },
         {
-            "id": 291,
-            "date": "20/10/2024",
-            "category": "Transport",
-            "amount": 4.5,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.018000000000000002,
-            "hash_value": "77f21a796ef43c77c50fc9719dc88c997441bb89017ade5697fd6f8e7dcb2255"
-        },
-        {
-            "id": 292,
+            "id": 625,
             "date": "21/10/2024",
             "category": "Investing",
             "amount": 100.0,
@@ -1852,17 +642,7 @@
             "hash_value": "c048fe420b064ceb08444634ec09c5d097ff129bfe12ddec0ac8a7c4f3e483a5"
         },
         {
-            "id": 293,
-            "date": "21/10/2024",
-            "category": "Laundry",
-            "amount": 10.0,
-            "payment_method": "HSBC",
-            "merchant": "Laundry",
-            "rebate": 0.04,
-            "hash_value": "52d3c8b745c1408f6411dbd2045522983b3a5cd2188806bb49b6c07e15dea5f9"
-        },
-        {
-            "id": 294,
+            "id": 626,
             "date": "22/10/2024",
             "category": "Leisure",
             "amount": 3.8,
@@ -1872,17 +652,7 @@
             "hash_value": "e9d8243425508990949574b3b37f9d01ea227aac43de4362492786b195a12452"
         },
         {
-            "id": 296,
-            "date": "22/10/2024",
-            "category": "Bill",
-            "amount": 34.0,
-            "payment_method": "HSBC",
-            "merchant": "Gov",
-            "rebate": 0.136,
-            "hash_value": "ee61aa00ff0ecbca963bfb466bc0e9de56f7caacd464a05959fc31df66c596e1"
-        },
-        {
-            "id": 297,
+            "id": 627,
             "date": "23/10/2024",
             "category": "Dining",
             "amount": 5.0,
@@ -1892,17 +662,7 @@
             "hash_value": "0cb2097d3e1c477860fe130e8a6e6aee6b0bc0787cd90b42c4b332fe95af863c"
         },
         {
-            "id": 298,
-            "date": "23/10/2024",
-            "category": "Leisure",
-            "amount": 4.26,
-            "payment_method": "HSBC",
-            "merchant": "Club",
-            "rebate": 0.01704,
-            "hash_value": "2587b9a74e93f2890550acf57a14b2a3968f8a6213bf98e3a47e1beeb08dbc7c"
-        },
-        {
-            "id": 299,
+            "id": 628,
             "date": "24/10/2024",
             "category": "Leisure",
             "amount": 5.0,
@@ -1912,17 +672,17 @@
             "hash_value": "dcbd05706283e58795f4dfc685623161fb30c97180cb88a8159cdd73a9ccefe6"
         },
         {
-            "id": 300,
+            "id": 629,
             "date": "24/10/2024",
-            "category": "Leisure",
-            "amount": 3.2,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0128,
-            "hash_value": "477cfc7bc25e454bb4f5f4638b6be61fa1ef0761a3feebe6e8b21859ccef75a5"
+            "category": "Investing",
+            "amount": NaN,
+            "payment_method": "HSBC Invest",
+            "merchant": "Interactive Brokers",
+            "rebate": 0.0,
+            "hash_value": "2bbf12e5e7fddb8d8c1a2462d3e22928006ac23ca2ecee57a10a462885ce0f40"
         },
         {
-            "id": 303,
+            "id": 630,
             "date": "26/10/2024",
             "category": "Sport",
             "amount": 1.0,
@@ -1932,7 +692,7 @@
             "hash_value": "ed8a8b2da148a4acc0a2f46f17eef20a4c3a247ddd4a1b5454323579f1fc84d6"
         },
         {
-            "id": 304,
+            "id": 631,
             "date": "27/10/2024",
             "category": "Transport",
             "amount": 2.0,
@@ -1942,17 +702,7 @@
             "hash_value": "39fa4099306d95dc52ab6de410cbb60cd2d74fa346d0850e371646aba294504c"
         },
         {
-            "id": 308,
-            "date": "27/10/2024",
-            "category": "Dining",
-            "amount": 3.0,
-            "payment_method": "HSBC",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.012,
-            "hash_value": "b2afd19564da505c1495566419f5fb4593da65bce4e91880491bfabc2fb9d839"
-        },
-        {
-            "id": 309,
+            "id": 632,
             "date": "27/10/2024",
             "category": "Leisure",
             "amount": 4.26,
@@ -1962,37 +712,7 @@
             "hash_value": "f7b20771801f12f291668c4e25aea5ad67060b4fa24a1bdf17a846ab8ded1b69"
         },
         {
-            "id": 310,
-            "date": "27/10/2024",
-            "category": "Dining",
-            "amount": 44.6,
-            "payment_method": "HSBC",
-            "merchant": "Dining",
-            "rebate": 0.1784,
-            "hash_value": "b864629992882c4f7737ff124c33b302c46b7821dd432438b7772bb7e30e4724"
-        },
-        {
-            "id": 311,
-            "date": "27/10/2024",
-            "category": "Dining",
-            "amount": -26.0,
-            "payment_method": "nan",
-            "merchant": "Dining",
-            "rebate": 0.0,
-            "hash_value": "ec8ed437995b465f93869f4ef181f5ee1d3853ec4ddf6d202a3dc0aba6c94a47"
-        },
-        {
-            "id": 312,
-            "date": "27/10/2024",
-            "category": "Transport",
-            "amount": 4.5,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.018000000000000002,
-            "hash_value": "a6a9aa10daacbc8f098f4a6ec6e478109ea807e303d8f027d87990df6961b751"
-        },
-        {
-            "id": 313,
+            "id": 634,
             "date": "27/10/2024",
             "category": "Leisure",
             "amount": 20.0,
@@ -2002,17 +722,7 @@
             "hash_value": "d544482e00cf98b0628f1b19f9fa64f267f754cbd0bbb8290e44237967cd9410"
         },
         {
-            "id": 314,
-            "date": "27/10/2024",
-            "category": "Groceries",
-            "amount": 2.89,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.01156,
-            "hash_value": "26b91b256a45e447db52bf8aa04b28ff03aef4728c7cb41d55bca6c0193190d8"
-        },
-        {
-            "id": 315,
+            "id": 635,
             "date": "27/10/2024",
             "category": "Dining",
             "amount": 3.3,
@@ -2022,17 +732,7 @@
             "hash_value": "b9597497ec75426d8f75a7140e41472cbcad6e9419b30180ee1194a8d42ad2e5"
         },
         {
-            "id": 316,
-            "date": "29/10/2024",
-            "category": "Leisure",
-            "amount": 50.0,
-            "payment_method": "HSBC",
-            "merchant": "Deep Dish",
-            "rebate": 0.2,
-            "hash_value": "025c83608673187661a1baf4eb0f3c05b095a0399c2405756e8c0edd020d3353"
-        },
-        {
-            "id": 317,
+            "id": 636,
             "date": "30/10/2024",
             "category": "Dining",
             "amount": 18.25,
@@ -2042,17 +742,7 @@
             "hash_value": "802c6def3b009388a59b14657062bab289c4e95f101d31670a9dd4c376248007"
         },
         {
-            "id": 318,
-            "date": "30/10/2024",
-            "category": "Transport",
-            "amount": 70.0,
-            "payment_method": "HSBC",
-            "merchant": "Rail",
-            "rebate": 0.28,
-            "hash_value": "6e846f38c7bb9be349dc043f99e887ba3f6b7b49bf02acee57e21e0d0940a438"
-        },
-        {
-            "id": 319,
+            "id": 637,
             "date": "30/10/2024",
             "category": "Groceries",
             "amount": 5.58,
@@ -2062,17 +752,7 @@
             "hash_value": "56cbe433f717893b7b3000f0244340d807f70aab04f7fd2b8b938a511e45446f"
         },
         {
-            "id": 320,
-            "date": "31/10/2024",
-            "category": "Groceries",
-            "amount": 3.03,
-            "payment_method": "HSBC",
-            "merchant": "Aldi",
-            "rebate": 0.012119999999999999,
-            "hash_value": "662d10980cd2d792b837afe94c90f6014d3d059e0865c732779fa66b48d4f38b"
-        },
-        {
-            "id": 321,
+            "id": 638,
             "date": "31/10/2024",
             "category": "Groceries",
             "amount": 41.83,
@@ -2082,17 +762,7 @@
             "hash_value": "a82aa59c52263f606c5814b37fc539ba1d69907cdaebc8e8db22d8a8d3fcf1bb"
         },
         {
-            "id": 322,
-            "date": "31/10/2024",
-            "category": "Groceries",
-            "amount": 1.0,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.004,
-            "hash_value": "70a68fafef4ca84d1917db318f5915b10ffa644bb5a1bfc8a66d44c80bd1278d"
-        },
-        {
-            "id": 323,
+            "id": 639,
             "date": "11/11/2024",
             "category": "Groceries",
             "amount": 55.05,
@@ -2102,17 +772,7 @@
             "hash_value": "b23e3422b363d3c6141766b882866182bc08482572a6a5f2cb236160b3fde734"
         },
         {
-            "id": 324,
-            "date": "25/11/2024",
-            "category": "Groceries",
-            "amount": 47.71,
-            "payment_method": "Chase",
-            "merchant": "Aldi",
-            "rebate": 0.4771,
-            "hash_value": "fd7e5cfbce28452aa70fe34e88db27ee6016cb315ac6f7935621b59eb54e726d"
-        },
-        {
-            "id": 325,
+            "id": 640,
             "date": "07/11/2024",
             "category": "Groceries",
             "amount": 20.29,
@@ -2122,17 +782,7 @@
             "hash_value": "8a98192eaf8643ab4587432b7276854421f33776fab514d9828b45fac0674439"
         },
         {
-            "id": 326,
-            "date": "28/11/2024",
-            "category": "Groceries",
-            "amount": 6.64,
-            "payment_method": "Chase",
-            "merchant": "Aldi",
-            "rebate": 0.0664,
-            "hash_value": "9a0cb2eb1d93c4ac757adb359f5ae4f865d38caea5d7e8e237cb1d9f96907a6f"
-        },
-        {
-            "id": 327,
+            "id": 641,
             "date": "07/11/2024",
             "category": "Shopping",
             "amount": 158.97,
@@ -2142,17 +792,7 @@
             "hash_value": "ff1465d65aacaf13e42b5dd8d55969765bf4a0404a68125d6a1308bc522df5f2"
         },
         {
-            "id": 328,
-            "date": "14/11/2024",
-            "category": "Shopping",
-            "amount": 50.29,
-            "payment_method": "Chase",
-            "merchant": "Amazon",
-            "rebate": 0.5029,
-            "hash_value": "7e1059bbd6f27f9b796bcbf1dee19f2c554f34ceff142a56e9e4cf2063bfe7aa"
-        },
-        {
-            "id": 329,
+            "id": 642,
             "date": "29/11/2024",
             "category": "Leisure",
             "amount": 5.99,
@@ -2162,17 +802,7 @@
             "hash_value": "aaf9450a224487b58d77dc9912f537dc909d1d0f541c8ddcde3d43560f12caf4"
         },
         {
-            "id": 330,
-            "date": "08/11/2024",
-            "category": "Leisure",
-            "amount": 3.2,
-            "payment_method": "Chase",
-            "merchant": "Bar SU",
-            "rebate": 0.032,
-            "hash_value": "591666a61344d5b414f996ecc463082d0fdd18e95bec91967e8c867ef22d2f06"
-        },
-        {
-            "id": 331,
+            "id": 643,
             "date": "01/11/2024",
             "category": "Leisure",
             "amount": 3.8,
@@ -2182,17 +812,7 @@
             "hash_value": "424dc4f5092d90f15a77065175053d9b7c6ad386da599016c76ec3454d6f9d95"
         },
         {
-            "id": 332,
-            "date": "06/11/2024",
-            "category": "Leisure",
-            "amount": 3.2,
-            "payment_method": "HSBC",
-            "merchant": "Bar SU",
-            "rebate": 0.0128,
-            "hash_value": "87e5fe6c338755e4ad870ac2e4989c01d67a45f4c3a68b3defc0a1398b1e9920"
-        },
-        {
-            "id": 333,
+            "id": 644,
             "date": "30/11/2024",
             "category": "Transport",
             "amount": 2.2,
@@ -2202,17 +822,7 @@
             "hash_value": "59dacaaae77e3ab786f6343cb65a55fe187aaf8ad6f7c0d842f7913acd2a5421"
         },
         {
-            "id": 334,
-            "date": "10/11/2024",
-            "category": "Leisure",
-            "amount": 16.9,
-            "payment_method": "Chase",
-            "merchant": "Bowling",
-            "rebate": 0.16899999999999998,
-            "hash_value": "bba2c68909e5045eb9ba3aa96d16034404004d940a992f53a79bad60131402ee"
-        },
-        {
-            "id": 335,
+            "id": 645,
             "date": "10/11/2024",
             "category": "Dining",
             "amount": 7.69,
@@ -2222,17 +832,7 @@
             "hash_value": "eab421ae61e6304183f1eac8982a20a61b3e63580919eb39d6ac6a88e579dd73"
         },
         {
-            "id": 336,
-            "date": "11/11/2024",
-            "category": "Dining",
-            "amount": 7.69,
-            "payment_method": "Lloyds",
-            "merchant": "Burger King",
-            "rebate": 0.38450000000000006,
-            "hash_value": "50aa959159552e705e88e1b9f913d0ebd5da8e28668e59db7ee38eb8b7af6d05"
-        },
-        {
-            "id": 337,
+            "id": 646,
             "date": "08/11/2024",
             "category": "Savings",
             "amount": 3500.0,
@@ -2242,17 +842,7 @@
             "hash_value": "267a363e82c04730b10a4eaeb3e72ececf6f596fa9dcd17919aabfcf0c1b001a"
         },
         {
-            "id": 338,
-            "date": "21/11/2024",
-            "category": "Leisure",
-            "amount": 5.78,
-            "payment_method": "Chase",
-            "merchant": "Club",
-            "rebate": 0.057800000000000004,
-            "hash_value": "eabd671529c525f43fc04aa75fb89aa10e3980d1923aaf20597eb5d339e4f303"
-        },
-        {
-            "id": 339,
+            "id": 647,
             "date": "25/11/2024",
             "category": "Dining",
             "amount": 17.8,
@@ -2262,7 +852,7 @@
             "hash_value": "5c3b0fa6849928acbfcec3567d1bc9a3655c49c9e546f1d8f0fafec819b9b700"
         },
         {
-            "id": 340,
+            "id": 648,
             "date": "10/11/2024",
             "category": "Transport",
             "amount": 2.0,
@@ -2272,17 +862,7 @@
             "hash_value": "ae1a33269c1fd8ccae35826dacf5addfcad8122f05dd4ccc2cbe4198744fa0a5"
         },
         {
-            "id": 342,
-            "date": "30/11/2024",
-            "category": "Transport",
-            "amount": 2.0,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.02,
-            "hash_value": "37ec7700dfda50930eaca81a44579171a9369bbdc1d5b4669abc42f477a1cc62"
-        },
-        {
-            "id": 343,
+            "id": 649,
             "date": "04/11/2024",
             "category": "Transport",
             "amount": 2.0,
@@ -2292,17 +872,7 @@
             "hash_value": "4db7f6d38498063e1ecc59d6bdf19a9c30300fa3f264cded44ab9f2c4aa34ac4"
         },
         {
-            "id": 344,
-            "date": "01/11/2024",
-            "category": "Investing",
-            "amount": 479.73595333128645,
-            "payment_method": "HSBC Invest",
-            "merchant": "Interactive Brokers",
-            "rebate": 0.0,
-            "hash_value": "f778f52eb7d851dfb49c5d8b5a7fdf5f04da05b4e000181abc1bff7651b2726d"
-        },
-        {
-            "id": 345,
+            "id": 650,
             "date": "04/11/2024",
             "category": "Laundry",
             "amount": 10.0,
@@ -2312,17 +882,7 @@
             "hash_value": "50489525c09df767a10b19288968931a9b1b1e91f41d65e94d2bf17ebc5644e9"
         },
         {
-            "id": 346,
-            "date": "04/11/2024",
-            "category": "Savings",
-            "amount": 250.0,
-            "payment_method": "Lloyds Savings",
-            "merchant": "Lloyds Savings",
-            "rebate": 0.0,
-            "hash_value": "ca88b27b2e23f078b4d03fa9c395cf948011b665070cddb7625da0a1e0088b4f"
-        },
-        {
-            "id": 347,
+            "id": 651,
             "date": "10/11/2024",
             "category": "Shopping",
             "amount": 22.94,
@@ -2332,17 +892,7 @@
             "hash_value": "74cc415c810a1d85b962dc10151aeee1f14c4df5fa8f95176564064a963c138e"
         },
         {
-            "id": 348,
-            "date": "02/11/2024",
-            "category": "Transport",
-            "amount": 24.59,
-            "payment_method": "HSBC",
-            "merchant": "Rail",
-            "rebate": 0.09836,
-            "hash_value": "9a413edf68a699eb7f18f69341bbc3cdb45ccf595f39e02192f4e15a2c1162fe"
-        },
-        {
-            "id": 349,
+            "id": 652,
             "date": "14/11/2024",
             "category": "Groceries",
             "amount": 10.0,
@@ -2352,17 +902,7 @@
             "hash_value": "80251981fd96ffeb8ec52a9b32a0f41e7ae47e1adc5341b18f2d3f9ab3fdbd3d"
         },
         {
-            "id": 350,
-            "date": "10/11/2024",
-            "category": "Groceries",
-            "amount": 4.08,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.0408,
-            "hash_value": "c14b1adfb094357ffeb71442f82dfdffc00db607098e907ed8c3f999a20d3171"
-        },
-        {
-            "id": 351,
+            "id": 653,
             "date": "19/11/2024",
             "category": "Groceries",
             "amount": 3.85,
@@ -2372,17 +912,7 @@
             "hash_value": "782549857630e0a57a9529655e46a2aa89db7c001ec2e28737fabc4525cd4cc4"
         },
         {
-            "id": 352,
-            "date": "24/11/2024",
-            "category": "Groceries",
-            "amount": 3.14,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.031400000000000004,
-            "hash_value": "51b8b37a914ca196b4e9ab15a3e04e55431fa34d4484bbfd6486ea4ba5e917a9"
-        },
-        {
-            "id": 353,
+            "id": 654,
             "date": "28/11/2024",
             "category": "Groceries",
             "amount": 2.99,
@@ -2392,17 +922,7 @@
             "hash_value": "977689b0e1fcca1149050d541f416d2f0455003279fe1a06927fb546012dacf8"
         },
         {
-            "id": 354,
-            "date": "07/11/2024",
-            "category": "Groceries",
-            "amount": 2.58,
-            "payment_method": "HSBC",
-            "merchant": "Spar",
-            "rebate": 0.010320000000000001,
-            "hash_value": "16590aea297c181702c913fa0b6936a61d82124625449675357b8bdfe706aa45"
-        },
-        {
-            "id": 355,
+            "id": 655,
             "date": "25/11/2024",
             "category": "Groceries",
             "amount": 7.25,
@@ -2412,17 +932,7 @@
             "hash_value": "3786a3f6b36b732f7874edefe5d7bb6845cdd50b07c8819c0dd60358fe6a48ed"
         },
         {
-            "id": 356,
-            "date": "27/11/2024",
-            "category": "Dining",
-            "amount": 1.5,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.015,
-            "hash_value": "78847181746d22d47114ca73e31400557c49b8bae52dda9429bac97e30db5a28"
-        },
-        {
-            "id": 357,
+            "id": 656,
             "date": "29/11/2024",
             "category": "Dining",
             "amount": 1.5,
@@ -2432,17 +942,7 @@
             "hash_value": "7fa89b48b6443e3612f173fc8844a02323bc0dbba9b7568ad0436d4ea81a2f16"
         },
         {
-            "id": 358,
-            "date": "14/11/2024",
-            "category": "Sport",
-            "amount": 7.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.07,
-            "hash_value": "d70470c3998c1d42284064f3c5d6bcc1af0bf30a9e3964f5a24adb66b1999837"
-        },
-        {
-            "id": 359,
+            "id": 657,
             "date": "10/11/2024",
             "category": "Sport",
             "amount": 4.5,
@@ -2452,17 +952,7 @@
             "hash_value": "f190caec0474d4b1db16c5265cb3777149e7181148dfe324348f25bfa9e6c161"
         },
         {
-            "id": 360,
-            "date": "18/11/2024",
-            "category": "Sport",
-            "amount": 4.5,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.045,
-            "hash_value": "6f70ef7bbff0312d44df51fe30fa35837d6347d9a8afa081ed2873c625078266"
-        },
-        {
-            "id": 361,
+            "id": 658,
             "date": "21/11/2024",
             "category": "Sport",
             "amount": 4.5,
@@ -2472,17 +962,7 @@
             "hash_value": "b1661cec668931df104f0b72f23d0b8c5bbfc4d97c6c993b81e107b1be9d50ec"
         },
         {
-            "id": 362,
-            "date": "29/11/2024",
-            "category": "Sport",
-            "amount": 4.5,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.045,
-            "hash_value": "0e46633d3131a0c19b13a9dcc1a6f24645185ebe08b1ff20ea52123d4bf0b74c"
-        },
-        {
-            "id": 363,
+            "id": 659,
             "date": "04/11/2024",
             "category": "Sport",
             "amount": 4.5,
@@ -2492,17 +972,7 @@
             "hash_value": "3a4b516e75b413aac1e28956e1d3246dc2992c710090eae1dd45c45fd1f7f371"
         },
         {
-            "id": 364,
-            "date": "08/11/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.01,
-            "hash_value": "fed17572ac7f05e54c3d5ab762955385bcb6190ad6351eef1942e045fa179fe1"
-        },
-        {
-            "id": 365,
+            "id": 660,
             "date": "10/11/2024",
             "category": "Sport",
             "amount": 1.0,
@@ -2512,17 +982,7 @@
             "hash_value": "38f25f50702b9165d3bae92b1f6700e44b96585194683e2c19ca598c56eebb75"
         },
         {
-            "id": 366,
-            "date": "18/11/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.01,
-            "hash_value": "1a345fcbccc988edf70bdd7cfa30e2078fc048b46ea69fb5119b2edad77d3f7f"
-        },
-        {
-            "id": 367,
+            "id": 661,
             "date": "20/11/2024",
             "category": "Sport",
             "amount": 1.9,
@@ -2532,17 +992,7 @@
             "hash_value": "ed7a16eadb9b1863c1e26f3ca570e1d9fa0e8aaf7d3ceefd54e19e2acdfa54b1"
         },
         {
-            "id": 368,
-            "date": "26/11/2024",
-            "category": "Sport",
-            "amount": 1.75,
-            "payment_method": "Lloyds",
-            "merchant": "Sportspark",
-            "rebate": 0.0,
-            "hash_value": "a7f9cbfbbda065930fe185a318423c1f5305f91093231a64891c5c1e106e0a0f"
-        },
-        {
-            "id": 369,
+            "id": 662,
             "date": "12/11/2024",
             "category": "Dining",
             "amount": 2.38,
@@ -2552,17 +1002,7 @@
             "hash_value": "4e9dcd679a657f0c242fb471427e7d85f9e1f46baaddce885f8990050ff5abd1"
         },
         {
-            "id": 370,
-            "date": "04/11/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "HSBC",
-            "merchant": "Sportspark",
-            "rebate": 0.0076,
-            "hash_value": "60e28d0e339caeab36d2716255c26255d7dd42d0147d8127d66d1517bebd2931"
-        },
-        {
-            "id": 371,
+            "id": 663,
             "date": "07/11/2024",
             "category": "Leisure",
             "amount": 30.52,
@@ -2572,17 +1012,7 @@
             "hash_value": "a15b89b32821bc278463887a22c0ea217e3605fd20cde6f3681cdab7aa34f1f7"
         },
         {
-            "id": 372,
-            "date": "21/11/2024",
-            "category": "Groceries",
-            "amount": 1.7,
-            "payment_method": "Chase",
-            "merchant": "Tesco",
-            "rebate": 0.017,
-            "hash_value": "95d40a268cd9c2bc6e5a1f29a3e4156cd0606d5574cee770533abe0f46833871"
-        },
-        {
-            "id": 373,
+            "id": 664,
             "date": "08/11/2024",
             "category": "Dining",
             "amount": 2.1,
@@ -2592,17 +1022,7 @@
             "hash_value": "ef6d9b4262b1d9252a9cb75476deaad3be52a9c5478fbc3f5124fe4a4477c0fb"
         },
         {
-            "id": 374,
-            "date": "19/11/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "Chase",
-            "merchant": "Vending Machine",
-            "rebate": 0.019,
-            "hash_value": "63362b24c8ac94b80f46afedcd8e9de08f4bcbd9b5f70afb1bad417ab7a0177c"
-        },
-        {
-            "id": 375,
+            "id": 665,
             "date": "20/11/2024",
             "category": "Dining",
             "amount": 1.9,
@@ -2612,17 +1032,7 @@
             "hash_value": "997b28a0b44f8ddd3192d8fba6391e0ac8b254fbfdb199520f90d01fa6f77ae5"
         },
         {
-            "id": 376,
-            "date": "23/11/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "Chase",
-            "merchant": "Vending Machine",
-            "rebate": 0.019,
-            "hash_value": "81809313e3a303465a98e1eb2f8f3b199408ed9e1d0d579b432e7c099e25ab65"
-        },
-        {
-            "id": 377,
+            "id": 666,
             "date": "24/11/2024",
             "category": "Dining",
             "amount": 1.9,
@@ -2632,17 +1042,7 @@
             "hash_value": "f0e453adb8de9f6122ff2af9fe8bc326f0f6a61cb75130a0050b23d6c27d4913"
         },
         {
-            "id": 378,
-            "date": "25/11/2024",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "Chase",
-            "merchant": "Vending Machine",
-            "rebate": 0.019,
-            "hash_value": "60368abb93c00a96bf76304e1db981c95f609e885ded7d552b5e870e6054635e"
-        },
-        {
-            "id": 379,
+            "id": 667,
             "date": "08/11/2024",
             "category": "Dining",
             "amount": 1.3,
@@ -2652,17 +1052,7 @@
             "hash_value": "caa7e6a00683f5f53176dd3edec2aec12683e9a56938cecc54223a0fc4de64a9"
         },
         {
-            "id": 380,
-            "date": "10/11/2024",
-            "category": "Bill",
-            "amount": 10.0,
-            "payment_method": "Lloyds",
-            "merchant": "Voxi",
-            "rebate": 0.0,
-            "hash_value": "60017d9b131698724b19e082bf2d04e21c58f511fcea2477cdcbd68d9a42d810"
-        },
-        {
-            "id": 381,
+            "id": 668,
             "date": "10/11/2024",
             "category": "Dining",
             "amount": 7.56,
@@ -2672,17 +1062,7 @@
             "hash_value": "c86fef771be6b07ec2e42e8f4d5a4457cbf97be8720e3c419bc1c18133ab2596"
         },
         {
-            "id": 382,
-            "date": "28/12/2024",
-            "category": "Groceries",
-            "amount": 38.26,
-            "payment_method": "Chase",
-            "merchant": "Aldi",
-            "rebate": 0.3826,
-            "hash_value": "14999d41b6110c024098e466b15482e7fae79cfc2abbc563d3399a915833e682"
-        },
-        {
-            "id": 383,
+            "id": 669,
             "date": "02/12/2024",
             "category": "Shopping",
             "amount": 24.65,
@@ -2692,17 +1072,7 @@
             "hash_value": "a4a0d0f84bc31ddfd07d0483c3339327bc11c7c118c6176ba8ba0fb6da4e98ca"
         },
         {
-            "id": 384,
-            "date": "14/12/2024",
-            "category": "Leisure",
-            "amount": 2.99,
-            "payment_method": "Chase",
-            "merchant": "Bar SU",
-            "rebate": 0.029900000000000003,
-            "hash_value": "7a9477fc1db0d41fcac44812062e1a48e6ac36560090fe560321c7e30d88f237"
-        },
-        {
-            "id": 385,
+            "id": 670,
             "date": "13/12/2024",
             "category": "Leisure",
             "amount": 3.8,
@@ -2712,17 +1082,7 @@
             "hash_value": "7a9b9fb786c0e9185928d115365d0ed92a03a1970ee583f6db3778a701ada107"
         },
         {
-            "id": 386,
-            "date": "13/12/2024",
-            "category": "Leisure",
-            "amount": 8.19,
-            "payment_method": "Chase",
-            "merchant": "Bar SU",
-            "rebate": 0.0819,
-            "hash_value": "7f38810eeefb8ebebebb14ec18e1dfc15fe9844d7aeca4cc19408df324106b7e"
-        },
-        {
-            "id": 387,
+            "id": 671,
             "date": "12/12/2024",
             "category": "Dining",
             "amount": 5.0,
@@ -2732,17 +1092,7 @@
             "hash_value": "c461e7c046ce4618a3d2a342580b2c0640b167d054a9a2747c9ed569a9510a9d"
         },
         {
-            "id": 388,
-            "date": "13/12/2024",
-            "category": "Leisure",
-            "amount": 9.0,
-            "payment_method": "Lloyds",
-            "merchant": "BBB",
-            "rebate": 0.0,
-            "hash_value": "93acc97a7510ad8e013c8b74251895c3c16dc50114144ac49cca2f54e71d5ab1"
-        },
-        {
-            "id": 389,
+            "id": 672,
             "date": "28/12/2024",
             "category": "Transport",
             "amount": 2.6,
@@ -2752,17 +1102,7 @@
             "hash_value": "092201793e951507fd28aa2f7544a9213f7b01ff0c80c5410cc237d5ba1a6e1c"
         },
         {
-            "id": 390,
-            "date": "28/12/2024",
-            "category": "Transport",
-            "amount": 3.4,
-            "payment_method": "Chase",
-            "merchant": "Beryl",
-            "rebate": 0.034,
-            "hash_value": "d00b4ec7427bf1d963258f82fae9a1d2ea82a7e2f9d5846cd9f082a738e394f3"
-        },
-        {
-            "id": 391,
+            "id": 673,
             "date": "25/12/2024",
             "category": "Transport",
             "amount": 6.12,
@@ -2772,17 +1112,7 @@
             "hash_value": "b4b4e5aed8e6cd9395ec2cf223c126f81bf79a6dee84e0e9052981c7075bc9e1"
         },
         {
-            "id": 392,
-            "date": "25/12/2024",
-            "category": "Transport",
-            "amount": 7.6,
-            "payment_method": "Chase",
-            "merchant": "Beryl",
-            "rebate": 0.076,
-            "hash_value": "4e6fd63876acb9d90ffd7dafd22a9e827fc16b9a584c400836257901dc375f77"
-        },
-        {
-            "id": 393,
+            "id": 674,
             "date": "27/12/2024",
             "category": "Groceries",
             "amount": 3.49,
@@ -2792,17 +1122,7 @@
             "hash_value": "78bedbd2c48bd26b3504a58a08c5e8867083d318d954a90adcabf8b69edbdce1"
         },
         {
-            "id": 394,
-            "date": "20/12/2024",
-            "category": "Groceries",
-            "amount": 18.9,
-            "payment_method": "HSBC UK",
-            "merchant": "Boots",
-            "rebate": 0.0,
-            "hash_value": "675b04fe2fada33744c70591fd642dc1c6b6bbd55e7166b2cd31387d654a47d1"
-        },
-        {
-            "id": 395,
+            "id": 675,
             "date": "20/12/2024",
             "category": "Dining",
             "amount": 17.21,
@@ -2812,17 +1132,7 @@
             "hash_value": "be41d36ed8f01e52436408104f1506abff8e6a8912aef279f4f9f8f6deaddd92"
         },
         {
-            "id": 396,
-            "date": "01/12/2024",
-            "category": "Groceries",
-            "amount": 7.4,
-            "payment_method": "Chase",
-            "merchant": "Chinatown",
-            "rebate": 0.07400000000000001,
-            "hash_value": "f9ecb2bdf98525b6be876dc69799af541421039cd88c37f8c281f31843e99adb"
-        },
-        {
-            "id": 397,
+            "id": 676,
             "date": "01/12/2024",
             "category": "Groceries",
             "amount": 35.49,
@@ -2832,17 +1142,7 @@
             "hash_value": "7302259118a5009613610e8a99fc3c52544f0c1889fe0ef0641587c5f99b4c73"
         },
         {
-            "id": 398,
-            "date": "24/12/2024",
-            "category": "Dining",
-            "amount": 1.5,
-            "payment_method": "Chase",
-            "merchant": "Co-op",
-            "rebate": 0.015,
-            "hash_value": "78dd610e55f38b15b536f37cec490df9e8706bf9c23dadf7b871d65637a83c57"
-        },
-        {
-            "id": 399,
+            "id": 677,
             "date": "31/12/2024",
             "category": "Transport",
             "amount": 2.0,
@@ -2852,17 +1152,7 @@
             "hash_value": "a80a77a12700acffd2a9445a646d406273ec584a82d6d9ff0fbb6a96ef4c9870"
         },
         {
-            "id": 401,
-            "date": "27/12/2024",
-            "category": "Transport",
-            "amount": 1.7,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.017,
-            "hash_value": "4e8fbfa30cc697c908f565474304360e9ae23641c7cb3126183fc106a31d0229"
-        },
-        {
-            "id": 402,
+            "id": 678,
             "date": "27/12/2024",
             "category": "Transport",
             "amount": 2.0,
@@ -2872,17 +1162,7 @@
             "hash_value": "ad5909aaa08c76ad334431fec285d9717be883daf0946c3123ef0aefabfcd59d"
         },
         {
-            "id": 404,
-            "date": "24/12/2024",
-            "category": "Transport",
-            "amount": 2.0,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.02,
-            "hash_value": "8dea5034ad79d7a6ef2d89b2986d310411e5dcd9bc173049e794ac1881853f5b"
-        },
-        {
-            "id": 405,
+            "id": 679,
             "date": "18/12/2024",
             "category": "Transport",
             "amount": 2.0,
@@ -2892,17 +1172,7 @@
             "hash_value": "af8397ab71b35deaa4811e04f3c7d17f6a0dc6a4d32b2aa5489bb30bd7acc6fc"
         },
         {
-            "id": 406,
-            "date": "01/12/2024",
-            "category": "Transport",
-            "amount": 2.0,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.02,
-            "hash_value": "7a0635ac9b697525d804a11f3327e0a351290c31d3e34a65583a33b43dfba7e2"
-        },
-        {
-            "id": 407,
+            "id": 680,
             "date": "19/12/2024",
             "category": "Dining",
             "amount": 24.97,
@@ -2912,17 +1182,7 @@
             "hash_value": "d3d5ab15493448b8a4e2f649922a5ca14f4c7cd6af02b5be1fc680a4d3bfbb5b"
         },
         {
-            "id": 408,
-            "date": "20/12/2024",
-            "category": "Groceries",
-            "amount": 8.99,
-            "payment_method": "Chase",
-            "merchant": "Gordon Hill",
-            "rebate": 0.08990000000000001,
-            "hash_value": "5ed0c87c68d45d7692328d7dcc12892c540e9bebc78e107e5a06d48ba3e5765e"
-        },
-        {
-            "id": 409,
+            "id": 681,
             "date": "12/12/2024",
             "category": "Transport",
             "amount": 12.65,
@@ -2932,17 +1192,7 @@
             "hash_value": "63dfd04537e720483ae41cf570f12671f63a7528234025d658cd72af14df451b"
         },
         {
-            "id": 410,
-            "date": "02/12/2024",
-            "category": "Transport",
-            "amount": 10.95,
-            "payment_method": "Chase",
-            "merchant": "Greater Anglia",
-            "rebate": 0.1095,
-            "hash_value": "76a43000a9cb0ef5800ef56b50bb89e2bb1db247535e7327e45a920096834672"
-        },
-        {
-            "id": 411,
+            "id": 682,
             "date": "22/12/2024",
             "category": "Dining",
             "amount": 2.5,
@@ -2952,17 +1202,7 @@
             "hash_value": "08790c557a1d18ada3375694015bf42505c3db8dca17efdab651a4280aa6dac1"
         },
         {
-            "id": 412,
-            "date": "27/12/2024",
-            "category": "Shopping",
-            "amount": 19.99,
-            "payment_method": "Chase",
-            "merchant": "H&M",
-            "rebate": 0.1999,
-            "hash_value": "f4ea2ef20afe2eae43b87c7ad81d36e7c98142ef2393250740dd22fd2cd818c0"
-        },
-        {
-            "id": 413,
+            "id": 683,
             "date": "22/12/2024",
             "category": "Dining",
             "amount": 5.25,
@@ -2972,17 +1212,7 @@
             "hash_value": "c87f3efd6d50008c189a96793705c4b59bb134abd6c41553eecdc5a014bdd15f"
         },
         {
-            "id": 414,
-            "date": "22/12/2024",
-            "category": "Dining",
-            "amount": 11.45,
-            "payment_method": "Chase",
-            "merchant": "Hotspur",
-            "rebate": 0.11449999999999999,
-            "hash_value": "b44abdd327fc1940d100200e3f03dc396328ca76322fde84d391df1063937666"
-        },
-        {
-            "id": 415,
+            "id": 684,
             "date": "22/12/2024",
             "category": "Shopping",
             "amount": 28.0,
@@ -2992,17 +1222,7 @@
             "hash_value": "7bfb8027a5ff1cf07bbf8602b666382ab8f5ea6fb1adf81519f816b7e9858492"
         },
         {
-            "id": 416,
-            "date": "28/12/2024",
-            "category": "Groceries",
-            "amount": 20.0,
-            "payment_method": "Chase",
-            "merchant": "Jamdoughnut",
-            "rebate": 0.2,
-            "hash_value": "93adeeb0416f5de5843dbd658e792cd69e4d7767fe648cdfb55819fe4a3ef54e"
-        },
-        {
-            "id": 417,
+            "id": 685,
             "date": "20/12/2024",
             "category": "Dining",
             "amount": 1.99,
@@ -3012,17 +1232,7 @@
             "hash_value": "18417f6f124ca52a2cdae4e8438f1bba6805d91f81c7ff057a0101a2644f585c"
         },
         {
-            "id": 418,
-            "date": "26/12/2024",
-            "category": "Laundry",
-            "amount": 10.0,
-            "payment_method": "Chase",
-            "merchant": "Laundry",
-            "rebate": 0.1,
-            "hash_value": "aca518687924bd92ad734dcf183fd0b01d0929e83fe6d93f767bafbfb0964a86"
-        },
-        {
-            "id": 419,
+            "id": 686,
             "date": "03/12/2024",
             "category": "Laundry",
             "amount": 10.0,
@@ -3032,17 +1242,7 @@
             "hash_value": "6010d3825429bba72e55185755269cfb7350b08a8e94b039bcf439ce546dcf39"
         },
         {
-            "id": 420,
-            "date": "21/12/2024",
-            "category": "Groceries",
-            "amount": 1.49,
-            "payment_method": "Chase",
-            "merchant": "Lidl",
-            "rebate": 0.0149,
-            "hash_value": "5e97e28a4ea07b301167e5b7ed761c36b12252cd49e8af91cec4942b5350f28b"
-        },
-        {
-            "id": 421,
+            "id": 687,
             "date": "27/12/2024",
             "category": "Dining",
             "amount": 8.0,
@@ -3052,17 +1252,7 @@
             "hash_value": "1943381102ad26871ba968e9843f0a55195aff39e8b64963f2cc707f41128a96"
         },
         {
-            "id": 422,
-            "date": "19/12/2024",
-            "category": "Dining",
-            "amount": 19.13,
-            "payment_method": "Chase",
-            "merchant": "Moto Ramen",
-            "rebate": 0.1913,
-            "hash_value": "ee160b480d29d39b09a20c5f6e939bfd9853f3acb467b6113adafcef8bd86d47"
-        },
-        {
-            "id": 423,
+            "id": 688,
             "date": "23/12/2024",
             "category": "Transport",
             "amount": 4.2,
@@ -3072,17 +1262,7 @@
             "hash_value": "1a747ce878825fbf40c9c84ce8962129b6d610bffa7413a48eaab762afee3a1c"
         },
         {
-            "id": 424,
-            "date": "23/12/2024",
-            "category": "Transport",
-            "amount": 13.71,
-            "payment_method": "Chase",
-            "merchant": "Parking",
-            "rebate": 0.1371,
-            "hash_value": "be274e37affd42bea0a2a3e518ae11e17d9ee32959fbd14ee1be29188c5945ee"
-        },
-        {
-            "id": 425,
+            "id": 689,
             "date": "02/12/2024",
             "category": "House",
             "amount": 100.0,
@@ -3092,17 +1272,7 @@
             "hash_value": "dbb7fbf1a49154eba8ca3d1a2680f45cd6673a966c6d538074e7e272ccdf261c"
         },
         {
-            "id": 426,
-            "date": "21/12/2024",
-            "category": "Shopping",
-            "amount": 22.95,
-            "payment_method": "Chase",
-            "merchant": "Pearsons",
-            "rebate": 0.2295,
-            "hash_value": "9750c7e0fe3531603bea947a7d43cfe2658073d1b92e0064a445c963e7856ad8"
-        },
-        {
-            "id": 427,
+            "id": 690,
             "date": "20/12/2024",
             "category": "Dining",
             "amount": 5.99,
@@ -3112,17 +1282,7 @@
             "hash_value": "b8f7075cdc141bea845e0e1499eb1e9f0fc51453a61c2cafcee05c0ac1963522"
         },
         {
-            "id": 428,
-            "date": "12/12/2024",
-            "category": "Groceries",
-            "amount": 73.62,
-            "payment_method": "Lloyds",
-            "merchant": "Sainsbury's",
-            "rebate": 3.6810000000000005,
-            "hash_value": "e63b2823d919ba1ba34055e9a45b78be555d02c2fc5cc6bfd547574cc847377a"
-        },
-        {
-            "id": 429,
+            "id": 691,
             "date": "12/12/2024",
             "category": "Dining",
             "amount": 9.6,
@@ -3132,17 +1292,7 @@
             "hash_value": "0528402f436535d13203cb97e7f1085c38ba8c9f5b865c42bf0cd0ef038a2433"
         },
         {
-            "id": 430,
-            "date": "20/12/2024",
-            "category": "Shopping",
-            "amount": 12.0,
-            "payment_method": "Chase",
-            "merchant": "Sherlock",
-            "rebate": 0.12,
-            "hash_value": "f0d9b8376721e9777ca092a3dd64bfd5034d0cc2e0fb4a669fd191dc22c2830c"
-        },
-        {
-            "id": 431,
+            "id": 692,
             "date": "10/12/2024",
             "category": "Groceries",
             "amount": 6.0,
@@ -3152,17 +1302,7 @@
             "hash_value": "3a13b00b6b4d3dadbab3bc34b3cc527bf35b7ede53df7cd1f1b1aadbf6cb225f"
         },
         {
-            "id": 432,
-            "date": "09/12/2024",
-            "category": "Groceries",
-            "amount": 3.49,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.0349,
-            "hash_value": "5935150f2c3e3e989318446962bf4fd692f7cdeb9b2bb089a80bcb82e6aee91c"
-        },
-        {
-            "id": 433,
+            "id": 693,
             "date": "05/12/2024",
             "category": "Groceries",
             "amount": 4.13,
@@ -3172,17 +1312,7 @@
             "hash_value": "becd7ed9a39e72b5572dd63bdd5ff5827bd704a23db7881b816a641f1fa16ab5"
         },
         {
-            "id": 434,
-            "date": "04/12/2024",
-            "category": "Groceries",
-            "amount": 1.5,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.015,
-            "hash_value": "ff9e4d9d890c5eb0425c58e199283c7d86ece02aac8ff227b466d6e862b75b1a"
-        },
-        {
-            "id": 435,
+            "id": 694,
             "date": "02/12/2024",
             "category": "Groceries",
             "amount": 4.49,
@@ -3192,17 +1322,7 @@
             "hash_value": "f9d67cdd929705eb92dc5b0fcf88fed40297edd25fdea2065ff7b8fd0b176e8a"
         },
         {
-            "id": 436,
-            "date": "15/12/2024",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.01,
-            "hash_value": "1ef32f09f72de87e12503c7ad5ddd0e86750fb653b34fa1f2a0d599e035e01cf"
-        },
-        {
-            "id": 437,
+            "id": 695,
             "date": "08/12/2024",
             "category": "Sport",
             "amount": 4.5,
@@ -3212,17 +1332,7 @@
             "hash_value": "78e87f751ec53fa8db2e0ca5eb87d80314b612c1b0ac7b9364e25bb255e527c1"
         },
         {
-            "id": 438,
-            "date": "04/12/2024",
-            "category": "Sport",
-            "amount": 1.8,
-            "payment_method": "Lloyds",
-            "merchant": "Sportspark",
-            "rebate": 0.0,
-            "hash_value": "9dd7f3464b57d48718c6f4ba62734c3073281aca1941f4acd69d810f3ac32588"
-        },
-        {
-            "id": 439,
+            "id": 696,
             "date": "25/12/2024",
             "category": "Transport",
             "amount": 5.4,
@@ -3232,17 +1342,7 @@
             "hash_value": "c8190d1f1d08da62cf887ec7ec73a3e9bebf582fc08321d732aa4bfddc6d757c"
         },
         {
-            "id": 440,
-            "date": "24/12/2024",
-            "category": "Transport",
-            "amount": 7.15,
-            "payment_method": "Chase",
-            "merchant": "TFL",
-            "rebate": 0.07150000000000001,
-            "hash_value": "60af5e7c9ebfe7f7ddd1b68c03c078470de766eaf9e5a95406920f6c47d62786"
-        },
-        {
-            "id": 441,
+            "id": 697,
             "date": "23/12/2024",
             "category": "Transport",
             "amount": 4.4,
@@ -3252,17 +1352,7 @@
             "hash_value": "a27c52787014f8f49a85d49be5c2b421a6daf7adb81ab3c642d7b482e4bf5806"
         },
         {
-            "id": 442,
-            "date": "23/12/2024",
-            "category": "Transport",
-            "amount": 15.0,
-            "payment_method": "Chase",
-            "merchant": "TFL",
-            "rebate": 0.15,
-            "hash_value": "440396ec234413f72dfa0940b5eeffa6152d98de7a4de3f44d251e000eb73f9e"
-        },
-        {
-            "id": 443,
+            "id": 698,
             "date": "21/12/2024",
             "category": "Transport",
             "amount": 14.6,
@@ -3272,17 +1362,7 @@
             "hash_value": "9ec9fba40a00195d0cc4ccf4f25f793f4e85ab212b70b38fb474a4226ef88e5d"
         },
         {
-            "id": 444,
-            "date": "19/12/2024",
-            "category": "Transport",
-            "amount": 12.0,
-            "payment_method": "Chase",
-            "merchant": "TFL",
-            "rebate": 0.12,
-            "hash_value": "32ef46f0c1304fce797ce03c4a978f48e7aefd62830b59beaa3de67f6f984362"
-        },
-        {
-            "id": 445,
+            "id": 699,
             "date": "21/12/2024",
             "category": "Shopping",
             "amount": 74.98,
@@ -3292,17 +1372,7 @@
             "hash_value": "81eb4905a7cb329389d0899da36e5e35966794207b662c8e3f721303aad2e647"
         },
         {
-            "id": 446,
-            "date": "11/12/2024",
-            "category": "Bill",
-            "amount": 10.0,
-            "payment_method": "Lloyds",
-            "merchant": "Voxi",
-            "rebate": 0.0,
-            "hash_value": "bb0d910b483c67bba55da86df10b27fe83e88a87329d54f21481a63f4fc342f6"
-        },
-        {
-            "id": 447,
+            "id": 700,
             "date": "23/12/2024",
             "category": "Dining",
             "amount": 6.75,
@@ -3312,17 +1382,7 @@
             "hash_value": "680e375018280c06d0fd998ed680ee0a1f03bde2fb46337815f590225677fb36"
         },
         {
-            "id": 448,
-            "date": "31/01/2025",
-            "category": "Groceries",
-            "amount": 22.64,
-            "payment_method": "Chase",
-            "merchant": "Aldi",
-            "rebate": 0.22640000000000002,
-            "hash_value": "73368ced1a089833bafbf62bfafe99e6ae2b506cc60d053f1a23ea5d9463e6ea"
-        },
-        {
-            "id": 449,
+            "id": 701,
             "date": "18/01/2025",
             "category": "Groceries",
             "amount": 12.65,
@@ -3332,17 +1392,7 @@
             "hash_value": "d461bdc47d32dc2002d460d51fcb68afd837c84ce80f9fe98966faf23918afde"
         },
         {
-            "id": 450,
-            "date": "21/01/2025",
-            "category": "Groceries",
-            "amount": 4.92,
-            "payment_method": "Chase",
-            "merchant": "Aldi",
-            "rebate": 0.0492,
-            "hash_value": "d864fbb6417caec775f06c57ca101a31b3bdd3a63d039b120e3460057364c56a"
-        },
-        {
-            "id": 451,
+            "id": 702,
             "date": "06/01/2025",
             "category": "Shopping",
             "amount": 129.99,
@@ -3352,17 +1402,7 @@
             "hash_value": "9bd0f6a685d55c7cc4d5b53f36feff99fd674578882bbf6f8e4a9123d9e492fc"
         },
         {
-            "id": 452,
-            "date": "17/01/2025",
-            "category": "Shopping",
-            "amount": 13.72,
-            "payment_method": "Chase",
-            "merchant": "Amazon",
-            "rebate": 0.13720000000000002,
-            "hash_value": "8e188eeafcbddee848889b3c82189fc1d4a7a921f3045661fcc6f7b31d779cf7"
-        },
-        {
-            "id": 453,
+            "id": 703,
             "date": "25/01/2025",
             "category": "Shopping",
             "amount": 3.99,
@@ -3372,17 +1412,7 @@
             "hash_value": "4d7277e6f71da087f19ffbc5539d88d778648caf7640dc0eec164d96ea440ebc"
         },
         {
-            "id": 454,
-            "date": "28/01/2025",
-            "category": "Leisure",
-            "amount": 3.2,
-            "payment_method": "Chase",
-            "merchant": "Bar SU",
-            "rebate": 0.032,
-            "hash_value": "f2e9e71283d1114f6d9c131c0ad8fc28b0e5c803f6f0c51f4cf1a0d5524710d5"
-        },
-        {
-            "id": 455,
+            "id": 704,
             "date": "18/01/2025",
             "category": "Transport",
             "amount": 3.4,
@@ -3392,17 +1422,7 @@
             "hash_value": "2076ace3cd6e80aec84b2b8056f0697d587d2b8a354497fa6838c91c903259a7"
         },
         {
-            "id": 456,
-            "date": "18/01/2025",
-            "category": "Transport",
-            "amount": 1.6,
-            "payment_method": "Chase",
-            "merchant": "Beryl",
-            "rebate": 0.016,
-            "hash_value": "87beff823393ac63fb51aabb070e35239c415bfb3edba22ee2c4808a854d5099"
-        },
-        {
-            "id": 457,
+            "id": 705,
             "date": "17/01/2025",
             "category": "Groceries",
             "amount": 2.7,
@@ -3412,17 +1432,7 @@
             "hash_value": "905d8876b5f2c8619ef1076f6c79a2a3ccdbf2d37bf565c70d1ed8cdac891d43"
         },
         {
-            "id": 458,
-            "date": "27/01/2025",
-            "category": "Dining",
-            "amount": 3.0,
-            "payment_method": "Chase",
-            "merchant": "Campus Kitchen",
-            "rebate": 0.03,
-            "hash_value": "8b458a68156c0fd1a8c49b5b65517ba77c168abc6253a8d15b50b5465a707835"
-        },
-        {
-            "id": 459,
+            "id": 706,
             "date": "17/01/2025",
             "category": "Groceries",
             "amount": 31.19,
@@ -3432,17 +1442,7 @@
             "hash_value": "7cb9ea1704e47f33e26707707170e5a0539b65818999d21b96338e9d3683ad8c"
         },
         {
-            "id": 460,
-            "date": "17/01/2025",
-            "category": "Groceries",
-            "amount": 12.6,
-            "payment_method": "Chase",
-            "merchant": "Chinatown",
-            "rebate": 0.126,
-            "hash_value": "359e04100d5f9856204e51abe70efde493d25f83efaf05025bce9d21ae076f14"
-        },
-        {
-            "id": 461,
+            "id": 707,
             "date": "13/01/2025",
             "category": "Dining",
             "amount": 2.39,
@@ -3452,17 +1452,7 @@
             "hash_value": "2a4b97e708865689ba0afd5f57abd622e2f9dea059e981d388314b5134afe2fd"
         },
         {
-            "id": 462,
-            "date": "15/01/2025",
-            "category": "Shopping",
-            "amount": 4.0,
-            "payment_method": "Chase",
-            "merchant": "Cotton:On",
-            "rebate": 0.04,
-            "hash_value": "7962e6b229ee08c8d7424aa980b67316ebda7237b0676121143ef999c9ac5f30"
-        },
-        {
-            "id": 463,
+            "id": 708,
             "date": "13/01/2025",
             "category": "Leisure",
             "amount": 214.0,
@@ -3472,17 +1462,7 @@
             "hash_value": "bc6642c2114b775a3ef24ee195595a4168d762ce94632e53912bdfc75df605b8"
         },
         {
-            "id": 464,
-            "date": "16/01/2025",
-            "category": "Dining",
-            "amount": 28.57,
-            "payment_method": "Chase",
-            "merchant": "Deliveroo",
-            "rebate": 0.2857,
-            "hash_value": "be37448702ae83abf79afc7913c9178b269883fca658577fd8a9af5f2316185f"
-        },
-        {
-            "id": 465,
+            "id": 709,
             "date": "09/01/2025",
             "category": "Dining",
             "amount": 24.12,
@@ -3492,17 +1472,7 @@
             "hash_value": "7a4e001d0cdfd94728133222074fcbfe71e8da794c23731e1a9aa77579ca0309"
         },
         {
-            "id": 466,
-            "date": "09/01/2025",
-            "category": "Dining",
-            "amount": 2.29,
-            "payment_method": "Chase",
-            "merchant": "Deliveroo",
-            "rebate": 0.0229,
-            "hash_value": "126f170a26115a2adada42e0bab23b718175df02bd8a823a0d00dd9084ded132"
-        },
-        {
-            "id": 467,
+            "id": 710,
             "date": "17/01/2025",
             "category": "Transport",
             "amount": 13.5,
@@ -3512,17 +1482,7 @@
             "hash_value": "2d824eebe139784fcd8a57b5cd9717033cb6f80080d5757fe994b1a482a0b8c1"
         },
         {
-            "id": 468,
-            "date": "25/01/2025",
-            "category": "Transport",
-            "amount": 5.2,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.052000000000000005,
-            "hash_value": "7234645a65eaef01a9409d1a3a21a1cce1cf34fa5ec6e6389c55017bdba4790e"
-        },
-        {
-            "id": 469,
+            "id": 711,
             "date": "31/01/2025",
             "category": "Transport",
             "amount": 5.2,
@@ -3532,17 +1492,7 @@
             "hash_value": "45790172ddb1f784e1292b21f6e254be559979481e5e8ed4beb510f3a8c25b3d"
         },
         {
-            "id": 470,
-            "date": "13/01/2025",
-            "category": "Transport",
-            "amount": 3.0,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.03,
-            "hash_value": "1256cddd4af7fb71c9e1302ecd00f393b6caaa8691a781364b74fa1cff6368c2"
-        },
-        {
-            "id": 471,
+            "id": 712,
             "date": "16/01/2025",
             "category": "Transport",
             "amount": 3.0,
@@ -3552,17 +1502,7 @@
             "hash_value": "ab1ccb9c18af7ed147da51ba85d887bb1b598a422e8701353ad098add1cf7745"
         },
         {
-            "id": 472,
-            "date": "02/01/2025",
-            "category": "Transport",
-            "amount": 45.2,
-            "payment_method": "Chase",
-            "merchant": "Greater Anglia",
-            "rebate": 0.452,
-            "hash_value": "0830a355eab9e34a06b603c4b65d7f6b5afe42135e9e5b6930d97e4f6d1baf4e"
-        },
-        {
-            "id": 473,
+            "id": 713,
             "date": "18/01/2025",
             "category": "Shopping",
             "amount": 60.97,
@@ -3572,17 +1512,7 @@
             "hash_value": "2185bb89a26ff14b2ee88aace99f1e23a96bb0ee8dd9c42b674b98af7213e4b8"
         },
         {
-            "id": 474,
-            "date": "14/01/2025",
-            "category": "Leisure",
-            "amount": 10.49,
-            "payment_method": "Lloyds",
-            "merchant": "Hollywood Bowl",
-            "rebate": 0.0,
-            "hash_value": "f9e821e0a138171fe05d83524217b2a524d55eadaa4737af3a32af82bf4235d2"
-        },
-        {
-            "id": 475,
+            "id": 714,
             "date": "13/01/2025",
             "category": "Leisure",
             "amount": 10.0,
@@ -3592,17 +1522,7 @@
             "hash_value": "fd3c9bb40808e3378f581d52ddfdd30d78a7b87c51ea20241789cd941a88cfa1"
         },
         {
-            "id": 476,
-            "date": "15/01/2025",
-            "category": "Dining",
-            "amount": 8.75,
-            "payment_method": "Chase",
-            "merchant": "Kokoro",
-            "rebate": 0.08750000000000001,
-            "hash_value": "f023bcfafefdb08678fcb3ccf8fc92d68c89c7bb6baed67216dd0b24322c64a7"
-        },
-        {
-            "id": 477,
+            "id": 715,
             "date": "15/01/2025",
             "category": "Shopping",
             "amount": 6.7,
@@ -3612,17 +1532,7 @@
             "hash_value": "4d28ece02e3e8e5f68c091b93c80d8ca9ad069fbee05ef8b186e8f7d5a7f79f0"
         },
         {
-            "id": 478,
-            "date": "05/01/2025",
-            "category": "Leisure",
-            "amount": 7.5,
-            "payment_method": "Chase",
-            "merchant": "Parking",
-            "rebate": 0.075,
-            "hash_value": "1de5752092281213220630585556f11ca3ab4bc0f6285ad2e88a6b86c93f829d"
-        },
-        {
-            "id": 479,
+            "id": 716,
             "date": "25/01/2025",
             "category": "Shopping",
             "amount": 6.98,
@@ -3632,17 +1542,7 @@
             "hash_value": "65ad782fc5bf5fadca1e7454bec61a615146a9206c08e61bf61879394a89073a"
         },
         {
-            "id": 480,
-            "date": "17/01/2025",
-            "category": "Shopping",
-            "amount": 45.0,
-            "payment_method": "Chase",
-            "merchant": "SD sports direct",
-            "rebate": 0.45,
-            "hash_value": "a7c4019c2f733de2d91925f60cee081aa3a5cc6936b92cc20f39f75aa95db555"
-        },
-        {
-            "id": 481,
+            "id": 717,
             "date": "15/01/2025",
             "category": "Transport",
             "amount": 4.85,
@@ -3652,17 +1552,7 @@
             "hash_value": "6f6dc6e4807cbac28f061dcc8f9d836d0ae7d12e896c2878dcc37ff074eccbdf"
         },
         {
-            "id": 482,
-            "date": "09/01/2025",
-            "category": "Groceries",
-            "amount": 15.66,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.15660000000000002,
-            "hash_value": "603c982c36e5375770d2f94a063a3be5ddb8433aa1a5cbe72d68f70efcd578db"
-        },
-        {
-            "id": 483,
+            "id": 718,
             "date": "03/01/2025",
             "category": "Groceries",
             "amount": 5.39,
@@ -3672,17 +1562,7 @@
             "hash_value": "f3fc0376b0a49b8cf3d116d1b833b4d160abbf1d6cc31e24b7f91a7b8c99738c"
         },
         {
-            "id": 484,
-            "date": "31/01/2025",
-            "category": "Groceries",
-            "amount": 4.99,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.0499,
-            "hash_value": "a357abf21f4a2f86b7241af0b6ad3d56acb1a1bcd29919dd6a15580d7cebc8d5"
-        },
-        {
-            "id": 485,
+            "id": 719,
             "date": "20/01/2025",
             "category": "Leisure",
             "amount": 2.58,
@@ -3692,17 +1572,7 @@
             "hash_value": "bbe88eda04977079e9a21119d59bf60b7de77fbbbca8820cf73dad0aabec6380"
         },
         {
-            "id": 486,
-            "date": "29/01/2025",
-            "category": "Groceries",
-            "amount": 2.4,
-            "payment_method": "Chase",
-            "merchant": "Spar",
-            "rebate": 0.024,
-            "hash_value": "4b1986e1b11a0ecfbd604b65c4b9db1dc190f839f944f7938675d8b028350428"
-        },
-        {
-            "id": 487,
+            "id": 720,
             "date": "06/01/2025",
             "category": "Sport",
             "amount": 5.0,
@@ -3712,17 +1582,7 @@
             "hash_value": "3dceba0693679e5b2bd93b8d9a14b71ae6d67d8661867da101b24e4679a1e418"
         },
         {
-            "id": 488,
-            "date": "20/01/2025",
-            "category": "Sport",
-            "amount": 5.0,
-            "payment_method": "Chase",
-            "merchant": "Spikers",
-            "rebate": 0.05,
-            "hash_value": "f2118ab9440403928eff004dd8e22a2eca3d07ab362b8ff4d9a6f484729a9d64"
-        },
-        {
-            "id": 489,
+            "id": 721,
             "date": "06/01/2025",
             "category": "Sport",
             "amount": 4.5,
@@ -3732,17 +1592,7 @@
             "hash_value": "25c10c12554e419571a5c3c49ea01eda7be7ccdcf32ecf6a77b4979f19f45df9"
         },
         {
-            "id": 490,
-            "date": "19/01/2025",
-            "category": "Sport",
-            "amount": 4.5,
-            "payment_method": "Chase",
-            "merchant": "Spikers",
-            "rebate": 0.045,
-            "hash_value": "f8608685c524b0da4193cd22878d36117396a6fa043859f27fa1e49ce8bfd91e"
-        },
-        {
-            "id": 491,
+            "id": 722,
             "date": "26/01/2025",
             "category": "Sport",
             "amount": 4.5,
@@ -3752,17 +1602,7 @@
             "hash_value": "f1210491f47237db66244ae30e3e1636d8d448f35c3c1b7a719f61a6c5758a52"
         },
         {
-            "id": 492,
-            "date": "10/01/2025",
-            "category": "Sport",
-            "amount": 1.75,
-            "payment_method": "Lloyds",
-            "merchant": "Sportspark",
-            "rebate": 0.0,
-            "hash_value": "7234762128520a86450f2f93f7a4db5d63a971f625f7e1c8f7720f074e2c2b76"
-        },
-        {
-            "id": 493,
+            "id": 723,
             "date": "26/01/2025",
             "category": "Sport",
             "amount": 1.0,
@@ -3772,7 +1612,7 @@
             "hash_value": "f64d146021eb62954fc83fc9467adfd0d15e36bab70249ae5ef6663ddd3b6f1a"
         },
         {
-            "id": 494,
+            "id": 724,
             "date": "13/01/2025",
             "category": "Transport",
             "amount": 4.5,
@@ -3782,17 +1622,7 @@
             "hash_value": "61b93b6f97d77013fdf5023c6a4ad43f8112d54d99bc2a6b3b73631e266376f3"
         },
         {
-            "id": 496,
-            "date": "31/01/2025",
-            "category": "Groceries",
-            "amount": 1.9,
-            "payment_method": "Chase",
-            "merchant": "Tesco",
-            "rebate": 0.019,
-            "hash_value": "c9de42c34c95e8b5e4cfc79a00abf7f1814f16ccf1b26a62052ca930f5c25192"
-        },
-        {
-            "id": 497,
+            "id": 725,
             "date": "13/01/2025",
             "category": "Dining",
             "amount": 18.5,
@@ -3802,17 +1632,7 @@
             "hash_value": "c11a7dd450e504693978171c11d4d4ca69c4f936d053c51720337b3b67293d13"
         },
         {
-            "id": 498,
-            "date": "17/01/2025",
-            "category": "Groceries",
-            "amount": 7.0,
-            "payment_method": "Chase",
-            "merchant": "The Works",
-            "rebate": 0.07,
-            "hash_value": "3eec82233166136c45e5379fd38a985fa84c042d38735c58f07782d3446e27fb"
-        },
-        {
-            "id": 499,
+            "id": 726,
             "date": "11/01/2025",
             "category": "Leisure",
             "amount": 158.16,
@@ -3822,17 +1642,7 @@
             "hash_value": "c489799c0201e955ecf36d6af4da756cc785e55596685a21ed6dcf8e3c8a65cd"
         },
         {
-            "id": 500,
-            "date": "17/01/2025",
-            "category": "Transport",
-            "amount": 3.5,
-            "payment_method": "Lloyds",
-            "merchant": "Uber",
-            "rebate": 0.0,
-            "hash_value": "bb962e6eac3d0be7c078f7250f54dad3fac3034156dc380d31fd8f3921e813d8"
-        },
-        {
-            "id": 501,
+            "id": 727,
             "date": "20/01/2025",
             "category": "UEA",
             "amount": 9965.0,
@@ -3842,17 +1652,7 @@
             "hash_value": "2792ef93a71745dc42d8304c0c3b8b9f1c682cfccffe3639c550b69102fa05cf"
         },
         {
-            "id": 502,
-            "date": "08/01/2025",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "Chase",
-            "merchant": "Vending",
-            "rebate": 0.019,
-            "hash_value": "fc256e6160a631bb4f8456f95313c384fad07cd5fdc05e6c81c76ee2d261706c"
-        },
-        {
-            "id": 503,
+            "id": 728,
             "date": "24/01/2025",
             "category": "Dining",
             "amount": 1.9,
@@ -3862,17 +1662,7 @@
             "hash_value": "81bbcde6bb1b9e472c89b21eb098b3de07ae2f3891ae25568da7aba21cc2c8d5"
         },
         {
-            "id": 504,
-            "date": "04/01/2025",
-            "category": "Dining",
-            "amount": 1.6,
-            "payment_method": "Chase",
-            "merchant": "Vending",
-            "rebate": 0.016,
-            "hash_value": "e7740f282607077c68a7cf9e4303a207a64dac3d2967223ec38a3d942cd23e4e"
-        },
-        {
-            "id": 505,
+            "id": 729,
             "date": "10/01/2025",
             "category": "Bill",
             "amount": 10.0,
@@ -3882,17 +1672,7 @@
             "hash_value": "ef648bf954465f170a8bcadcef2abb1abaf3581ea6119e7b1e48c409517b7aab"
         },
         {
-            "id": 506,
-            "date": "15/01/2025",
-            "category": "Dining",
-            "amount": 11.7,
-            "payment_method": "Chase",
-            "merchant": "Weatherspoon",
-            "rebate": 0.11699999999999999,
-            "hash_value": "461340d932d4212d9ce4fc045046a89d097337e3f843ede3e4647bd5d37ddaed"
-        },
-        {
-            "id": 507,
+            "id": 730,
             "date": "15/01/2025",
             "category": "Dining",
             "amount": 8.51,
@@ -3902,17 +1682,7 @@
             "hash_value": "67c70d205aa176f11eb99fcb5afdf3b6089e115119279602c965c81a15376725"
         },
         {
-            "id": 508,
-            "date": "15/01/2025",
-            "category": "Dining",
-            "amount": 5.85,
-            "payment_method": "Chase",
-            "merchant": "Weatherspoon",
-            "rebate": 0.058499999999999996,
-            "hash_value": "586e0ab9941f730dc82e68d3ce2fa1ff0a162861f4b4f01795f0f0b5ea84fd38"
-        },
-        {
-            "id": 509,
+            "id": 731,
             "date": "15/01/2025",
             "category": "Dining",
             "amount": 3.36,
@@ -3922,17 +1692,7 @@
             "hash_value": "4a3dd5c6776cd83774dd21928aff4650675f2885e716138a7dbd1864098125d5"
         },
         {
-            "id": 510,
-            "date": "13/01/2025",
-            "category": "Dining",
-            "amount": 3.0,
-            "payment_method": "Chase",
-            "merchant": "WHSmith",
-            "rebate": 0.03,
-            "hash_value": "085881950857e39045b42097a146d170eab1d0d370ef15e24dcdcb22705a83c0"
-        },
-        {
-            "id": 511,
+            "id": 732,
             "date": "18/01/2025",
             "category": "Shopping",
             "amount": 29.99,
@@ -3942,17 +1702,7 @@
             "hash_value": "6229eab46266a45adeebc24282c8562cd3a89aabf0d39046b0ff2bc6979d9672"
         },
         {
-            "id": 512,
-            "date": "09/02/2025",
-            "category": "HK",
-            "amount": 719.62,
-            "payment_method": "Chase",
-            "merchant": "China Airline",
-            "rebate": 7.1962,
-            "hash_value": "f446c443af090eb7a075c1f32975fbf9f4e6ea4642302621b852d3141a0c0270"
-        },
-        {
-            "id": 513,
+            "id": 733,
             "date": "04/02/2025",
             "category": "Shopping",
             "amount": 59.92,
@@ -3962,17 +1712,7 @@
             "hash_value": "071e4595db5af3f2027e6175c3966f9d4cc32fdf1189525b95e6301b9d9f17c3"
         },
         {
-            "id": 514,
-            "date": "24/02/2025",
-            "category": "Groceries",
-            "amount": 50.0,
-            "payment_method": "Chase",
-            "merchant": "Jamdoughnut",
-            "rebate": 0.5,
-            "hash_value": "cbf6ae835b952ecd7f21aa8c0468a3c9b1c55d756b9494ed9db154412f109ca3"
-        },
-        {
-            "id": 515,
+            "id": 734,
             "date": "22/02/2025",
             "category": "Groceries",
             "amount": 46.6,
@@ -3982,17 +1722,7 @@
             "hash_value": "d784fc75483a1c95cedd414cff1a3bff75dc857c741159fa945724388fabe5db"
         },
         {
-            "id": 516,
-            "date": "15/02/2025",
-            "category": "Dining",
-            "amount": 36.45,
-            "payment_method": "Chase",
-            "merchant": "GBK",
-            "rebate": 0.36450000000000005,
-            "hash_value": "7fa96040a9a1b3ecb51f4ed694c0dc0f14e67f3991bbf2c750e2bd9a07ccc62a"
-        },
-        {
-            "id": 517,
+            "id": 735,
             "date": "22/02/2025",
             "category": "Dining",
             "amount": 35.25,
@@ -4002,17 +1732,7 @@
             "hash_value": "885cec39cf9941379256ceac01806824a8598d963220304aef5c05336b843864"
         },
         {
-            "id": 518,
-            "date": "05/02/2025",
-            "category": "Groceries",
-            "amount": 34.71,
-            "payment_method": "Chase",
-            "merchant": "Aldi",
-            "rebate": 0.3471,
-            "hash_value": "39fe5c5a9b9699c759f77609f788233aa5337d315cea315bd2d2cbb4cc3dcae5"
-        },
-        {
-            "id": 519,
+            "id": 736,
             "date": "02/02/2025",
             "category": "Sport",
             "amount": 30.52,
@@ -4022,17 +1742,7 @@
             "hash_value": "938824a8d1a56d77b703ef63fb79353e1e029136fd31f49d8ed991152b67cc0b"
         },
         {
-            "id": 520,
-            "date": "17/02/2025",
-            "category": "Groceries",
-            "amount": 30.38,
-            "payment_method": "Chase",
-            "merchant": "Co-op",
-            "rebate": 0.3038,
-            "hash_value": "0d1e0e7f8eecfb17a58d5ae92a6e180efee032fe9820bdfb176d6256b84a678c"
-        },
-        {
-            "id": 521,
+            "id": 737,
             "date": "01/02/2025",
             "category": "Dining",
             "amount": 30.07,
@@ -4042,17 +1752,7 @@
             "hash_value": "3117ce72f0e153d6baf5402ff0ee16552c35d79a8f0bf51b0b61668b0398897b"
         },
         {
-            "id": 522,
-            "date": "16/02/2025",
-            "category": "Dining",
-            "amount": 25.5,
-            "payment_method": "Chase",
-            "merchant": "Ask Italian",
-            "rebate": 0.255,
-            "hash_value": "e68744738d75cce5a7d56fdede9cb97bf8a1c8696871e98b42cd752cef72d496"
-        },
-        {
-            "id": 523,
+            "id": 738,
             "date": "16/02/2025",
             "category": "Shopping",
             "amount": 22.98,
@@ -4062,17 +1762,7 @@
             "hash_value": "6bd92489e7404b608341d83f8a14b179864c180525a06467133c631ebab34de8"
         },
         {
-            "id": 524,
-            "date": "21/02/2025",
-            "category": "Dining",
-            "amount": 20.65,
-            "payment_method": "Chase",
-            "merchant": "Five Guys",
-            "rebate": 0.2065,
-            "hash_value": "d5b5d10f26ed027eb1eae17444187a67432498f8af904ad3d809b43df1b9220d"
-        },
-        {
-            "id": 525,
+            "id": 739,
             "date": "12/02/2025",
             "category": "Groceries",
             "amount": 18.37,
@@ -4082,17 +1772,7 @@
             "hash_value": "db8369e18de32c358911c1780539dd07d39262f33de1d2096ef7ed7fc86cc921"
         },
         {
-            "id": 526,
-            "date": "14/02/2025",
-            "category": "Transport",
-            "amount": 13.5,
-            "payment_method": "Chase",
-            "merchant": "First Bus",
-            "rebate": 0.135,
-            "hash_value": "059517e6de2636403744647fbe6e2c6042d3c3e1abacf52520cdb0b6bff737f1"
-        },
-        {
-            "id": 527,
+            "id": 740,
             "date": "18/02/2025",
             "category": "Shopping",
             "amount": 12.99,
@@ -4102,17 +1782,7 @@
             "hash_value": "7a14327288b5b9f997b3fe56e9404b7d48dadd728552fcd0f4802466820e1b0b"
         },
         {
-            "id": 528,
-            "date": "11/02/2025",
-            "category": "Shopping",
-            "amount": 27.5,
-            "payment_method": "HSBC",
-            "merchant": "First Bus",
-            "rebate": 0.11,
-            "hash_value": "167aeba95213cce64d25c11456b901d8584c95ad1801e683c817b7f1abb028aa"
-        },
-        {
-            "id": 529,
+            "id": 741,
             "date": "20/02/2025",
             "category": "Leisure",
             "amount": 10.4,
@@ -4122,17 +1792,7 @@
             "hash_value": "dd5b0aa20610065cafcccc3afd62829676b0957a5a2af4502b927d60fab7a2b9"
         },
         {
-            "id": 530,
-            "date": "08/02/2025",
-            "category": "Groceries",
-            "amount": 10.35,
-            "payment_method": "Chase",
-            "merchant": "Sainsbury's",
-            "rebate": 0.1035,
-            "hash_value": "35ef572101993baa2aba85192d5d001de54026ade2c9d1b89917b0a225d06cba"
-        },
-        {
-            "id": 531,
+            "id": 742,
             "date": "13/02/2025",
             "category": "Laundry",
             "amount": 10.0,
@@ -4142,17 +1802,7 @@
             "hash_value": "b3ea1e046c0cc60b71d3b519f4286022c6f12865e927452100d43f42610a18b7"
         },
         {
-            "id": 532,
-            "date": "14/02/2025",
-            "category": "Groceries",
-            "amount": 9.3,
-            "payment_method": "Chase",
-            "merchant": "Chinatown",
-            "rebate": 0.09300000000000001,
-            "hash_value": "80ef9c22efe67d90998835418ca8e4b1497f12d6edb72adf41afda6f6a16e090"
-        },
-        {
-            "id": 533,
+            "id": 743,
             "date": "07/02/2025",
             "category": "Bill",
             "amount": 7.0,
@@ -4162,17 +1812,7 @@
             "hash_value": "f2b82b05b7af9475ec5cdc3e13fef2686eb54dde9890b777cadcdb33e4c99527"
         },
         {
-            "id": 534,
-            "date": "05/02/2025",
-            "category": "Dining",
-            "amount": 6.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.06,
-            "hash_value": "011d90c910fbd9efdd6f9c51476ec255c384e4180a0b4fc62cce6b3b3d44160d"
-        },
-        {
-            "id": 535,
+            "id": 744,
             "date": "14/02/2025",
             "category": "Dining",
             "amount": 5.9,
@@ -4182,17 +1822,7 @@
             "hash_value": "45b367a7094843cf648be6a8051cabf607b09c56ef0813c1cf9e6ba4d3c18812"
         },
         {
-            "id": 536,
-            "date": "21/02/2025",
-            "category": "Leisure",
-            "amount": 5.4,
-            "payment_method": "Chase",
-            "merchant": "Bar SU",
-            "rebate": 0.054000000000000006,
-            "hash_value": "51ea840ae5b07bd0d9c6050c7bed778c664984bb6d81d7b6e16213cb8dccf8cb"
-        },
-        {
-            "id": 537,
+            "id": 745,
             "date": "22/02/2025",
             "category": "Transport",
             "amount": 13.5,
@@ -4202,17 +1832,7 @@
             "hash_value": "c40dc78ad0cf344460d6bad7f83868332adb4886846cc7c8b6516c6bd4039e6a"
         },
         {
-            "id": 538,
-            "date": "15/02/2025",
-            "category": "Groceries",
-            "amount": 5.24,
-            "payment_method": "Chase",
-            "merchant": "Boots",
-            "rebate": 0.0524,
-            "hash_value": "73165699c5eecbb14a34c505b6eaac9d10b58191ab61bc577d23ae3d0408ad6a"
-        },
-        {
-            "id": 539,
+            "id": 746,
             "date": "27/02/2025",
             "category": "Leisure",
             "amount": 5.2,
@@ -4222,17 +1842,7 @@
             "hash_value": "3d03d15523381caea946adafa7e14e7f7d8e5ce26537cf3dbf6f63060a4a37c8"
         },
         {
-            "id": 541,
-            "date": "08/02/2025",
-            "category": "Bill",
-            "amount": 4.99,
-            "payment_method": "Chase",
-            "merchant": "Apple",
-            "rebate": 0.0499,
-            "hash_value": "60763062d10d2ae268ea44bf4a131263c770fc5b2948029b1a37f06e18e02525"
-        },
-        {
-            "id": 542,
+            "id": 747,
             "date": "03/02/2025",
             "category": "Dining",
             "amount": 4.8,
@@ -4242,17 +1852,7 @@
             "hash_value": "82f5f40e6157e10d6cf8b6adff20e176d198be826bdb126195220f6f84c77a61"
         },
         {
-            "id": 543,
-            "date": "03/02/2025",
-            "category": "Sport",
-            "amount": 4.5,
-            "payment_method": "Chase",
-            "merchant": "Spikers",
-            "rebate": 0.045,
-            "hash_value": "daff994e8ef6fd8d87ec50c2654bae7797d305af4e9d14d62bea2c37ba3291eb"
-        },
-        {
-            "id": 544,
+            "id": 748,
             "date": "23/02/2025",
             "category": "Sport",
             "amount": 4.5,
@@ -4262,17 +1862,7 @@
             "hash_value": "b26bbbc7edb7dd3372ca2979e325235395803258dbb80fde564d85689a66ec16"
         },
         {
-            "id": 545,
-            "date": "18/02/2025",
-            "category": "Leisure",
-            "amount": 4.26,
-            "payment_method": "Chase",
-            "merchant": "Club",
-            "rebate": 0.0426,
-            "hash_value": "17e1881e41845d4bb62218a6b54f988ac18606c89e9ca9a7b044f8151a453ffa"
-        },
-        {
-            "id": 546,
+            "id": 749,
             "date": "24/02/2025",
             "category": "Leisure",
             "amount": 4.26,
@@ -4282,17 +1872,7 @@
             "hash_value": "397e2df0c70f1dc4a04f931c9926ba26a3813a1364ebeacdd6c6ca14ffa18b3d"
         },
         {
-            "id": 547,
-            "date": "08/02/2025",
-            "category": "Dining",
-            "amount": 4.1,
-            "payment_method": "Chase",
-            "merchant": "Bar SU",
-            "rebate": 0.040999999999999995,
-            "hash_value": "87c1888da3f2fc568bcae3e13824d2bef5e98c33e5feb08ee07968c316609383"
-        },
-        {
-            "id": 548,
+            "id": 750,
             "date": "05/02/2025",
             "category": "Dining",
             "amount": 3.94,
@@ -4302,17 +1882,7 @@
             "hash_value": "658cc9bbf28c754ddfb0deec47cac9115b7ced91286b9ef47abda2dd28c28b00"
         },
         {
-            "id": 549,
-            "date": "22/02/2025",
-            "category": "Groceries",
-            "amount": 2.7,
-            "payment_method": "Chase",
-            "merchant": "Boots",
-            "rebate": 0.027000000000000003,
-            "hash_value": "a24120d3f624f2608f058d06c02cf15ad67656437a3d28208e06018000cfffed"
-        },
-        {
-            "id": 550,
+            "id": 751,
             "date": "27/02/2025",
             "category": "Leisure",
             "amount": 2.7,
@@ -4322,17 +1892,7 @@
             "hash_value": "45c32991cfdabcc95572c52a63baa7d908c20146692a1b6682676e6b30e8b3b5"
         },
         {
-            "id": 551,
-            "date": "26/02/2025",
-            "category": "Groceries",
-            "amount": 2.42,
-            "payment_method": "Chase",
-            "merchant": "Sainsbury's",
-            "rebate": 0.0242,
-            "hash_value": "1c860e7186e6b5f96a5993469a0476270ac74af5a56d4ae450ab66a994f37ffc"
-        },
-        {
-            "id": 552,
+            "id": 752,
             "date": "08/02/2025",
             "category": "Dining",
             "amount": 2.4,
@@ -4342,17 +1902,7 @@
             "hash_value": "a75e8568856bd0fe468001bdafc45a64cdcc8bf4395bfc2d85d0ec773f30e2ba"
         },
         {
-            "id": 553,
-            "date": "11/02/2025",
-            "category": "Dining",
-            "amount": 2.3,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.023,
-            "hash_value": "32cf680d21fe2ed9ab6a96dd5851730bc43cc949b78b0aa5c6d4684002692c24"
-        },
-        {
-            "id": 554,
+            "id": 753,
             "date": "09/02/2025",
             "category": "Dining",
             "amount": 2.2,
@@ -4362,17 +1912,7 @@
             "hash_value": "8bcb45968eb1d65dd82d1980a7bd89fdb0819c056c8900a3fb072bf8bbbe07ad"
         },
         {
-            "id": 555,
-            "date": "22/02/2025",
-            "category": "Shopping",
-            "amount": 2.0,
-            "payment_method": "Chase",
-            "merchant": "Copenhagen",
-            "rebate": 0.02,
-            "hash_value": "043e32929b12b060e4392cf71b8c916c62ca4249826035a49709432e2a38afd1"
-        },
-        {
-            "id": 556,
+            "id": 754,
             "date": "08/02/2025",
             "category": "Dining",
             "amount": 1.9,
@@ -4382,17 +1922,7 @@
             "hash_value": "d414be0618b44339bbf7d92378fc307a3ca01e59861d6e6c02927831ca34b337"
         },
         {
-            "id": 557,
-            "date": "10/02/2025",
-            "category": "Dining",
-            "amount": 1.9,
-            "payment_method": "Chase",
-            "merchant": "Ziggy",
-            "rebate": 0.019,
-            "hash_value": "85d7dbc423b16d9d0195e78dfd2b4daab6c3c75b1f98b5c6ddf6c47d11b37e81"
-        },
-        {
-            "id": 558,
+            "id": 755,
             "date": "25/02/2025",
             "category": "Leisure",
             "amount": 1.23,
@@ -4402,17 +1932,7 @@
             "hash_value": "ceed203dbce5f6f322afc54f6602d36c0d939b43c798ac41142666a872e973c4"
         },
         {
-            "id": 559,
-            "date": "01/02/2025",
-            "category": "Sport",
-            "amount": 1.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.01,
-            "hash_value": "9bcbdb4744259020247c430a6039132ac49b27ccac876173864ab1da3766f7de"
-        },
-        {
-            "id": 560,
+            "id": 756,
             "date": "03/02/2025",
             "category": "Sport",
             "amount": 1.0,
@@ -4422,17 +1942,7 @@
             "hash_value": "7bce6b7861a3ca08163fc95df410e21e4c3f9e1b87639690205f3abb22861342"
         },
         {
-            "id": 561,
-            "date": "22/02/2025",
-            "category": "Dining",
-            "amount": 1.0,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.01,
-            "hash_value": "1ace240164f26562c99d817fb1e99e74cd0f757aa0f89576425c9fed7d0a6206"
-        },
-        {
-            "id": 562,
+            "id": 757,
             "date": "24/02/2025",
             "category": "Sport",
             "amount": 1.0,
@@ -4440,16 +1950,6 @@
             "merchant": "Sportspark",
             "rebate": 0.01,
             "hash_value": "a3198858c157eb6c548f1bc742a0b25ea9b2bfa7c779c4d712ec60defba0bacf"
-        },
-        {
-            "id": 563,
-            "date": "09/02/2025",
-            "category": "Dining",
-            "amount": 10.75,
-            "payment_method": "Chase",
-            "merchant": "Sportspark",
-            "rebate": 0.0,
-            "hash_value": "b0d0a4f5490865b126b7c509d317cbb10bc11d978088a68480ccffca847752f1"
         }
     ]
 }

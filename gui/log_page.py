@@ -1,8 +1,8 @@
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QTableWidget,
-    QTableWidgetItem, QPushButton, QLineEdit, QFileDialog, QAbstractItemView, QMessageBox, 
+    QTableWidgetItem, QPushButton, QLineEdit, QFileDialog, QAbstractItemView, QMessageBox, QItemDelegate
 )
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt , QDate
 
     #bugs
  #why is the sorting weird
@@ -85,10 +85,17 @@ class LogPage(QWidget):
             id_item = QTableWidgetItem(str(exp.id))
             id_item.setFlags(id_item.flags() & ~Qt.ItemFlag.ItemIsEditable)
             self.table.setItem(row, 0, id_item)
+            
+            date_item = QTableWidgetItem() #date items still do not sort as date obj with table widget 
+            date_obj = QDate.fromString(exp.date, "dd/MM/yyyy")
+            date_item.setData(Qt.ItemDataRole.EditRole, date_obj)
+            date_item.setText(date_obj.toString("dd/MM/yyyy"))
 
-            self.table.setItem(row, 1, QTableWidgetItem(exp.date))
+            self.table.setItem(row, 1, date_item)
             self.table.setItem(row, 2, QTableWidgetItem(exp.category))
-            self.table.setItem(row, 3, QTableWidgetItem(str(exp.amount)))
+            amt_item = QTableWidgetItem()
+            amt_item.setData(Qt.ItemDataRole.EditRole, float(exp.amount))
+            self.table.setItem(row, 3, amt_item)
             self.table.setItem(row, 4, QTableWidgetItem(exp.payment_method))
             self.table.setItem(row, 5, QTableWidgetItem(exp.merchant))
             self.table.setItem(row, 6, QTableWidgetItem(str(exp.rebate)))

@@ -85,3 +85,5 @@ Lifestyle adjustments
 Shows:
 “By day 15 I’ve already spent 80% of last month.”
 Very powerful behaviourally.
+
+Automated Tagging: If you're building this in Python, use a library like spaCy or simple keyword matching to auto-categorize transactions so we don't have to do it manually.
