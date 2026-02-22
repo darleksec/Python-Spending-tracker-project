@@ -106,6 +106,10 @@ class LogPage(QWidget):
         
         self.table.setSortingEnabled(True)
         self.table.sortItems(sort_column, sort_order)
+        
+        print("Total expenses:", len(expenses))
+        
+
 
         
 
@@ -208,7 +212,7 @@ class LogPage(QWidget):
 
 
     def filter_expenses(self, text):
-
+        count = 0
         for row in range(self.table.rowCount()):
             match = False
 
@@ -216,6 +220,8 @@ class LogPage(QWidget):
                 item = self.table.item(row, col)
                 if item and text.lower() in item.text().lower():
                     match = True
+                    count += 1 
                     break
 
             self.table.setRowHidden(row, not match)
+        print ("Showing : ", count)

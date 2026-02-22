@@ -215,6 +215,8 @@ class ExpenseTracker:
             try:
                 # Date
                 date = row["Date"]
+                print(type(row["Date"]), row["Date"])
+
                 if pd.isna(date):
                     raise ValueError("Missing date")
                 date = date.strftime("%d/%m/%Y")
