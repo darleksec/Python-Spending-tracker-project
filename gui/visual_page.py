@@ -637,6 +637,47 @@ class VisualPage(QWidget):
         self.figure.tight_layout()
         self.canvas.draw()
 
+    def plot_cashback_analysis(self):
+
+        df = self.df.copy()
+
+        # Group by month and calculate totals
+        monthly_cashback = df.groupby("Month")["Rebate"].sum()
+        monthly_spending = df.groupby("Month")["Amount"].sum()
+
+        # Calculate efficiency percentage
+        efficiency = (monthly_cashback / monthly_spending * 100).fillna(0)
+
+        # Convert index to string for plotting
+        monthly_cashback.index = monthly_cashback.index.astype(str)
+        efficiency.index = efficiency.index.astype(str)
+
+        ax = self.clear_and_get_axis()
+
+        # Create bar chart for monthly cashback
+        bars = ax.bar(monthly_cashback.index, monthly_cashback.values)
+
+        # Add efficiency % labels on top of bars
+        for i, (bar, eff) in enumerate(zip(bars, efficiency.values)):
+            height = bar.get_height()
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                height,
+                f'{eff:.1f}%',
+                ha='center',
+                va='bottom',
+                fontsize=9
+            )
+
+        ax.set_title("Monthly Cashback Analysis")
+        ax.set_xlabel("Month")
+        ax.set_ylabel("Total Cashback (£)")
+        ax.tick_params(axis='x', rotation=45)
+        ax.grid(True, alpha=0.3)
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
     def create_sidebar(self):
 
         self.sidebar_frame = QFrame()
@@ -672,6 +713,9 @@ class VisualPage(QWidget):
         self.cat_trend_btn = QPushButton("Category Trend")
         self.cat_trend_btn.clicked.connect(self.plot_category_trend)
 
+        self.cashback_btn = QPushButton("Cashback Analysis")
+        self.cashback_btn.clicked.connect(self.plot_cashback_analysis)
+
         # === TREND FILTERS SECTION ===
         filter_label = QLabel("Trend Filters")
         filter_label.setStyleSheet("font-weight: bold; font-size: 14px;")
@@ -703,6 +747,7 @@ class VisualPage(QWidget):
         layout.addWidget(self.month_pie_btn)
         layout.addWidget(self.cumulative_btn)
         layout.addWidget(self.cat_trend_btn)
+        layout.addWidget(self.cashback_btn)
 
         layout.addSpacing(20)
 
