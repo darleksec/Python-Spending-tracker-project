@@ -407,6 +407,24 @@ class VisualPage(QWidget):
         ax.tick_params(axis='x', rotation=45)
 
         self.canvas.draw()
+
+
+    def plot_category_horizontal_bar(self):
+
+        data = self.tracker.get_category_total()
+
+        sorted_items = sorted(data.items(), key=lambda x: x[1], reverse=True)
+        categories = [item[0] for item in sorted_items]
+        totals = [item[1] for item in sorted_items]
+
+        ax = self.clear_and_get_axis()
+
+        ax.barh(categories, totals)
+        ax.set_title("Expenses by Category (Horizontal)")
+        ax.set_xlabel("Total Spending")
+        ax.set_ylabel("Category")
+
+        self.canvas.draw()
         
     
     def monthly_overview(self):
@@ -610,6 +628,9 @@ class VisualPage(QWidget):
         self.cat_bar_btn = QPushButton("Category Bar Chart")
         self.cat_bar_btn.clicked.connect(self.Category_Sum)
 
+        self.cat_bar_h_btn = QPushButton("Category Bar (Horizontal)")
+        self.cat_bar_h_btn.clicked.connect(self.plot_category_horizontal_bar)
+
         self.month_overview_btn = QPushButton("Monthly Overview")
         self.month_overview_btn.clicked.connect(self.monthly_overview)
 
@@ -649,6 +670,7 @@ class VisualPage(QWidget):
         # Add everything to sidebar layout
         layout.addWidget(quick_label)
         layout.addWidget(self.cat_bar_btn)
+        layout.addWidget(self.cat_bar_h_btn)
         layout.addWidget(self.month_overview_btn)
         layout.addWidget(self.month_pie_btn)
         layout.addWidget(self.cumulative_btn)
