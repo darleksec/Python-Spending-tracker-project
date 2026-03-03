@@ -720,6 +720,56 @@ class VisualPage(QWidget):
         self.figure.tight_layout()
         self.canvas.draw()
 
+    def plot_budget_vs_actual(self):
+
+        # Get actual spending by category
+        data = self.tracker.get_category_total()
+
+        # Hardcoded placeholder budgets (TODO: Replace with actual budget data)
+        placeholder_budgets = {
+            "Food": 500,
+            "Transport": 200,
+            "Entertainment": 150,
+            "Shopping": 300,
+            "Utilities": 250,
+            "Healthcare": 100,
+            "Other": 100
+        }
+
+        # Prepare data for plotting
+        categories = list(data.keys())
+        actual = list(data.values())
+
+        # Match budgets to actual categories (use 0 if no budget set)
+        budget = [placeholder_budgets.get(cat, 0) for cat in categories]
+
+        ax = self.clear_and_get_axis()
+
+        # Create grouped bar chart
+        x_pos = np.arange(len(categories))
+        width = 0.35
+
+        bars_budget = ax.bar(x_pos - width/2, budget, width, label='Budget', color='#4a90e2')
+        bars_actual = ax.bar(x_pos + width/2, actual, width, label='Actual', color='#e74c3c')
+
+        # Color actual bars differently if over budget
+        for i, (b, a) in enumerate(zip(budget, actual)):
+            if a > b and b > 0:
+                bars_actual[i].set_color('#e74c3c')  # Red for over budget
+            else:
+                bars_actual[i].set_color('#2ecc71')  # Green for under budget
+
+        ax.set_title("Budget vs Actual Spending by Category")
+        ax.set_xlabel("Category")
+        ax.set_ylabel("Amount (£)")
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(categories, rotation=45, ha='right')
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
     def create_sidebar(self):
 
         self.sidebar_frame = QFrame()
@@ -761,6 +811,9 @@ class VisualPage(QWidget):
         self.payment_method_btn = QPushButton("Payment Methods")
         self.payment_method_btn.clicked.connect(self.plot_payment_method_spend)
 
+        self.budget_btn = QPushButton("Budget vs Actual")
+        self.budget_btn.clicked.connect(self.plot_budget_vs_actual)
+
         # === TREND FILTERS SECTION ===
         filter_label = QLabel("Trend Filters")
         filter_label.setStyleSheet("font-weight: bold; font-size: 14px;")
@@ -794,6 +847,7 @@ class VisualPage(QWidget):
         layout.addWidget(self.cat_trend_btn)
         layout.addWidget(self.cashback_btn)
         layout.addWidget(self.payment_method_btn)
+        layout.addWidget(self.budget_btn)
 
         layout.addSpacing(20)
 
