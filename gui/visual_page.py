@@ -678,6 +678,48 @@ class VisualPage(QWidget):
         self.figure.tight_layout()
         self.canvas.draw()
 
+    def plot_payment_method_spend(self):
+
+        df = self.df.copy()
+
+        # Group by payment method and calculate totals
+        payment_spending = df.groupby("PaymentMethod")["Amount"].sum()
+        payment_cashback = df.groupby("PaymentMethod")["Rebate"].sum()
+
+        # Calculate efficiency percentage
+        efficiency = (payment_cashback / payment_spending * 100).fillna(0)
+
+        # Sort by total spending (descending)
+        payment_spending = payment_spending.sort_values(ascending=False)
+        efficiency = efficiency.reindex(payment_spending.index)
+
+        ax = self.clear_and_get_axis()
+
+        # Create bar chart for payment method spending
+        bars = ax.bar(range(len(payment_spending)), payment_spending.values)
+        ax.set_xticks(range(len(payment_spending)))
+        ax.set_xticklabels(payment_spending.index, rotation=45, ha='right')
+
+        # Add efficiency % labels on top of bars
+        for i, (bar, eff) in enumerate(zip(bars, efficiency.values)):
+            height = bar.get_height()
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                height,
+                f'{eff:.1f}%',
+                ha='center',
+                va='bottom',
+                fontsize=9
+            )
+
+        ax.set_title("Spending by Payment Method (with Cashback Efficiency)")
+        ax.set_xlabel("Payment Method")
+        ax.set_ylabel("Total Spending (£)")
+        ax.grid(True, alpha=0.3)
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
     def create_sidebar(self):
 
         self.sidebar_frame = QFrame()
@@ -716,6 +758,9 @@ class VisualPage(QWidget):
         self.cashback_btn = QPushButton("Cashback Analysis")
         self.cashback_btn.clicked.connect(self.plot_cashback_analysis)
 
+        self.payment_method_btn = QPushButton("Payment Methods")
+        self.payment_method_btn.clicked.connect(self.plot_payment_method_spend)
+
         # === TREND FILTERS SECTION ===
         filter_label = QLabel("Trend Filters")
         filter_label.setStyleSheet("font-weight: bold; font-size: 14px;")
@@ -748,6 +793,7 @@ class VisualPage(QWidget):
         layout.addWidget(self.cumulative_btn)
         layout.addWidget(self.cat_trend_btn)
         layout.addWidget(self.cashback_btn)
+        layout.addWidget(self.payment_method_btn)
 
         layout.addSpacing(20)
 
