@@ -2,6 +2,9 @@
 *.xls
 *.csv
 
+gui/__pycache__
+Bank-Statement-Parser-PDF-to-CSV
+
 # Auto Claude data directory
 .auto-claude/
 
