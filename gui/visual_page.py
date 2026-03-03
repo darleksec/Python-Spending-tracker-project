@@ -330,6 +330,7 @@ class VisualPage(QWidget):
 
         df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y")
         df["Month"] = df["Date"].dt.to_period("M")
+        df["DayOfWeek"] = df["Date"].dt.day_name()
 
         return df
     
