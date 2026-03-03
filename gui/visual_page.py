@@ -317,7 +317,10 @@ class VisualPage(QWidget):
             data.append({
                 "Date": exp.date,
                 "Category": exp.category,
-                "Amount": exp.amount
+                "Amount": exp.amount,
+                "Merchant": exp.merchant,
+                "PaymentMethod": exp.payment_method,
+                "Rebate": exp.rebate
             })
 
         df = pd.DataFrame(data)
