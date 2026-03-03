@@ -324,9 +324,6 @@ class VisualPage(QWidget):
             })
 
         df = pd.DataFrame(data)
-        print(df.columns)
-        print(df.head())
-
 
         df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y")
         df["Month"] = df["Date"].dt.to_period("M")
