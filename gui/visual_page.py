@@ -814,6 +814,9 @@ class VisualPage(QWidget):
         self.budget_btn = QPushButton("Budget vs Actual")
         self.budget_btn.clicked.connect(self.plot_budget_vs_actual)
 
+        self.top_merchants_btn = QPushButton("Top Merchants")
+        self.top_merchants_btn.clicked.connect(self.plot_top_merchants)
+
         # === TREND FILTERS SECTION ===
         filter_label = QLabel("Trend Filters")
         filter_label.setStyleSheet("font-weight: bold; font-size: 14px;")
@@ -845,6 +848,7 @@ class VisualPage(QWidget):
         layout.addWidget(self.month_pie_btn)
         layout.addWidget(self.cumulative_btn)
         layout.addWidget(self.cat_trend_btn)
+        layout.addWidget(self.top_merchants_btn)
         layout.addWidget(self.cashback_btn)
         layout.addWidget(self.payment_method_btn)
         layout.addWidget(self.budget_btn)
