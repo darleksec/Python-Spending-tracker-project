@@ -488,9 +488,33 @@ class VisualPage(QWidget):
         ax.set_title(f"Spending Breakdown — {selected_month}")
 
         self.canvas.draw()
-        
-        
-        
+
+
+    def plot_weekly_pattern(self):
+
+        df = self.df.copy()
+
+        # Group by day of week and calculate average spending
+        daily_avg = df.groupby("DayOfWeek")["Amount"].mean()
+
+        # Define day order (Monday to Sunday)
+        day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+        # Reindex to ensure correct order
+        daily_avg = daily_avg.reindex(day_order)
+
+        ax = self.clear_and_get_axis()
+
+        ax.bar(daily_avg.index, daily_avg.values)
+
+        ax.set_title("Weekly Spending Pattern")
+        ax.set_xlabel("Day of Week")
+        ax.set_ylabel("Average Spending")
+        ax.tick_params(axis='x', rotation=45)
+
+        self.canvas.draw()
+
+
     def plot_category_trend(self):
 
         df = self.df.copy()
@@ -631,6 +655,9 @@ class VisualPage(QWidget):
         self.cat_bar_h_btn = QPushButton("Category Bar (Horizontal)")
         self.cat_bar_h_btn.clicked.connect(self.plot_category_horizontal_bar)
 
+        self.weekly_pattern_btn = QPushButton("Weekly Pattern")
+        self.weekly_pattern_btn.clicked.connect(self.plot_weekly_pattern)
+
         self.month_overview_btn = QPushButton("Monthly Overview")
         self.month_overview_btn.clicked.connect(self.monthly_overview)
 
@@ -671,6 +698,7 @@ class VisualPage(QWidget):
         layout.addWidget(quick_label)
         layout.addWidget(self.cat_bar_btn)
         layout.addWidget(self.cat_bar_h_btn)
+        layout.addWidget(self.weekly_pattern_btn)
         layout.addWidget(self.month_overview_btn)
         layout.addWidget(self.month_pie_btn)
         layout.addWidget(self.cumulative_btn)
