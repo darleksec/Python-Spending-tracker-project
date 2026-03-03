@@ -572,7 +572,29 @@ class VisualPage(QWidget):
 
         self.figure.tight_layout()
         self.canvas.draw()
-        
+
+    def plot_top_merchants(self):
+
+        df = self.df.copy()
+
+        merchant_totals = df.groupby("Merchant")["Amount"].sum()
+        merchant_totals = merchant_totals.sort_values(ascending=False)
+
+        top_10 = merchant_totals.head(10)
+
+        ax = self.clear_and_get_axis()
+
+        ax.bar(range(len(top_10)), top_10.values)
+        ax.set_xticks(range(len(top_10)))
+        ax.set_xticklabels(top_10.index, rotation=45, ha='right')
+
+        ax.set_title("Top 10 Merchants by Total Spending")
+        ax.set_xlabel("Merchant")
+        ax.set_ylabel("Total Spending")
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
     def create_sidebar(self):
 
         self.sidebar_frame = QFrame()
