@@ -1,0 +1,119 @@
+QMainWindow {
+    background-color: @bg_primary@;
+}
+
+QWidget {
+    background-color: @bg_primary@;
+    color: @text_primary@;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+QLabel {
+    color: @text_primary@;
+    background-color: transparent;
+}
+
+QLineEdit, QComboBox, QDateEdit, QSpinBox, QDoubleSpinBox {
+    padding: 6px;
+    border: 1px solid @border@;
+    border-radius: 2px;
+    background-color: @bg_secondary@;
+    color: @text_primary@;
+}
+
+QLineEdit:focus, QComboBox:focus, QDateEdit:focus {
+    border: 1px solid @accent@;
+}
+
+QPushButton {
+    padding: 8px 16px;
+    border: 1px solid @border@;
+    border-radius: 2px;
+    background-color: @accent@;
+    color: @bg_primary@;
+}
+
+QPushButton:hover {
+    background-color: @accent_hover@;
+}
+
+QPushButton:pressed {
+    background-color: @accent_pressed@;
+}
+
+QTableWidget {
+    background-color: @bg_secondary@;
+    gridline-color: @border@;
+    color: @text_primary@;
+    border: 1px solid @border@;
+}
+
+QTableWidget::item:selected {
+    background-color: @accent@;
+    color: @bg_primary@;
+}
+
+QHeaderView::section {
+    background-color: @bg_tertiary@;
+    color: @text_primary@;
+    padding: 4px;
+    border: 1px solid @border@;
+}
+
+QGroupBox {
+    border: 1px solid @border@;
+    border-radius: 2px;
+    margin-top: 10px;
+    padding-top: 14px;
+    color: @text_primary@;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 4px;
+    color: @text_secondary@;
+}
+
+QFrame#sidebar {
+    background-color: @bg_tertiary@;
+    border-right: 1px solid @border@;
+}
+
+QListWidget {
+    background-color: @bg_secondary@;
+    border: 1px solid @border@;
+    color: @text_primary@;
+}
+
+QListWidget::item:selected {
+    background-color: @accent@;
+    color: @bg_primary@;
+}
+
+QScrollBar:vertical {
+    background-color: @bg_secondary@;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: @border@;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: @bg_secondary@;
+    color: @text_primary@;
+    selection-background-color: @accent@;
+    selection-color: @bg_primary@;
+}
+
+QCalendarWidget {
+    background-color: @bg_secondary@;
+    color: @text_primary@;
+}
