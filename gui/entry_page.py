@@ -3,53 +3,74 @@ from PyQt6.QtWidgets import (
     QLineEdit, QPushButton, QComboBox, QDateEdit, QFormLayout, QMessageBox
 )
 from PyQt6.QtCore import QDate
- #bugs
- #prompt to enter all fields 
- 
+
+
 class EntryPage(QWidget):
-    
 
     def __init__(self, tracker):
-            super().__init__()
-            self.tracker = tracker
+        super().__init__()
+        self.tracker = tracker
 
-            layout = QVBoxLayout()
-            form = QFormLayout()
+        layout = QVBoxLayout()
+        layout.setSpacing(15)
 
+        title = QLabel("Add New Expense")
+        title.setObjectName("pageTitle")
+        layout.addWidget(title)
 
+        form = QFormLayout()
+        form.setVerticalSpacing(12)
+        form.setHorizontalSpacing(10)
 
-            
-            self.date_input = QDateEdit()
-            self.date_input.setDate(QDate.currentDate())
+        self.create_form_fields()
 
-            self.category_input = QLineEdit()
-            self.amount_input = QLineEdit()
-            self.payment_input = QLineEdit()
-            self.merchant_input = QLineEdit()
-            self.rebate_input = QLineEdit()
+        form.addRow("Date:", self.date_input)
+        form.addRow("Category:", self.category_input)
+        form.addRow("Amount:", self.amount_input)
+        form.addRow("Payment:", self.payment_input)
+        form.addRow("Merchant:", self.merchant_input)
+        form.addRow("Rebate:", self.rebate_input)
 
-            form.addRow("Date:", self.date_input)
-            form.addRow("Category:", self.category_input)
-            form.addRow("Amount:", self.amount_input)
-            form.addRow("Payment:", self.payment_input)
-            form.addRow("Merchant:", self.merchant_input)
-            form.addRow("Rebate:", self.rebate_input)
+        layout.addLayout(form)
 
-            layout.addLayout(form)
-            
-            
+        self.create_submit_section()
+        layout.addWidget(self.submit_btn)
 
-            self.submit_btn = QPushButton("Add Expense")
-            self.submit_btn.clicked.connect(self.submit_add_expense)
+        self.setup_signals()
+        self.setLayout(layout)
 
-            layout.addWidget(self.submit_btn)
-            
-            self.amount_input.textChanged.connect(self.check_form_complete)
-            self.category_input.textChanged.connect(self.check_form_complete)
-            self.payment_input.textChanged.connect(self.check_form_complete)
-            self.merchant_input.textChanged.connect(self.check_form_complete)
-            self.rebate_input.textChanged.connect(self.check_form_complete)
-            self.setLayout(layout)
+    def create_form_fields(self):
+        self.date_input = QDateEdit()
+        self.date_input.setDate(QDate.currentDate())
+        self.date_input.setCalendarPopup(True)
+        self.date_input.setDisplayFormat("dd/MM/yyyy")
+
+        self.category_input = QLineEdit()
+        self.category_input.setPlaceholderText("e.g. Food, Transport...")
+
+        self.amount_input = QLineEdit()
+        self.amount_input.setPlaceholderText("e.g. 25.50")
+
+        self.payment_input = QLineEdit()
+        self.payment_input.setPlaceholderText("e.g. Card, Cash...")
+
+        self.merchant_input = QLineEdit()
+        self.merchant_input.setPlaceholderText("e.g. Tesco, Amazon...")
+
+        self.rebate_input = QLineEdit()
+        self.rebate_input.setPlaceholderText("0.00 (optional)")
+
+    def create_submit_section(self):
+        self.submit_btn = QPushButton("Add Expense")
+        self.submit_btn.setObjectName("submitButton")
+        self.submit_btn.clicked.connect(self.submit_add_expense)
+
+    def setup_signals(self):
+        self.amount_input.textChanged.connect(self.check_form_complete)
+        self.category_input.textChanged.connect(self.check_form_complete)
+        self.payment_input.textChanged.connect(self.check_form_complete)
+        self.merchant_input.textChanged.connect(self.check_form_complete)
+        self.rebate_input.textChanged.connect(self.check_form_complete)
 
     def add_expense(self):
         self.tracker.add_expense(
@@ -60,19 +81,19 @@ class EntryPage(QWidget):
             merchant=self.merchant_input.text(),
             rebate=float(self.rebate_input.text() or 0)
         )
-        
+
         self.category_input.clear()
         self.amount_input.clear()
         self.payment_input.clear()
         self.merchant_input.clear()
         self.rebate_input.clear()
-        
+
     def submit_add_expense(self):
         self.check_form_complete()
         if not self.validate_inputs():
             return
         self.add_expense()
-        QMessageBox.information(self," Success" , "Expense saved")
+        QMessageBox.information(self, " Success", "Expense saved")
 
     def validate_inputs(self):
 
@@ -94,7 +115,6 @@ class EntryPage(QWidget):
 
         return True
 
-    
     def check_form_complete(self):
 
         if (
@@ -106,5 +126,3 @@ class EntryPage(QWidget):
             self.submit_btn.setEnabled(True)
         else:
             self.submit_btn.setEnabled(False)
-
-
