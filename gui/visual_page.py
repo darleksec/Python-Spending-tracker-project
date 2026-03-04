@@ -317,16 +317,17 @@ class VisualPage(QWidget):
             data.append({
                 "Date": exp.date,
                 "Category": exp.category,
-                "Amount": exp.amount
+                "Amount": exp.amount,
+                "Merchant": exp.merchant,
+                "PaymentMethod": exp.payment_method,
+                "Rebate": exp.rebate
             })
 
         df = pd.DataFrame(data)
-        print(df.columns)
-        print(df.head())
-
 
         df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y")
         df["Month"] = df["Date"].dt.to_period("M")
+        df["DayOfWeek"] = df["Date"].dt.day_name()
 
         return df
     
@@ -403,6 +404,24 @@ class VisualPage(QWidget):
         ax.tick_params(axis='x', rotation=45)
 
         self.canvas.draw()
+
+
+    def plot_category_horizontal_bar(self):
+
+        data = self.tracker.get_category_total()
+
+        sorted_items = sorted(data.items(), key=lambda x: x[1], reverse=True)
+        categories = [item[0] for item in sorted_items]
+        totals = [item[1] for item in sorted_items]
+
+        ax = self.clear_and_get_axis()
+
+        ax.barh(categories, totals)
+        ax.set_title("Expenses by Category (Horizontal)")
+        ax.set_xlabel("Total Spending")
+        ax.set_ylabel("Category")
+
+        self.canvas.draw()
         
     
     def monthly_overview(self):
@@ -466,9 +485,33 @@ class VisualPage(QWidget):
         ax.set_title(f"Spending Breakdown — {selected_month}")
 
         self.canvas.draw()
-        
-        
-        
+
+
+    def plot_weekly_pattern(self):
+
+        df = self.df.copy()
+
+        # Group by day of week and calculate average spending
+        daily_avg = df.groupby("DayOfWeek")["Amount"].mean()
+
+        # Define day order (Monday to Sunday)
+        day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+        # Reindex to ensure correct order
+        daily_avg = daily_avg.reindex(day_order)
+
+        ax = self.clear_and_get_axis()
+
+        ax.bar(daily_avg.index, daily_avg.values)
+
+        ax.set_title("Weekly Spending Pattern")
+        ax.set_xlabel("Day of Week")
+        ax.set_ylabel("Average Spending")
+        ax.tick_params(axis='x', rotation=45)
+
+        self.canvas.draw()
+
+
     def plot_category_trend(self):
 
         df = self.df.copy()
@@ -568,7 +611,162 @@ class VisualPage(QWidget):
 
         self.figure.tight_layout()
         self.canvas.draw()
-        
+
+    def plot_top_merchants(self):
+
+        df = self.df.copy()
+
+        merchant_totals = df.groupby("Merchant")["Amount"].sum()
+        merchant_totals = merchant_totals.sort_values(ascending=False)
+
+        top_10 = merchant_totals.head(10)
+
+        ax = self.clear_and_get_axis()
+
+        ax.bar(range(len(top_10)), top_10.values)
+        ax.set_xticks(range(len(top_10)))
+        ax.set_xticklabels(top_10.index, rotation=45, ha='right')
+
+        ax.set_title("Top 10 Merchants by Total Spending")
+        ax.set_xlabel("Merchant")
+        ax.set_ylabel("Total Spending")
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
+    def plot_cashback_analysis(self):
+
+        df = self.df.copy()
+
+        # Group by month and calculate totals
+        monthly_cashback = df.groupby("Month")["Rebate"].sum()
+        monthly_spending = df.groupby("Month")["Amount"].sum()
+
+        # Calculate efficiency percentage
+        efficiency = (monthly_cashback / monthly_spending * 100).fillna(0)
+
+        # Convert index to string for plotting
+        monthly_cashback.index = monthly_cashback.index.astype(str)
+        efficiency.index = efficiency.index.astype(str)
+
+        ax = self.clear_and_get_axis()
+
+        # Create bar chart for monthly cashback
+        bars = ax.bar(monthly_cashback.index, monthly_cashback.values)
+
+        # Add efficiency % labels on top of bars
+        for i, (bar, eff) in enumerate(zip(bars, efficiency.values)):
+            height = bar.get_height()
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                height,
+                f'{eff:.1f}%',
+                ha='center',
+                va='bottom',
+                fontsize=9
+            )
+
+        ax.set_title("Monthly Cashback Analysis")
+        ax.set_xlabel("Month")
+        ax.set_ylabel("Total Cashback (£)")
+        ax.tick_params(axis='x', rotation=45)
+        ax.grid(True, alpha=0.3)
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
+    def plot_payment_method_spend(self):
+
+        df = self.df.copy()
+
+        # Group by payment method and calculate totals
+        payment_spending = df.groupby("PaymentMethod")["Amount"].sum()
+        payment_cashback = df.groupby("PaymentMethod")["Rebate"].sum()
+
+        # Calculate efficiency percentage
+        efficiency = (payment_cashback / payment_spending * 100).fillna(0)
+
+        # Sort by total spending (descending)
+        payment_spending = payment_spending.sort_values(ascending=False)
+        efficiency = efficiency.reindex(payment_spending.index)
+
+        ax = self.clear_and_get_axis()
+
+        # Create bar chart for payment method spending
+        bars = ax.bar(range(len(payment_spending)), payment_spending.values)
+        ax.set_xticks(range(len(payment_spending)))
+        ax.set_xticklabels(payment_spending.index, rotation=45, ha='right')
+
+        # Add efficiency % labels on top of bars
+        for i, (bar, eff) in enumerate(zip(bars, efficiency.values)):
+            height = bar.get_height()
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                height,
+                f'{eff:.1f}%',
+                ha='center',
+                va='bottom',
+                fontsize=9
+            )
+
+        ax.set_title("Spending by Payment Method (with Cashback Efficiency)")
+        ax.set_xlabel("Payment Method")
+        ax.set_ylabel("Total Spending (£)")
+        ax.grid(True, alpha=0.3)
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
+    def plot_budget_vs_actual(self):
+
+        # Get actual spending by category
+        data = self.tracker.get_category_total()
+
+        # Hardcoded placeholder budgets (TODO: Replace with actual budget data)
+        placeholder_budgets = {
+            "Food": 500,
+            "Transport": 200,
+            "Entertainment": 150,
+            "Shopping": 300,
+            "Utilities": 250,
+            "Healthcare": 100,
+            "Other": 100
+        }
+
+        # Prepare data for plotting
+        categories = list(data.keys())
+        actual = list(data.values())
+
+        # Match budgets to actual categories (use 0 if no budget set)
+        budget = [placeholder_budgets.get(cat, 0) for cat in categories]
+
+        ax = self.clear_and_get_axis()
+
+        # Create grouped bar chart
+        x_pos = np.arange(len(categories))
+        width = 0.35
+
+        bars_budget = ax.bar(x_pos - width/2, budget, width, label='Budget', color='#4a90e2')
+        bars_actual = ax.bar(x_pos + width/2, actual, width, label='Actual', color='#e74c3c')
+
+        # Color actual bars differently if over budget
+        for i, (b, a) in enumerate(zip(budget, actual)):
+            if a > b and b > 0:
+                bars_actual[i].set_color('#e74c3c')  # Red for over budget
+            else:
+                bars_actual[i].set_color('#2ecc71')  # Green for under budget
+
+        ax.set_title("Budget vs Actual Spending by Category")
+        ax.set_xlabel("Category")
+        ax.set_ylabel("Amount (£)")
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(categories, rotation=45, ha='right')
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
     def create_sidebar(self):
 
         self.sidebar_frame = QFrame()
@@ -584,6 +782,12 @@ class VisualPage(QWidget):
         self.cat_bar_btn = QPushButton("Category Bar Chart")
         self.cat_bar_btn.clicked.connect(self.Category_Sum)
 
+        self.cat_bar_h_btn = QPushButton("Category Bar (Horizontal)")
+        self.cat_bar_h_btn.clicked.connect(self.plot_category_horizontal_bar)
+
+        self.weekly_pattern_btn = QPushButton("Weekly Pattern")
+        self.weekly_pattern_btn.clicked.connect(self.plot_weekly_pattern)
+
         self.month_overview_btn = QPushButton("Monthly Overview")
         self.month_overview_btn.clicked.connect(self.monthly_overview)
 
@@ -597,6 +801,18 @@ class VisualPage(QWidget):
 
         self.cat_trend_btn = QPushButton("Category Trend")
         self.cat_trend_btn.clicked.connect(self.plot_category_trend)
+
+        self.cashback_btn = QPushButton("Cashback Analysis")
+        self.cashback_btn.clicked.connect(self.plot_cashback_analysis)
+
+        self.payment_method_btn = QPushButton("Payment Methods")
+        self.payment_method_btn.clicked.connect(self.plot_payment_method_spend)
+
+        self.budget_btn = QPushButton("Budget vs Actual")
+        self.budget_btn.clicked.connect(self.plot_budget_vs_actual)
+
+        self.top_merchants_btn = QPushButton("Top Merchants")
+        self.top_merchants_btn.clicked.connect(self.plot_top_merchants)
 
         # === TREND FILTERS SECTION ===
         filter_label = QLabel("Trend Filters")
@@ -623,10 +839,16 @@ class VisualPage(QWidget):
         # Add everything to sidebar layout
         layout.addWidget(quick_label)
         layout.addWidget(self.cat_bar_btn)
+        layout.addWidget(self.cat_bar_h_btn)
+        layout.addWidget(self.weekly_pattern_btn)
         layout.addWidget(self.month_overview_btn)
         layout.addWidget(self.month_pie_btn)
         layout.addWidget(self.cumulative_btn)
         layout.addWidget(self.cat_trend_btn)
+        layout.addWidget(self.top_merchants_btn)
+        layout.addWidget(self.cashback_btn)
+        layout.addWidget(self.payment_method_btn)
+        layout.addWidget(self.budget_btn)
 
         layout.addSpacing(20)
 
