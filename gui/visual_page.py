@@ -7,7 +7,8 @@ from PyQt6.QtWidgets import (
     QVBoxLayout, QHBoxLayout, QGroupBox,
     QListWidget, QListWidgetItem,
     QComboBox, QPushButton,
-    QTableWidget, QLabel, QFrame, QSizePolicy
+    QTableWidget, QLabel, QFrame, QSizePolicy,
+    QDialog, QDialogButtonBox
 )
 
 from PyQt6.QtCore import Qt
@@ -16,268 +17,56 @@ from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import numpy as np
 
-# class VisualPage(QWidget):
 
-#     def __init__(self, tracker):
-#         super().__init__()
-#         self.tracker = tracker
+class FilterDialog(QDialog):
+    """Popup dialog for selecting categories and month range for trend charts."""
 
-#         layout = QVBoxLayout()
+    def __init__(self, categories, months, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Chart Filters")
+        self.setMinimumWidth(350)
+        self.setMinimumHeight(400)
 
-#         self.plot_button = QPushButton("Show Category Chart")
-#         self.plot_button.clicked.connect(self.plot_data)
-        
-        
-#         self.monthly_pie_label = QLabel("Show monthly breakdown ")
-        
-#         self.month_dropdown = QComboBox()
-        
-       
-#         months = set()
-#         for expense in self.tracker.get_all_expenses():
-#             months.add(expense.date[3:10])
-            
-#         sorted_months = sorted(months)
-        
-#         self.month_dropdown.addItems(sorted_months)
-#         self.month_dropdown.currentTextChanged.connect(self.update_monthly_pie)
-        
-#         self.MTot_btn = QPushButton("Show Monthly Total Chart")
-#         self.MTot_btn.clicked.connect(self.monthly_overview)
-        
-        
-#         self.cat_trend_btn = QPushButton("Show Category Trend Chart")
-#         self.cat_trend_btn.clicked.connect(self.plot_category_trend)
-        
+        layout = QVBoxLayout()
+        self.setLayout(layout)
 
-#         layout.addWidget(self.plot_button)
-#         layout.addWidget(self.MTot_btn)
-#         layout.addWidget(self.monthly_pie_label)
-#         layout.addWidget(self.month_dropdown)
-#         layout.addWidget(self.cat_trend_btn)
-#         self.setLayout(layout)
-        
-#     def monthly_overview(self, selected_month):
-#         data = []
-#         for exp in self.tracker.get_all_expenses():
-#             data.append({
-#                 "date": exp.date,
-#                 "amount":exp.amount
-#             })
-            
-#         df = pd.DataFrame(data)
-        
-#         df["date"] = pd.to_datetime(df["date"], format = "%d/%m/%Y")
-#         df["month"] = df["date"].dt.to_period("M")
-        
-#         monthly_total = df.groupby("month")["amount"].sum()
-#         monthly_total.index = monthly_total.index.astype(str)
-        
-#         plt.figure()
-#         plt.bar(monthly_total.index, monthly_total.values)
-#         plt.xlabel("Month")
-#         plt.ylabel("Total Spending")
-#         plt.title("Monthly Spending Overview")
-#         plt.xticks(rotation=45)
-#         plt.tight_layout()
-#         plt.show()
-        
-#     def monthly_pie(self, selected_month):
-#         data = []
-#         for exp in self.tracker.get_all_expenses():
-#             data.append({
-#                 "date": exp.date,
-#                 "amount":exp.amount,
-#                 "category": exp.category
-#             })
-            
-#         df = pd.DataFrame(data)
-        
-#         df["date"] = pd.to_datetime(df["date"], format = "%d/%m/%Y")
-        
-        
-#         df["month"] = df["date"].dt.to_period("M")
-        
-#         monthly_df = df[df["month"] == selected_month]
-        
-#         category_totals = monthly_df.groupby("category")["amount"].sum()
-        
-#         category_totals = category_totals.sort_values(ascending=False)
-        
-#         top_5 = category_totals.head(5)
-        
-#         other_total = category_totals.iloc[5:].sum()    
-        
-#         if other_total > 0:
-#             top_5["Other"] = other_total
-            
-#         fig, ax = plt.subplots()
-#         wedges, texts = ax.pie(
-#             top_5.values,
-#             startangle=90
-#         )
-        
-#         total = top_5.sum()
-        
-#         for i , wedge in enumerate(wedges):
-#             angle = (wedge.theta2 + wedge.theta1) /2
-#             x=np.cos(np.deg2rad(angle))
-#             y=np.sin(np.deg2rad(angle))
-            
-#             percentage = top_5.values[i]/ total *100
-#             label = f"{top_5.index[i]} ({percentage:.1f}%)"
-            
-#             ax.annotate(
-#                 label,
-#                 xy=(x,y),
-#                 xytext=(1.1 *x, 1.1 *y),
-#                 arrowprops=dict(arrowstyle="-"),
-#                 ha="center"
-                
-#             )
-            
-#             ax.set_title(f"Spending Breakdown = {selected_month}")
-#             plt.tight_layout()
-#             plt.show()
-            
-#     def update_monthly_pie(self):
-#         selected_month = self.month_dropdown.currentText()
-#         self.monthly_pie(selected_month)
-        
-#     def create_filters_frame(self):
+        layout.addWidget(QLabel("Select Categories:"))
+        self.category_list = QListWidget()
+        self.category_list.setSelectionMode(
+            QListWidget.SelectionMode.MultiSelection
+        )
+        for cat in categories:
+            QListWidgetItem(cat, self.category_list)
+        self.category_list.selectAll()
+        layout.addWidget(self.category_list)
 
-#         self.filters_group = QGroupBox("Trend Filters")
-#         layout = QHBoxLayout()
+        layout.addWidget(QLabel("Start Month:"))
+        self.start_month = QComboBox()
+        self.start_month.addItems(months)
+        layout.addWidget(self.start_month)
 
-#         # Category List (Multi-select)
-#         self.category_list = QListWidget()
-#         self.category_list.setSelectionMode(
-#             QListWidget.SelectionMode.MultiSelection
-#         )
+        layout.addWidget(QLabel("End Month:"))
+        self.end_month = QComboBox()
+        self.end_month.addItems(months)
+        if months:
+            self.end_month.setCurrentIndex(len(months) - 1)
+        layout.addWidget(self.end_month)
 
-#         categories = sorted(self.df['Category'].unique())
-#         for cat in categories:
-#             QListWidgetItem(cat, self.category_list)
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
+        )
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
 
-#         # Start Month Dropdown
-#         self.start_month = QComboBox()
+    def get_selected_categories(self):
+        return [item.text() for item in self.category_list.selectedItems()]
 
-#         # End Month Dropdown
-#         self.end_month = QComboBox()
+    def get_start_month(self):
+        return self.start_month.currentText()
 
-#         self.df['Date'] = pd.to_datetime(self.df['Date'])
-#         self.df['Month'] = self.df['Date'].dt.to_period('M')
-
-#         months = sorted(self.df['Month'].astype(str).unique())
-
-#         self.start_month.addItems(months)
-#         self.end_month.addItems(months)
-
-#         # Plot Button
-#         self.plot_button = QPushButton(" Show Category Trend")
-#         self.plot_button.clicked.connect(self.plot_category_trend)
-
-#         # Add widgets to layout
-#         layout.addWidget(self.category_list)
-#         layout.addWidget(self.start_month)
-#         layout.addWidget(self.end_month)
-#         layout.addWidget(self.plot_button)
-
-#         self.filters_group.setLayout(layout)
-        
-#     def create_table_frame(self):
-
-#         self.table_group = QGroupBox("Data / Chart")
-#         layout = QVBoxLayout()
-
-#         # Matplotlib Figure
-#         self.figure = Figure()
-#         self.canvas = FigureCanvas(self.figure)
-
-#         # Optional: Table (placeholder for your log table)
-#         self.table = QTableWidget()
-
-#         layout.addWidget(self.canvas)
-#         layout.addWidget(self.table)
-
-#         self.table_group.setLayout(layout)
-        
-#     def plot_category_trend(self):
-
-#         df = self.df.copy()
-
-#         # Selected categories
-#         selected_items = self.category_list.selectedItems()
-#         selected_categories = [item.text() for item in selected_items]
-
-#         if selected_categories:
-#             df = df[df['Category'].isin(selected_categories)]
-
-#         # Month filters
-#         start_month = pd.Period(self.start_month.currentText())
-#         end_month = pd.Period(self.end_month.currentText())
-
-#         df = df[
-#             (df['Month'] >= start_month) &
-#             (df['Month'] <= end_month)
-#         ]
-
-#         # Group data
-#         monthly = (
-#             df.groupby(['Month', 'Category'])['Amount']
-#               .sum()
-#               .reset_index()
-#         )
-
-#         if monthly.empty:
-#             return
-
-#         pivot_df = monthly.pivot(
-#             index='Month',
-#             columns='Category',
-#             values='Amount'
-#         ).fillna(0)
-
-#         # Clear previous plot
-#         self.figure.clear()
-#         ax = self.figure.add_subplot(111)
-
-#         pivot_df.index = pivot_df.index.astype(str)
-
-#         pivot_df.plot(ax=ax, marker='o')
-
-#         ax.set_title("Category Spending Trend Over Time")
-#         ax.set_xlabel("Month")
-#         ax.set_ylabel("Total Spending")
-#         ax.grid(True)
-
-#         self.canvas.draw()
-
-        
-        
-
-        
-        
-    
-
-        
-    
-
-
-#     def plot_data(self):
-#         data = self.tracker.get_category_total()
-
-#         categories = list(data.keys())
-#         totals = list(data.values())
-
-#         plt.figure()
-#         plt.bar(categories, totals)
-#         plt.title("Expenses by Category")
-#         plt.xticks(rotation=45)
-#         plt.tight_layout()
-
-#         plt.show()
-
+    def get_end_month(self):
+        return self.end_month.currentText()
 
 
 class VisualPage(QWidget):
@@ -300,20 +89,23 @@ class VisualPage(QWidget):
         main_layout.addWidget(self.sidebar_frame, 1)
         main_layout.addWidget(self.visual_frame, 3)
 
-        self.apply_modern_style()
 
-        
     def clear_and_get_axis(self):
         self.figure.clear()
-        return self.figure.add_subplot(111)
-    
-        
-        
-    
+        ax = self.figure.add_subplot(111)
+        self.figure.patch.set_facecolor('none')
+        ax.set_facecolor('none')
+        return ax
+
+
     def build_dataframe(self):
 
+        expenses = self.tracker.get_all_expenses()
+        if not expenses:
+            return pd.DataFrame(columns=['Date', 'Category', 'Amount', 'Month'])
+
         data = []
-        for exp in self.tracker.get_all_expenses():
+        for exp in expenses:
             data.append({
                 "Date": exp.date,
                 "Category": exp.category,
@@ -330,50 +122,8 @@ class VisualPage(QWidget):
         df["DayOfWeek"] = df["Date"].dt.day_name()
 
         return df
-    
-    
-    
-    
-    
-    
-    def create_filters_frame(self):
 
-        self.filters_group = QGroupBox("Category Trend Filters")
-        layout = QHBoxLayout()
 
-        # Category Multi-select
-        self.category_list = QListWidget()
-        self.category_list.setSelectionMode(
-            QListWidget.SelectionMode.MultiSelection
-        )
-
-        categories = sorted(self.df["Category"].unique())
-        for cat in categories:
-            QListWidgetItem(cat, self.category_list)
-            
-        self.category_list.selectAll()
-
-        # Start Month
-        self.start_month = QComboBox()
-        self.end_month = QComboBox()
-
-        months = sorted(self.df["Month"].astype(str).unique())
-
-        self.start_month.addItems(months)
-        self.end_month.addItems(months)
-
-        # Trend Button (matches your other buttons style)
-        self.cat_trend_btn = QPushButton("Show Category Trend Chart")
-        self.cat_trend_btn.clicked.connect(self.plot_category_trend)
-
-        layout.addWidget(self.category_list)
-        layout.addWidget(self.start_month)
-        layout.addWidget(self.end_month)
-        layout.addWidget(self.cat_trend_btn)
-
-        self.filters_group.setLayout(layout)
-        
-        
     def create_chart_frame(self):
 
         self.chart_group = QGroupBox("Chart Output")
@@ -386,8 +136,8 @@ class VisualPage(QWidget):
         self.chart_group.setLayout(layout)
 
 
-    
-        
+
+
     def Category_Sum(self):
 
         data = self.tracker.get_category_total()
@@ -441,7 +191,7 @@ class VisualPage(QWidget):
         ax.tick_params(axis='x', rotation=45)
 
         self.canvas.draw()
-        
+
     def monthly_pie(self, selected_month):
 
         df = self.df.copy()
@@ -514,18 +264,53 @@ class VisualPage(QWidget):
 
     def plot_category_trend(self):
 
+
+
+    def _plot_cum_spend_for_month(self, month):
+        """Wrapper: plot cumulative spend for a selected month (from dialog)."""
+        df = self.df.copy()
+        selected_period = pd.Period(month)
+        previous_period = selected_period - 1
+
+        current_df = df[df["Month"] == selected_period]
+        previous_df = df[df["Month"] == previous_period]
+
+        current_df = current_df.copy()
+        previous_df = previous_df.copy()
+
+        current_df["Day"] = current_df["Date"].dt.day
+        previous_df["Day"] = previous_df["Date"].dt.day
+
+        current_daily = current_df.groupby("Day")["Amount"].sum()
+        previous_daily = previous_df.groupby("Day")["Amount"].sum()
+
+        days = range(1, 32)
+        current_daily = current_daily.reindex(days, fill_value=0)
+        previous_daily = previous_daily.reindex(days, fill_value=0)
+
+        ax = self.clear_and_get_axis()
+        ax.plot(days, current_daily.cumsum(), label=f"{month}")
+        ax.plot(days, previous_daily.cumsum(), linestyle="--", label=f"{previous_period}")
+
+        ax.set_title("Cumulative Spend Comparison")
+        ax.set_xlabel("Day of Month")
+        ax.set_ylabel("Cumulative Spend (£)")
+        ax.grid(True)
+        ax.legend(loc="center left", bbox_to_anchor=(-0.25, 0.5))
+
+        self.figure.tight_layout()
+        self.canvas.draw()
+
+    def _plot_category_trend_filtered(self):
+        """Plot category trend using selections from the filter dialog."""
         df = self.df.copy()
 
-        # Selected categories
-        selected_items = self.category_list.selectedItems()
-        selected_categories = [item.text() for item in selected_items]
-
+        selected_categories = self._last_categories
         if selected_categories:
             df = df[df["Category"].isin(selected_categories)]
 
-        # Month filter
-        start_month = pd.Period(self.start_month.currentText())
-        end_month = pd.Period(self.end_month.currentText())
+        start_month = pd.Period(self._last_start_month)
+        end_month = pd.Period(self._last_end_month)
 
         df = df[
             (df["Month"] >= start_month) &
@@ -542,72 +327,66 @@ class VisualPage(QWidget):
             return
 
         pivot_df = monthly.pivot(
-            index="Month",
-            columns="Category",
-            values="Amount"
+            index="Month", columns="Category", values="Amount"
         ).fillna(0)
-
         pivot_df.index = pivot_df.index.astype(str)
 
         ax = self.clear_and_get_axis()
-
         pivot_df.plot(ax=ax, marker="o")
 
         ax.set_title("Category Spending Trend Over Time")
         ax.set_xlabel("Month")
         ax.set_ylabel("Total Spending")
         ax.grid(True)
-
-        # 🔥 LEGEND ON LEFT
-        ax.legend(
-            title="Category",
-            loc="center left",
-            bbox_to_anchor=(-0.25, 0.5)
-        )
+        ax.legend(title="Category", loc="center left", bbox_to_anchor=(-0.25, 0.5))
 
         self.figure.tight_layout()
         self.canvas.draw()
 
+    def _get_categories_and_months(self):
+        """Return sorted categories and months from current data."""
+        categories = sorted(self.df["Category"].unique()) if not self.df.empty else []
+        months = sorted(self.df["Month"].astype(str).unique()) if not self.df.empty else []
+        return categories, months
 
-    def plot_cum_spend(self):
-        df = self.df.copy()
-        
-        selected_month = self.start_month.currentText()
-        selected_period = pd.Period(selected_month)
-        
-        current_df = df[df["Month"] == selected_period]
-        
-        previous_period = selected_period - 1
-        previous_df = df[df["Month"] == previous_period]
-        
-        current_df["Day"] = current_df["Date"].dt.day
-        previous_df["Day"] = previous_df["Date"].dt.day
-        
-        current_daily = current_df.groupby("Day")["Amount"].sum()
-        
-        previous_daily = previous_df.groupby("Day")["Amount"].sum()
-        
-        days = range(1,32)
-        
-        current_daily = current_daily.reindex(days, fill_value=0)
-        previous_daily = previous_daily.reindex(days, fill_value=0)
-        
-        
-        current_cumulative = current_daily.cumsum()
-        previous_cumulative = previous_daily.cumsum()
-        
-        ax = self.clear_and_get_axis()
-        ax.plot(days, current_cumulative, label=f"{selected_month}")
-        ax.plot(days, previous_cumulative, linestyle ="--" ,label=f"{previous_period}")
-        
-        ax.set_title("Cumulative Spend Comparison")
-        ax.set_xlabel("Day of Month")
-        ax.set_ylabel("Cumulative Spend (£)")
-        ax.grid(True)
-        ax.legend(
-            loc="center left",
-            bbox_to_anchor=(-0.25, 0.5)
+    def _open_filter_and_run(self, chart_func):
+        """Open filter dialog, then run the chart function with selected filters."""
+        categories, months = self._get_categories_and_months()
+        if not categories and not months:
+            return
+
+        dlg = FilterDialog(categories, months, self)
+        if dlg.exec() == QDialog.DialogCode.Accepted:
+            self._last_categories = dlg.get_selected_categories()
+            self._last_start_month = dlg.get_start_month()
+            self._last_end_month = dlg.get_end_month()
+            chart_func()
+
+    def _open_month_picker_and_run(self, chart_func):
+        """Open a simple month picker dialog for charts that just need a month."""
+        _, months = self._get_categories_and_months()
+        if not months:
+            return
+
+        dlg = QDialog(self)
+        dlg.setWindowTitle("Select Month")
+        dlg.setMinimumWidth(250)
+        lay = QVBoxLayout()
+        dlg.setLayout(lay)
+        lay.addWidget(QLabel("Month:"))
+        combo = QComboBox()
+        combo.addItems(months)
+        combo.setCurrentIndex(len(months) - 1)
+        lay.addWidget(combo)
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
+        buttons.accepted.connect(dlg.accept)
+        buttons.rejected.connect(dlg.reject)
+        lay.addWidget(buttons)
+
+        if dlg.exec() == QDialog.DialogCode.Accepted:
+            chart_func(combo.currentText())
 
         self.figure.tight_layout()
         self.canvas.draw()
@@ -770,14 +549,19 @@ class VisualPage(QWidget):
     def create_sidebar(self):
 
         self.sidebar_frame = QFrame()
+        self.sidebar_frame.setObjectName('visualSidebar')
         self.sidebar_frame.setFrameShape(QFrame.Shape.StyledPanel)
 
         layout = QVBoxLayout()
         layout.setSpacing(15)
 
-        # === QUICK CHARTS SECTION ===
-        quick_label = QLabel("Quick Charts")
-        quick_label.setStyleSheet("font-weight: bold; font-size: 14px;")
+        # Store last filter selections for trend charts
+        self._last_categories = []
+        self._last_start_month = ""
+        self._last_end_month = ""
+
+        # === CHARTS SECTION ===
+        quick_label = QLabel("Charts")
 
         self.cat_bar_btn = QPushButton("Category Bar Chart")
         self.cat_bar_btn.clicked.connect(self.Category_Sum)
@@ -791,17 +575,14 @@ class VisualPage(QWidget):
         self.month_overview_btn = QPushButton("Monthly Overview")
         self.month_overview_btn.clicked.connect(self.monthly_overview)
 
-        self.month_pie_btn = QPushButton("Monthly Pie")
+        self.month_pie_btn = QPushButton("Monthly Pie...")
         self.month_pie_btn.clicked.connect(
-            lambda: self.monthly_pie(self.start_month.currentText())
+            lambda: self._open_month_picker_and_run(self.monthly_pie)
         )
-        
-        self.cumulative_btn = QPushButton("Cumulative Monthly Spend")
-        self.cumulative_btn.clicked.connect(self.plot_cum_spend)
 
-        self.cat_trend_btn = QPushButton("Category Trend")
-        self.cat_trend_btn.clicked.connect(self.plot_category_trend)
-
+        self.cumulative_btn = QPushButton("Cumulative Spend...")
+        self.cumulative_btn.clicked.connect(
+            lambda: self._open_month_picker_and_run(self._plot_cum_spend_for_month)
         self.cashback_btn = QPushButton("Cashback Analysis")
         self.cashback_btn.clicked.connect(self.plot_cashback_analysis)
 
@@ -823,20 +604,11 @@ class VisualPage(QWidget):
             QListWidget.SelectionMode.MultiSelection
         )
 
-        categories = sorted(self.df["Category"].unique())
-        for cat in categories:
-            QListWidgetItem(cat, self.category_list)
+        self.cat_trend_btn = QPushButton("Category Trend...")
+        self.cat_trend_btn.clicked.connect(
+            lambda: self._open_filter_and_run(self._plot_category_trend_filtered)
+        )
 
-        self.category_list.selectAll()
-
-        self.start_month = QComboBox()
-        self.end_month = QComboBox()
-
-        months = sorted(self.df["Month"].astype(str).unique())
-        self.start_month.addItems(months)
-        self.end_month.addItems(months)
-
-        # Add everything to sidebar layout
         layout.addWidget(quick_label)
         layout.addWidget(self.cat_bar_btn)
         layout.addWidget(self.cat_bar_h_btn)
@@ -850,16 +622,6 @@ class VisualPage(QWidget):
         layout.addWidget(self.payment_method_btn)
         layout.addWidget(self.budget_btn)
 
-        layout.addSpacing(20)
-
-        layout.addWidget(filter_label)
-        layout.addWidget(QLabel("Categories"))
-        layout.addWidget(self.category_list)
-        layout.addWidget(QLabel("Start Month"))
-        layout.addWidget(self.start_month)
-        layout.addWidget(QLabel("End Month( for Category Trend)"))
-        layout.addWidget(self.end_month)
-
         layout.addStretch()
 
         self.sidebar_frame.setLayout(layout)
@@ -867,15 +629,15 @@ class VisualPage(QWidget):
     def create_visual_area(self):
 
         self.visual_frame = QFrame()
+        self.visual_frame.setObjectName('visualContent')
         layout = QVBoxLayout()
 
         self.chart_title = QLabel("Select a Chart")
+        self.chart_title.setObjectName('chartTitle')
         self.chart_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.chart_title.setStyleSheet(
-            "font-size: 16px; font-weight: bold; margin: 10px;"
-        )
 
         self.figure = Figure()
+        self.figure.patch.set_facecolor('none')
         self.canvas = FigureCanvas(self.figure)
 
         self.canvas.setSizePolicy(
@@ -887,32 +649,3 @@ class VisualPage(QWidget):
         layout.addWidget(self.canvas)
 
         self.visual_frame.setLayout(layout)
-
-    def apply_modern_style(self):
-
-        self.setStyleSheet("""
-            QWidget {
-                font-family: Segoe UI;
-                font-size: 12px;
-            }
-
-            QPushButton {
-                padding: 6px;
-                border-radius: 6px;
-                background-color: #4a90e2;
-                color: white;
-            }
-
-            QPushButton:hover {
-                background-color: #357ABD;
-            }
-
-            QListWidget {
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-
-            QFrame {
-                background-color: #000000;
-            }
-        """)
