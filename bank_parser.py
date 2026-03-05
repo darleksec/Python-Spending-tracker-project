@@ -455,7 +455,33 @@ def parse_hsbc_statement(pdf_path):
 
 
 # ---------------------
-# Auto-detect Parser
+# Bank Auto-Detection
+# ---------------------
+
+def detect_bank_format(pdf_path):
+    """
+    Detect bank format by checking PDF content for bank-specific markers.
+    Returns 'HSBC' or 'Chase'.
+    """
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            if not pdf.pages:
+                return 'Chase'
+            first_page_text = pdf.pages[0].extract_text() or ''
+    except Exception:
+        return 'Chase'
+
+    text_lower = first_page_text.lower()
+
+    # HSBC detection: look for HSBC-specific markers
+    if 'hsbc' in text_lower or 'paid out' in text_lower or 'paid in' in text_lower:
+        return 'HSBC'
+
+    return 'Chase'
+
+
+# ---------------------
+# Unified Entry Point
 # ---------------------
 
 def parse_statement(pdf_path):
@@ -463,19 +489,11 @@ def parse_statement(pdf_path):
     Auto-detect bank format and parse the statement.
     Returns list of transaction dicts.
     """
+    bank = detect_bank_format(pdf_path)
+
     try:
-        with pdfplumber.open(pdf_path) as pdf:
-            if not pdf.pages:
-                return []
-            first_page_text = pdf.pages[0].extract_text() or ''
+        if bank == 'HSBC':
+            return parse_hsbc_statement(pdf_path)
+        return parse_chase_statement(pdf_path)
     except Exception:
         return []
-
-    text_lower = first_page_text.lower()
-
-    # HSBC detection: look for HSBC-specific markers
-    if 'hsbc' in text_lower or 'paid out' in text_lower or 'paid in' in text_lower:
-        return parse_hsbc_statement(pdf_path)
-
-    # Default to Chase
-    return parse_chase_statement(pdf_path)
