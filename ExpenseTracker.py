@@ -4,6 +4,7 @@ import csv
 from expense import Expense
 from datetime import datetime
 import pandas as pd
+import bank_parser
 class ExpenseTracker:
     def __init__(self, filename="expenses.json"):
         self.filename = filename
@@ -198,7 +199,41 @@ class ExpenseTracker:
                     continue
 
         return count
-    
+
+    def importPDF(self, file_path):
+        count = 0
+
+        transactions = bank_parser.parse_statement(file_path)
+
+        for txn in transactions:
+            try:
+                date = txn['date']
+                category = txn['category']
+                amount = txn['amount']
+                payment_method = txn['bank']
+                merchant = txn['merchant']
+                rebate = txn.get('rebate', 0.0)
+
+                if self.add_expense(date, category, amount,
+                                    payment_method, merchant, rebate):
+                    count += 1
+
+            except Exception as e:
+                print(f"Skipping transaction due to error: {e}")
+                continue
+
+        return count
+
+    def importPDFBatch(self, directory):
+        count = 0
+
+        for filename in os.listdir(directory):
+            if filename.lower().endswith('.pdf'):
+                file_path = os.path.join(directory, filename)
+                count += self.importPDF(file_path)
+
+        return count
+
     def importXlsx(self, file_path):
         count = 0
 
