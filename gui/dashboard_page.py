@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 
 from PyQt6.QtWidgets import (
-    QWidget, QVBoxLayout, QGridLayout, QComboBox, QLabel,
+    QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QComboBox, QLabel,
+    QCheckBox,
 )
 from PyQt6.QtCore import Qt
 
@@ -21,8 +22,27 @@ class DashboardPage(QWidget):
         layout = QVBoxLayout()
         self.setLayout(layout)
 
+        # Controls row: month selector + chart toggles
+        controls = QHBoxLayout()
         self.month_selector = self.create_month_selector()
-        layout.addWidget(self.month_selector)
+        controls.addWidget(QLabel("Month:"))
+        controls.addWidget(self.month_selector)
+        controls.addSpacing(20)
+
+        self.chart_names = [
+            "Category Pie", "Daily Spending", "Cumulative Spend", "Top Merchants"
+        ]
+        self.chart_checks = []
+        controls.addWidget(QLabel("Show:"))
+        for name in self.chart_names:
+            cb = QCheckBox(name)
+            cb.setChecked(True)
+            cb.toggled.connect(self._on_chart_toggle)
+            controls.addWidget(cb)
+            self.chart_checks.append(cb)
+
+        controls.addStretch()
+        layout.addLayout(controls)
 
         self.figures = []
         self.canvases = []
@@ -80,6 +100,11 @@ class DashboardPage(QWidget):
                 grid.addWidget(canvas, row, col)
 
         return widget
+
+    def _on_chart_toggle(self):
+        """Show/hide chart canvases based on checkbox state."""
+        for i, cb in enumerate(self.chart_checks):
+            self.canvases[i].setVisible(cb.isChecked())
 
     def _get_chart_style(self):
         if self.theme_manager:

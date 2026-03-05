@@ -55,7 +55,20 @@ QPushButton:pressed {
 QPushButton:disabled {
     background-color: #3d3d4d;
     border-color: #3d3d4d;
-    color: #666666;
+    color: #9a9aaa;
+}
+
+#pageTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: @text_primary@;
+    padding: 8px 0;
+}
+
+#chartTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: @text_primary@;
 }
 
 /* ============ Inputs ============ */
