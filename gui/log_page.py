@@ -22,6 +22,14 @@ class LogPage(QWidget):
         submit.clicked.connect(self.import_spreadsheet)
         layout.addWidget(submit)
 
+        import_pdf_btn = QPushButton("Import Bank Statement")
+        import_pdf_btn.clicked.connect(self.import_bank_statement)
+        layout.addWidget(import_pdf_btn)
+
+        import_folder_btn = QPushButton("Import All from Folder")
+        import_folder_btn.clicked.connect(self.import_bank_folder)
+        layout.addWidget(import_folder_btn)
+
 
         #table
         self.table = QTableWidget()
@@ -132,7 +140,35 @@ class LogPage(QWidget):
             count = self.tracker.importXlsx(file_path)
             self.load_data()
 
-        
+
+
+    def import_bank_statement(self):
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Select Bank Statement",
+            "",
+            "PDF Files (*.pdf)"
+        )
+
+        if not file_path:
+            return
+        count = self.tracker.importPDF(file_path)
+        QMessageBox.information(self, "Import Complete", f"Imported {count} transactions.")
+        self.load_data()
+
+    def import_bank_folder(self):
+        folder_path = QFileDialog.getExistingDirectory(
+            self,
+            "Select Folder with Bank Statements"
+        )
+
+        if not folder_path:
+            return
+        count = self.tracker.importPDFBatch(folder_path)
+        QMessageBox.information(self, "Import Complete", f"Imported {count} transactions.")
+        self.load_data()
+
+
     def get_expense_id_from_row(self, row):
         item = self.table.item(row, 0)  # Column 0 = ID
         return int(item.text())
