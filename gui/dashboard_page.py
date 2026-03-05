@@ -144,7 +144,7 @@ class DashboardPage(QWidget):
         if other_total > 0:
             top_5["Other"] = other_total
 
-        wedges, texts = ax.pie(
+        wedges, texts, autotexts = ax.pie(
             top_5.values, labels=top_5.index, startangle=90,
             autopct="%1.1f%%", textprops={"color": colors["text"]},
         )
