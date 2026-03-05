@@ -49,3 +49,14 @@ def build_menu(window):
     dark_action = QAction("Dark Mode", window)
     dark_action.triggered.connect(lambda: window.theme_manager.set_theme("dark"))
     theme_menu.addAction(dark_action)
+
+    # Import
+    import_menu = menubar.addMenu("Import")
+
+    import_pdf_action = QAction("Import Bank Statement (PDF)", window)
+    import_pdf_action.triggered.connect(window.log_page.import_single_pdf)
+    import_menu.addAction(import_pdf_action)
+
+    import_folder_action = QAction("Import All PDFs from Folder", window)
+    import_folder_action.triggered.connect(window.log_page.import_folder_pdfs)
+    import_menu.addAction(import_folder_action)
