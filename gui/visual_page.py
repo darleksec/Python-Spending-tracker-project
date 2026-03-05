@@ -339,18 +339,19 @@ class VisualPage(QWidget):
             QListWidget.SelectionMode.MultiSelection
         )
 
-        categories = sorted(self.df["Category"].unique())
-        for cat in categories:
-            QListWidgetItem(cat, self.category_list)
-
-        self.category_list.selectAll()
+        if not self.df.empty:
+            categories = sorted(self.df["Category"].unique())
+            for cat in categories:
+                QListWidgetItem(cat, self.category_list)
+            self.category_list.selectAll()
 
         self.start_month = QComboBox()
         self.end_month = QComboBox()
 
-        months = sorted(self.df["Month"].astype(str).unique())
-        self.start_month.addItems(months)
-        self.end_month.addItems(months)
+        if not self.df.empty:
+            months = sorted(self.df["Month"].astype(str).unique())
+            self.start_month.addItems(months)
+            self.end_month.addItems(months)
 
         # Add everything to sidebar layout
         layout.addWidget(quick_label)

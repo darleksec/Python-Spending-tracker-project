@@ -107,7 +107,6 @@ class LogPage(QWidget):
         self.table.setSortingEnabled(True)
         self.table.sortItems(sort_column, sort_order)
         
-        print("Total expenses:", len(expenses))
         
 
 
@@ -127,12 +126,10 @@ class LogPage(QWidget):
             return
         if file_path.endswith(".csv"):
             count = self.tracker.importCSV(file_path)
-            print(f"{count} expenses imported")
             self.load_data()
-        
+
         elif file_path.endswith(".xlsx"):
             count = self.tracker.importXlsx(file_path)
-            print(f"{count} expenses imported")
             self.load_data()
 
         
@@ -224,4 +221,3 @@ class LogPage(QWidget):
                     break
 
             self.table.setRowHidden(row, not match)
-        print ("Showing : ", count)

@@ -50,7 +50,7 @@ class ExpenseApp(QMainWindow):
         self.visual_page = VisualPage(self.tracker)
 
         if DashboardPage is not None:
-            self.dashboard_page = DashboardPage(self.tracker)
+            self.dashboard_page = DashboardPage(self.tracker, theme_manager=self.theme_manager)
         else:
             self.dashboard_page = QLabel("Dashboard (coming soon)")
 
