@@ -282,6 +282,9 @@ def _is_noise(description):
     for keyword in NOISE_KEYWORDS:
         if keyword in desc:
             return True
+    for pattern in NOISE_PATTERNS:
+        if pattern.search(description):
+            return True
     return False
 
 
