@@ -2,16 +2,30 @@
 *.xls
 *.csv
 
-gui/__pycache__
-Bank-Statement-Parser-PDF-to-CSV
+# Virtual environment
+.venv/
+venv/
+env/
 
-# Auto Claude data directory
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/
 .auto-claude/
-
-# Auto Claude generated files
 .auto-claude-security.json
 .auto-claude-status
 .claude_settings.json
 .worktrees/
 .security-key
 logs/security/
+
+# Project
+Bank-Statement-Parser-PDF-to-CSV
+theme_config.json
