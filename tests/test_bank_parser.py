@@ -10,6 +10,7 @@ from bank_parser import (
     get_category,
     _is_noise,
     parse_chase_statement,
+    parse_hsbc_statement,
     parse_statement,
     detect_bank_format,
 )
@@ -301,3 +302,53 @@ class TestParseStatementAutoDetect:
         result = parse_statement("fake.pdf")
         assert len(result) == 1
         assert result[0]["category"] == "Dining"
+
+
+# ---------------------
+# Integration tests
+# ---------------------
+
+class TestParsingIntegration:
+    @patch("bank_parser.pdfplumber.open")
+    def test_chase_filters_person_transfers(self, mock_open):
+        """Chase parser should filter out personal transfers and savings noise."""
+        rows = [
+            ["10 Jan 25", "personal transfer", "50.00", ""],
+            ["10 Jan 25", "Chase savings goal", "25.00", ""],
+            ["10 Jan 25", "Tesco Stores", "12.50", ""],
+        ]
+        mock_open.return_value = _make_mock_pdf(rows)
+
+        result = parse_chase_statement("fake.pdf")
+        assert len(result) == 1
+        assert result[0]["merchant"] == "Tesco Stores"
+        assert result[0]["category"] == "Groceries"
+
+    @patch("bank_parser.pdfplumber.open")
+    def test_chase_fuzzy_categorizes_ocr_typo(self, mock_open):
+        """Chase parser should fuzzy-match OCR-typo merchants to correct categories."""
+        rows = [
+            ["5 Feb 25", "TESC0 STORES", "30.00", ""],
+            ["5 Feb 25", "STARBVCKS LONDON", "4.50", ""],
+        ]
+        mock_open.return_value = _make_mock_pdf(rows)
+
+        result = parse_chase_statement("fake.pdf")
+        assert len(result) == 2
+        assert result[0]["category"] == "Groceries"
+        assert result[1]["category"] == "Dining"
+
+    @patch("bank_parser.pdfplumber.open")
+    def test_hsbc_filters_balance_bf(self, mock_open):
+        """HSBC parser should filter out 'Balance b/f' rows."""
+        rows = [
+            ["1 Mar 25", "Balance b/f", "", "", "1000.00"],
+            ["1 Mar 25", "b/f", "", "", "1000.00"],
+            ["2 Mar 25", "Sainsburys", "45.00", "", "955.00"],
+        ]
+        mock_open.return_value = _make_mock_pdf(rows)
+
+        result = parse_hsbc_statement("fake.pdf")
+        assert len(result) == 1
+        assert result[0]["merchant"] == "Sainsburys"
+        assert result[0]["bank"] == "HSBC"
