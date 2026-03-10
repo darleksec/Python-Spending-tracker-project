@@ -67,6 +67,52 @@ class TestGetCategory:
 
 
 # ---------------------
+# Fuzzy matching
+# ---------------------
+
+class TestFuzzyMatching:
+    """Test fuzzy matching for OCR typos, special characters, and edge cases."""
+
+    def test_ocr_typo_tesco(self):
+        assert get_category("TESC0 STORES") == "Groceries"
+
+    def test_ocr_typo_starbucks(self):
+        assert get_category("STARBVCKS LONDON") == "Dining"
+
+    def test_special_char_m_and_s(self):
+        assert get_category("M&S FOOD HALL") == "Groceries"
+
+    def test_special_char_coop(self):
+        assert get_category("CO-OP GROUP") == "Groceries"
+
+    def test_special_char_h_and_m(self):
+        assert get_category("H&M ONLINE") == "Shopping"
+
+    def test_short_merchant_kfc(self):
+        assert get_category("KFC DRIVE THRU") == "Dining"
+
+    def test_short_merchant_uber(self):
+        assert get_category("UBER TRIP") == "Transport"
+
+    def test_unknown_returns_flag(self):
+        assert get_category("XYZZYPLUGH SERVICES LTD") == "Flag"
+
+    def test_empty_description(self):
+        assert get_category("") == "Flag"
+
+    def test_none_description(self):
+        assert get_category(None) == "Flag"
+
+    def test_amazon_prime_before_amazon(self):
+        """AMAZON PRIME should match Bill, not Shopping."""
+        assert get_category("AMAZON PRIME MEMBERSHIP") == "Bill"
+
+    def test_amazon_without_prime(self):
+        """Plain AMAZON should match Shopping."""
+        assert get_category("AMAZON MARKETPLACE") == "Shopping"
+
+
+# ---------------------
 # clean_to_float
 # ---------------------
 
