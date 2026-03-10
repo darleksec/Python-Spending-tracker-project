@@ -262,7 +262,6 @@ class VisualPage(QWidget):
         self.canvas.draw()
 
 
-    def plot_category_trend(self):
 
 
 
@@ -583,6 +582,7 @@ class VisualPage(QWidget):
         self.cumulative_btn = QPushButton("Cumulative Spend...")
         self.cumulative_btn.clicked.connect(
             lambda: self._open_month_picker_and_run(self._plot_cum_spend_for_month)
+        )
         self.cashback_btn = QPushButton("Cashback Analysis")
         self.cashback_btn.clicked.connect(self.plot_cashback_analysis)
 
