@@ -216,6 +216,13 @@ NOISE_KEYWORDS = [
     'personal transfer',
 ]
 
+# Noise regex patterns for non-keyword-based filtering
+NOISE_PATTERNS = [
+    re.compile(r'^(to|from)\s+[A-Z][a-z]+', re.IGNORECASE),   # P2P transfers
+    re.compile(r'^\d{4,}$', re.IGNORECASE),                    # Pure reference numbers
+    re.compile(r'^(balance b/f|b/f)', re.IGNORECASE),          # Brought-forward balances
+]
+
 
 # ---------------------
 # Utility Functions
