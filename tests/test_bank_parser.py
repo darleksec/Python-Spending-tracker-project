@@ -115,6 +115,36 @@ class TestNoiseFiltering:
 
 
 # ---------------------
+# Regex noise patterns
+# ---------------------
+
+class TestRegexNoisePatterns:
+    def test_p2p_transfer_to(self):
+        assert _is_noise("To John")
+
+    def test_p2p_transfer_from(self):
+        assert _is_noise("From Sarah")
+
+    def test_reference_number(self):
+        assert _is_noise("123456")
+
+    def test_balance_bf(self):
+        assert _is_noise("Balance b/f")
+
+    def test_bf_shorthand(self):
+        assert _is_noise("b/f")
+
+    def test_false_positive_toffee(self):
+        assert not _is_noise("Toffee Shop")
+
+    def test_false_positive_fromage(self):
+        assert not _is_noise("Fromage Bistro")
+
+    def test_empty_string(self):
+        assert not _is_noise("")
+
+
+# ---------------------
 # parse_chase_statement (mocked PDF)
 # ---------------------
 
