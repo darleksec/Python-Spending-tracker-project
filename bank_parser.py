@@ -7,6 +7,7 @@ Outputs standardised transaction dicts for ExpenseTracker ingestion.
 import re
 import pdfplumber
 from datetime import datetime
+from rapidfuzz import process, fuzz, utils
 
 # ---------------------
 # Category Mapping
@@ -274,12 +275,27 @@ def clean_to_float(value):
 
 
 def get_category(description):
-    """Map a merchant description to a category using keyword matching."""
+    """Map a merchant description to a category using fuzzy matching."""
+    if not description or not description.strip():
+        return "Flag"
     desc = description.lower()
+    # Try exact keyword matching first for speed and precision
     for keyword, category in CATEGORY_MAPPING.items():
         if keyword in desc:
             return category
-    return "Flag"
+    # Fall back to fuzzy matching
+    choices = list(CATEGORY_MAPPING.keys())
+    result = process.extractOne(
+        desc,
+        choices,
+        scorer=fuzz.WRatio,
+        processor=utils.default_process,
+        score_cutoff=80,
+    )
+    if result is None:
+        return "Flag"
+    matched_key = result[0]
+    return CATEGORY_MAPPING[matched_key]
 
 
 def _is_noise(description):
