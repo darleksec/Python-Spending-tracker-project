@@ -294,7 +294,10 @@ def get_category(description):
     )
     if result is None:
         return "Flag"
-    matched_key = result[0]
+    matched_key, score = result[0], result[1]
+    # Short keywords (<=3 chars) are prone to false positives; require higher confidence
+    if len(matched_key) <= 3 and score < 90:
+        return "Flag"
     return CATEGORY_MAPPING[matched_key]
 
 
