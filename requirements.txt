@@ -7,3 +7,5 @@ PyQt6-Qt6==6.10.2
 PyQt6_sip==13.11.0
 tabula-py==2.10.0
 openpyxl==3.1.5
+rapidfuzz==3.14.3
+pytest==9.0.2
